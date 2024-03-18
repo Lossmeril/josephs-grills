@@ -9,7 +9,7 @@ const HomePage = () => {
         <section className="h-screen bg-white overflow-x-hidden">
           <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-[750px] aspect-video z-30">
             <Image
-              src="/src/img/logo-mono-light.png"
+              src="/img/logo-full-color-inv.png"
               alt="Fresh Lobster logo"
               fill
               className="object-contain"
