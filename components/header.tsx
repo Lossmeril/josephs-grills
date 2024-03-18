@@ -8,8 +8,8 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 const links = [
   ["/", "Domů"],
+  ["/grily", "Grily"],
   ["/o-nas", "O nás"],
-  ["/projekty", "Projekty"],
   ["/kontakt", "Kontakt"],
 ];
 
@@ -58,16 +58,16 @@ const Header = () => {
             <div className="flex flex-grow"></div>
           </div>
 
-          <div className="w-[150px] relative aspect-[15/5]">
-            <a href="/">
+          <a href="/">
+            <div className="w-[150px] relative aspect-[15/5]">
               <Image
                 src="/img/logo-full-color.png"
                 alt="Fresh Lobster logo"
                 className="object-contain"
                 fill
               />
-            </a>
-          </div>
+            </div>
+          </a>
 
           <div className="hidden md:flex flex-nowrap justify-end">
             <div className="flex flex-grow"></div>

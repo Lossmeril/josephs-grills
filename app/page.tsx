@@ -1,9 +1,262 @@
 "use client";
 
+import { useRef, useEffect } from "react";
+
 import HomeProduct from "@/components/homeProduct";
 import Image from "next/image";
 
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
+
 const HomePage = () => {
+  const manRef = useRef(null);
+  const productSecRef = useRef(null);
+
+  const product1Ref = useRef(null);
+  const product1InfoLeftRef = useRef(null);
+  const product1InfoRightRef = useRef(null);
+
+  const product2Ref = useRef(null);
+  const product2InfoLeftRef = useRef(null);
+  const product2InfoRightRef = useRef(null);
+
+  const product3Ref = useRef(null);
+  const product3InfoLeftRef = useRef(null);
+  const product3InfoRightRef = useRef(null);
+
+  useEffect(() => {
+    const man = manRef.current;
+    const productSection = productSecRef.current;
+
+    const product1 = product1Ref.current;
+    const left1 = product1InfoLeftRef.current;
+    const right1 = product1InfoRightRef.current;
+
+    const product2 = product2Ref.current;
+    const left2 = product2InfoLeftRef.current;
+    const right2 = product2InfoRightRef.current;
+
+    const product3 = product3Ref.current;
+    const left3 = product3InfoLeftRef.current;
+    const right3 = product3InfoRightRef.current;
+
+    gsap.fromTo(
+      man,
+      { y: 0 },
+      {
+        ease: "none",
+        y: "200vh",
+        duration: 3,
+        scrollTrigger: {
+          trigger: productSection,
+          start: "16.667% center",
+          end: "83.333% center",
+          scrub: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      left1,
+      { opacity: 0, y: -50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 2,
+        scrollTrigger: {
+          trigger: product1,
+          start: "-10% center",
+          end: "25% center",
+          scrub: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      left1,
+      { opacity: 1, y: 0 },
+      {
+        opacity: 0,
+        y: 50,
+        duration: 2,
+        scrollTrigger: {
+          trigger: product1,
+          start: "55% center",
+          end: "bottom center",
+          scrub: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      right1,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 2,
+        scrollTrigger: {
+          trigger: product1,
+          start: "top center",
+          end: "25% center",
+          scrub: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      right1,
+      { opacity: 1, y: 0 },
+      {
+        opacity: 0,
+        y: -50,
+        duration: 2,
+        scrollTrigger: {
+          trigger: product1,
+          start: "65% center",
+          end: "bottom center",
+          scrub: true,
+        },
+      }
+    );
+
+    /* SECOND PRODUCT SECTION */
+    gsap.fromTo(
+      left2,
+      { opacity: 0, y: -50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 2,
+        scrollTrigger: {
+          trigger: product2,
+          start: "-10% center",
+          end: "25% center",
+          scrub: true,
+          markers: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      left2,
+      { opacity: 1, y: 0 },
+      {
+        opacity: 0,
+        y: 50,
+        duration: 2,
+        scrollTrigger: {
+          trigger: product2,
+          start: "55% center",
+          end: "bottom center",
+          scrub: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      right2,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 2,
+        scrollTrigger: {
+          trigger: product2,
+          start: "top center",
+          end: "25% center",
+          scrub: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      right2,
+      { opacity: 1, y: 0 },
+      {
+        opacity: 0,
+        y: -50,
+        duration: 2,
+        scrollTrigger: {
+          trigger: product2,
+          start: "65% center",
+          end: "bottom center",
+          scrub: true,
+        },
+      }
+    );
+
+    /* THIRD PRODUCT SECTION */
+    gsap.fromTo(
+      left3,
+      { opacity: 0, y: -50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 2,
+        scrollTrigger: {
+          trigger: product3,
+          start: "-10% center",
+          end: "25% center",
+          scrub: true,
+          markers: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      left3,
+      { opacity: 1, y: 0 },
+      {
+        opacity: 0,
+        y: 50,
+        duration: 2,
+        scrollTrigger: {
+          trigger: product3,
+          start: "55% center",
+          end: "bottom center",
+          scrub: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      right3,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 2,
+        scrollTrigger: {
+          trigger: product3,
+          start: "top center",
+          end: "25% center",
+          scrub: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      right3,
+      { opacity: 1, y: 0 },
+      {
+        opacity: 0,
+        y: -50,
+        duration: 2,
+        scrollTrigger: {
+          trigger: product3,
+          start: "65% center",
+          end: "bottom center",
+          scrub: true,
+        },
+      }
+    );
+  }, []);
+
   return (
     <>
       <main className="max-w-screen overflow-x-hidden">
@@ -56,11 +309,46 @@ const HomePage = () => {
           </div>
         </section>
 
-        <section className="h-screen bg-white border-t border-[#ededed] section-3 relative flex flex-col justify-center items-center">
-          <HomeProduct
-            name="Peter"
-            tagline="Váš parťák na grilování na cestách"
+        <section className="relative w-full" ref={productSecRef}>
+          <img
+            src="/img/average-man.png"
+            alt=""
+            className="man absolute top-[16.667%] left-1/2 -translate-y-1/2 z-20"
+            ref={manRef}
           />
+          <div ref={product1Ref}>
+            <HomeProduct
+              name="John"
+              tagline="Váš parťák na grilování na cestách."
+              weight="6"
+              height="23"
+              length="25"
+              leftRef={product1InfoLeftRef}
+              rightRef={product1InfoRightRef}
+            />
+          </div>
+          <div ref={product2Ref}>
+            <HomeProduct
+              name="Peter"
+              tagline="To jedniné ohniště, které potřebujete."
+              weight="36"
+              height="33,1"
+              length="74,3"
+              leftRef={product2InfoLeftRef}
+              rightRef={product2InfoRightRef}
+            />
+          </div>
+          <div ref={product3Ref}>
+            <HomeProduct
+              name="Joseph"
+              tagline="Je to gril. A leccos ustojí."
+              weight="244"
+              height="90"
+              length="74"
+              leftRef={product3InfoLeftRef}
+              rightRef={product3InfoRightRef}
+            />
+          </div>
         </section>
       </main>
     </>
