@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Jost } from "next/font/google";
+import { Cabin } from "next/font/google";
 import "./globals.scss";
 import Header from "@/components/header";
 
-const font = Jost({ subsets: ["latin"] });
+const cabin = Cabin({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Fresh Lobster",
+  title: "Joseph's | Grills. Simple.",
   description: "",
 };
 
@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body className={font.className}>
+      <body className={cabin.className}>
         <Header />
         {children}
       </body>

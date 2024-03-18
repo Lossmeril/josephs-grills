@@ -32,29 +32,33 @@ const NavbarLink: React.FC<NavbarLinkProps> = ({ children, link }) => {
 const Header = () => {
   return (
     <header>
-      <nav className="navbar w-screen h-24 fixed bg-white shadow-sm z-50">
-        <div className="flex flex-row gap-6 h-full justify-between items-center mx-[5vw] lg:mx-[10vw]">
-          {/* --------------------- DESKTOP NAVBAR --------------------- */}
-          <div className="hidden md:flex flex-row md:gap-6 lg:gap-12 h-full justify-center items-center">
-            {links.map((link) => (
-              <NavbarLink key={link[0]} link="">
-                {link[1]}
-              </NavbarLink>
-            ))}
+      <div className="navbar w-screen h-20 fixed bg-white shadow-sm z-50">
+        <div className="grid grid-cols-[1fr_auto_1fr] h-full mx-[5vw] lg:mx-[10vw] gap-x-5 items-center">
+          <div className="flex flex-nowrap justify-start">
+            {/* --------------------- DESKTOP NAVBAR --------------------- */}
+            <nav className="hidden lg:flex flex-row gap-2 md:gap-6 xl:gap-12 h-full justify-center items-center">
+              {links.map((link) => (
+                <NavbarLink key={link[0]} link="">
+                  {link[1]}
+                </NavbarLink>
+              ))}
+            </nav>
+
+            {/* --------------------- MOBILE NAVBAR --------------------- */}
+
+            <nav className="flex lg:hidden flex-row md:gap-6 lg:gap-12 h-full justify-center items-center">
+              <div
+                className={
+                  "px-3 py-3 border-2 transition-all duration-300 bg-orange border-orange text-white cursor-pointer hover:bg-red hover:border-red"
+                }
+              >
+                <GiHamburgerMenu />
+              </div>
+            </nav>
+            <div className="flex flex-grow"></div>
           </div>
 
-          {/* --------------------- MOBILE NAVBAR --------------------- */}
-          <div className="flex md:hidden flex-row md:gap-6 lg:gap-12 h-full justify-center items-center">
-            <div
-              className={
-                "px-3 py-3 border-2 transition-all duration-300 bg-lobster border-lobster text-white cursor-pointer"
-              }
-            >
-              <GiHamburgerMenu />
-            </div>
-          </div>
-
-          <div className="w-[118px] relative aspect-[15/5]">
+          <div className="w-[150px] relative aspect-[15/5]">
             <a href="/">
               <Image
                 src="/img/logo-full-color.png"
@@ -65,11 +69,14 @@ const Header = () => {
             </a>
           </div>
 
-          <Button link="/" inverse={false}>
-            Objednat filma!
-          </Button>
+          <div className="hidden md:flex flex-nowrap justify-end">
+            <div className="flex flex-grow"></div>
+            <Button link="/" inverse={false}>
+              AB Action Button
+            </Button>
+          </div>
         </div>
-      </nav>
+      </div>
     </header>
   );
 };
