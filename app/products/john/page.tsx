@@ -24,41 +24,41 @@ const JohnProductPage = () => {
           </div>
           <div className="flex flex-row flex-nowrap w-full h-28 gap-4 mb-8">
             <div
-              className="w-1/4 relative overflow-hidden"
-              onClick={() => setCurrentImg(1)}
+              className="w-1/4 relative overflow-hidden bg-red"
+              onMouseOver={() => setCurrentImg(1)}
             >
               <Image
                 src="/img/products/placeholder1.jpg"
                 alt=""
                 fill
-                className="object-cover"
+                className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
               />
             </div>
-            <div className="w-1/4 relative overflow-hidden">
+            <div className="w-1/4 relative overflow-hidden bg-red">
               <Image
                 src="/img/products/placeholder2.jpg"
                 alt=""
                 fill
-                className="object-cover"
-                onClick={() => setCurrentImg(2)}
+                className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
+                onMouseOver={() => setCurrentImg(2)}
               />
             </div>
-            <div className="w-1/4 relative overflow-hidden">
+            <div className="w-1/4 relative overflow-hidden bg-red">
               <Image
                 src="/img/products/placeholder3.jpg"
                 alt=""
                 fill
-                className="object-cover"
-                onClick={() => setCurrentImg(3)}
+                className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
+                onMouseOver={() => setCurrentImg(3)}
               />
             </div>
-            <div className="w-1/4 relative overflow-hidden">
+            <div className="w-1/4 relative overflow-hidden bg-red">
               <Image
                 src="/img/products/placeholder4.jpg"
                 alt=""
                 fill
-                className="object-cover"
-                onClick={() => setCurrentImg(4)}
+                className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
+                onMouseOver={() => setCurrentImg(4)}
               />
             </div>
           </div>
@@ -87,7 +87,7 @@ const JohnProductPage = () => {
           </div>
         </div>
       </section>
-      <section className="h-screen border-t border-[#ededed] bg-white overflow-x-hidden flex flex-col flex-nowrap pt-20">
+      <section className="border-t border-[#ededed] bg-white overflow-x-hidden flex flex-col flex-nowrap p-20">
         <h2 className="text-4xl font-bold leading-[1.25em] mb-8 -mt-4 ">
           Popisek
         </h2>
@@ -103,6 +103,11 @@ const JohnProductPage = () => {
           finibus vehicula eget quis sapien. Pellentesque malesuada ligula vel
           auctor facilisis. In condimentum mattis ornare.
         </p>
+      </section>
+      <section className="border-t border-[#ededed] bg-white overflow-x-hidden flex flex-col flex-nowrap p-20">
+        <h2 className="text-4xl font-bold leading-[1.25em] mb-8 -mt-4 ">
+          Parametry
+        </h2>
       </section>
     </main>
   );
