@@ -32,7 +32,7 @@ const NavbarLink: React.FC<NavbarLinkProps> = ({ children, link }) => {
 const Header = () => {
   return (
     <header>
-      <div className="navbar w-screen h-20 fixed bg-white shadow-sm z-50">
+      <div className="navbar w-full h-20 fixed bg-white shadow-sm z-50">
         <div className="grid grid-cols-[1fr_auto_1fr] h-full mx-[5vw] lg:mx-[10vw] gap-x-5 items-center">
           <div className="flex flex-nowrap justify-start">
             {/* --------------------- DESKTOP NAVBAR --------------------- */}

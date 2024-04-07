@@ -350,6 +350,13 @@ const HomePage = () => {
             />
           </div>
         </section>
+
+        <section className="min-h-[80vh] bg-red section-2 relative flex flex-row justify-center items-center px-40">
+          <div className="w-1/2"></div>
+          <div className="bg-white p-20 w-1/2 text-center">
+            <h2 className="text-2xl mb-6 font-bold">Kontaktujte nás!</h2>
+          </div>
+        </section>
       </main>
     </>
   );
