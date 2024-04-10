@@ -85,13 +85,13 @@ const HomeProduct: React.FC<HomeProductProps> = ({
           </div>
 
           {/* DRUHÝ SLOUPEC */}
-          <div className="relative w-1/3 h-full z-30 flex flex-col justify-end">
+          <div className="relative w-1/3 h-full z-30 flex flex-col justify-end overflow-visible">
             <Image
               src={"/img/products/" + image}
               alt=""
-              width={500}
-              height={500}
-              className="object-cover overflow-visible z-30"
+              width={450}
+              height={450}
+              className="z-30 w-[450px] h-[450px]"
             />
           </div>
 

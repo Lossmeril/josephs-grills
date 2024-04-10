@@ -310,12 +310,12 @@ const HomePage = () => {
         </section>
 
         <section className="relative w-full" ref={productSecRef}>
-          <img
-            src="/img/average-man.png"
-            alt=""
-            className="man absolute top-[16.667%] left-1/2 -translate-y-1/2 z-10"
+          <div
             ref={manRef}
-          />
+            className="man absolute top-[16.667%] left-1/2 -translate-y-1/2 z-10 h-[550px] w-full"
+          >
+            <img src="/img/average-man.png" className="object-contain" alt="" />
+          </div>
           <div ref={product1Ref}>
             <HomeProduct
               name="John"
