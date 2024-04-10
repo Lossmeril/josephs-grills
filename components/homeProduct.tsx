@@ -32,6 +32,8 @@ interface HomeProductProps {
   pageLink: string;
   eshopLink: string;
 
+  image: string;
+
   leftRef: MutableRefObject<null>;
   rightRef: MutableRefObject<null>;
 }
@@ -44,11 +46,12 @@ const HomeProduct: React.FC<HomeProductProps> = ({
   length,
   pageLink,
   eshopLink,
+  image,
   leftRef,
   rightRef,
 }) => {
   return (
-    <div className="min-h-screen bg-white border-t border-[#ededed] section-3 relative flex flex-col justify-center items-center">
+    <div className="min-h-screen bg-white border-t border-[#ededed] section-3 relative flex flex-col justify-center items-center ">
       <div className="flex flex-col flex-nowrap justify-start">
         <div className="flex flex-row flex-nowrap items-center max-w-[1340px] h-[70vh]">
           {/* PRVNÍ SLOUPEC */}
@@ -82,12 +85,13 @@ const HomeProduct: React.FC<HomeProductProps> = ({
           </div>
 
           {/* DRUHÝ SLOUPEC */}
-          <div className="relative w-1/3 h-full">
+          <div className="relative w-1/3 h-full z-30 flex flex-col justify-end">
             <Image
-              src="/img/products/placeholder.png"
+              src={"/img/products/" + image}
               alt=""
-              fill
-              className="object-cover overflow-visible"
+              width={500}
+              height={500}
+              className="object-cover overflow-visible z-30"
             />
           </div>
 

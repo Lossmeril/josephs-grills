@@ -313,7 +313,7 @@ const HomePage = () => {
           <img
             src="/img/average-man.png"
             alt=""
-            className="man absolute top-[16.667%] left-1/2 -translate-y-1/2 z-20"
+            className="man absolute top-[16.667%] left-1/2 -translate-y-1/2 z-10"
             ref={manRef}
           />
           <div ref={product1Ref}>
@@ -325,6 +325,7 @@ const HomePage = () => {
               length="25"
               pageLink="./products/john"
               eshopLink=""
+              image="john-comparison.webp"
               leftRef={product1InfoLeftRef}
               rightRef={product1InfoRightRef}
             />
@@ -338,6 +339,7 @@ const HomePage = () => {
               length="74,3"
               pageLink="./products/peter"
               eshopLink=""
+              image="peter-comparison.webp"
               leftRef={product2InfoLeftRef}
               rightRef={product2InfoRightRef}
             />
@@ -351,6 +353,7 @@ const HomePage = () => {
               length="74"
               pageLink="./products/joseph"
               eshopLink=""
+              image="joseph-comparison.webp"
               leftRef={product3InfoLeftRef}
               rightRef={product3InfoRightRef}
             />
