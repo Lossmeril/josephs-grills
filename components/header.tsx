@@ -21,7 +21,7 @@ interface NavbarLinkProps {
 const NavbarLink: React.FC<NavbarLinkProps> = ({ children, link }) => {
   return (
     <Link
-      href=""
+      href={link}
       className="font-medium text-lg rotate-hover hover:text-lobster"
     >
       <p>{children}</p>
@@ -38,7 +38,7 @@ const Header = () => {
             {/* --------------------- DESKTOP NAVBAR --------------------- */}
             <nav className="hidden lg:flex flex-row gap-2 md:gap-6 xl:gap-12 h-full justify-center items-center">
               {links.map((link) => (
-                <NavbarLink key={link[0]} link="">
+                <NavbarLink key={link[0]} link={link[0]}>
                   {link[1]}
                 </NavbarLink>
               ))}
@@ -72,7 +72,7 @@ const Header = () => {
           <div className="hidden md:flex flex-nowrap justify-end">
             <div className="flex flex-grow"></div>
             <Button link="/" inverse={false}>
-              AB Action Button
+              Do e-shopu &raquo;
             </Button>
           </div>
         </div>

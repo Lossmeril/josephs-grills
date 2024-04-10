@@ -29,6 +29,9 @@ interface HomeProductProps {
   height: string;
   length: string;
 
+  pageLink: string;
+  eshopLink: string;
+
   leftRef: MutableRefObject<null>;
   rightRef: MutableRefObject<null>;
 }
@@ -39,6 +42,8 @@ const HomeProduct: React.FC<HomeProductProps> = ({
   weight,
   height,
   length,
+  pageLink,
+  eshopLink,
   leftRef,
   rightRef,
 }) => {
@@ -67,10 +72,10 @@ const HomeProduct: React.FC<HomeProductProps> = ({
             </div>
 
             <div className="flex flex-row flex-nowrap gap-5 mt-10">
-              <Button link={""} inverse={false}>
+              <Button link={pageLink} inverse={false}>
                 Více informací &raquo;
               </Button>
-              <Button link={""} inverse={true}>
+              <Button link={eshopLink} inverse={true}>
                 Do e-shopu &raquo;
               </Button>
             </div>

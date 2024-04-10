@@ -323,6 +323,8 @@ const HomePage = () => {
               weight="6"
               height="23"
               length="25"
+              pageLink="./products/john"
+              eshopLink=""
               leftRef={product1InfoLeftRef}
               rightRef={product1InfoRightRef}
             />
@@ -334,6 +336,8 @@ const HomePage = () => {
               weight="36"
               height="33,1"
               length="74,3"
+              pageLink="./products/peter"
+              eshopLink=""
               leftRef={product2InfoLeftRef}
               rightRef={product2InfoRightRef}
             />
@@ -345,6 +349,8 @@ const HomePage = () => {
               weight="244"
               height="90"
               length="74"
+              pageLink="./products/joseph"
+              eshopLink=""
               leftRef={product3InfoLeftRef}
               rightRef={product3InfoRightRef}
             />
