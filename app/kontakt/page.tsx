@@ -1,4 +1,8 @@
-import { MdPhone } from "react-icons/md";
+import { Inter } from "next/font/google";
+import { IoMdPin } from "react-icons/io";
+import { MdEmail, MdPhone } from "react-icons/md";
+
+const inter = Inter({ subsets: ["latin"] });
 
 const ContactPage = () => {
   return (
@@ -15,18 +19,20 @@ const ContactPage = () => {
           </p>
         </div>
         <div className="flex flex-row flex-nowrap w-full">
-          <div className="w-1/2 bg-red p-10">
-            <div className="flex flex-row flex-nowrap justify-between">
+          <div className="w-2/5 bg-red p-10 px-20 flex flex-col flex-nowrap gap-5">
+            <div className="flex flex-row flex-nowrap justify-start gap-5">
               <MdPhone size={25} />
-              <p className="text-lg text-right">+420 123 456 789</p>
+              <p className="text-lg text-left">+420 123 456 789</p>
             </div>
-            <div className="flex flex-row flex-nowrap justify-between">
-              <MdPhone size={25} />
-              <p className="text-lg text-right">info@josephs-grills.cz</p>
+            <div className="flex flex-row flex-nowrap justify-start gap-5">
+              <MdEmail size={25} />
+              <p className="text-lg text-left">
+                info<span className={inter.className}>@</span>josephs-grills.cz
+              </p>
             </div>
-            <div className="flex flex-row flex-nowrap justify-between">
-              <MdPhone size={25} />
-              <p className="text-lg text-right">
+            <div className="flex flex-row flex-nowrap justify-start gap-5">
+              <IoMdPin size={25} />
+              <p className="text-lg text-left">
                 Adresa 1<br />
                 123 45 Štíty
                 <br />
@@ -34,7 +40,7 @@ const ContactPage = () => {
               </p>
             </div>
           </div>
-          <div className="w-1/2 bg-orange"></div>
+          <div className="w-3/5 bg-orange"></div>
         </div>
       </section>
     </main>
