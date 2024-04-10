@@ -20,12 +20,12 @@ interface NavbarLinkProps {
 
 const NavbarLink: React.FC<NavbarLinkProps> = ({ children, link }) => {
   return (
-    <Link
+    <a
       href={link}
       className="font-medium text-lg rotate-hover hover:text-lobster"
     >
       <p>{children}</p>
-    </Link>
+    </a>
   );
 };
 
