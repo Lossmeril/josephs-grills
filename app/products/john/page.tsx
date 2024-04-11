@@ -7,7 +7,7 @@ import React, { useState } from "react";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
-const JohnProductPage = () => {
+const JohnProductPage: React.FC = () => {
   const [currentImg, setCurrentImg] = useState(2);
 
   return (

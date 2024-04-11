@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.contact-form-section {
+  background-image: url("/img/products/placeholder1.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}

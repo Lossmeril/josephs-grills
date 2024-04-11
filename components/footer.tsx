@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer>
       <div className="w-full h-60 bg-white shadow-sm z-50 border-t border-[#ededed]">

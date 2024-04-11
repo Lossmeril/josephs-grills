@@ -1,10 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import Button from "./button";
 
 import { GiHamburgerMenu } from "react-icons/gi";
+import { useState } from "react";
+import { MdClose } from "react-icons/md";
 
 const links = [
   ["/", "Domů"],
@@ -30,6 +31,8 @@ const NavbarLink: React.FC<NavbarLinkProps> = ({ children, link }) => {
 };
 
 const Header = () => {
+  const [isMobileNavOpen, setMobileNavOpen] = useState(false);
+
   return (
     <header>
       <div className="navbar w-full h-20 fixed bg-white shadow-sm z-50">
@@ -49,10 +52,21 @@ const Header = () => {
             <nav className="flex lg:hidden flex-row md:gap-6 lg:gap-12 h-full justify-center items-center">
               <div
                 className={
-                  "px-3 py-3 border-2 transition-all duration-300 bg-orange border-orange text-white cursor-pointer hover:bg-red hover:border-red"
+                  "px-3 py-3 border-2 transition-all duration-300 bg-orange border-orange text-white cursor-pointer hover:bg-red hover:border-red z-50"
                 }
+                onClick={() => setMobileNavOpen(!isMobileNavOpen)}
               >
-                <GiHamburgerMenu />
+                {!isMobileNavOpen ? <GiHamburgerMenu /> : <MdClose />}
+              </div>
+              <div
+                className="w-screen h-screen bg-white absolute top-0 left-0 z-10 flex-col justify-center items-center gap-10"
+                style={{ display: isMobileNavOpen ? "flex" : "none" }}
+              >
+                {links.map((link) => (
+                  <NavbarLink key={link[0]} link={link[0]}>
+                    {link[1]}
+                  </NavbarLink>
+                ))}
               </div>
             </nav>
             <div className="flex flex-grow"></div>
