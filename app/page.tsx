@@ -10,6 +10,9 @@ import { useGSAP } from "@gsap/react";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ContactFormSection from "@/components/contactFormSection";
+import { Unbounded } from "next/font/google";
+
+const unbounded = Unbounded({ subsets: ["latin"] });
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -264,30 +267,20 @@ const HomePage = () => {
         <section className="h-screen bg-white overflow-x-hidden">
           <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-[750px] aspect-video z-30">
             <Image
-              src="/img/logo-full-color-inv.png"
+              src="/img/logo-full-color.png"
               alt="Fresh Lobster logo"
               fill
               className="object-contain"
             />
           </div>
-          <div className="h-full w-full bg-black absolute top-0 left-0 z-20 opacity-50"></div>
-          <video
-            autoPlay
-            loop
-            muted
-            id="heroVideo"
-            className="h-screen w-screen object-cover z-10"
-          >
-            <source src="/video/placeholder.webm" type="video/webm" />
-          </video>
         </section>
 
-        <section className="h-[65vh] bg-white section-2 relative flex flex-col justify-center items-center">
+        <section className="h-[65vh] bg-white section-2 relative flex flex-col justify-center items-center overflow-hidden text-white">
           <div
             id="square"
-            className="bg-white w-40 h-40 absolute top-[20%] left-[50%] translate-x-[-50%] scale-100 rotate-45 z-0"
+            className="w-40 h-40 absolute top-[20%] left-[50%] translate-x-[-50%] scale-100 rotate-45 z-0"
           ></div>
-          <div className="text-center z-10 w-[40vw]">
+          <div className="text-center z-30 w-[40vw] text-white">
             <div className="relative w-10 h-10 mx-auto mb-6">
               <Image
                 src="/img/favicon.png"
@@ -296,18 +289,31 @@ const HomePage = () => {
                 className="object-contain"
               />
             </div>
-            <h2 className="text-2xl mb-6">Joseph&apos;s</h2>
-            <p className="text-5xl font-bold leading-[1.25em] mb-6">
-              If you&apos;re looking for a brand new electric scooter,
-              you&apos;re in the right place
+            <h2 className="text-3xl mb-6">Joseph&apos;s</h2>
+            <p
+              className={
+                "text-6xl font-bold leading-[1.25em] mb-6 " +
+                unbounded.className
+              }
+            >
+              Grily. Jednoduše.
             </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-              ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
-              accumsan lacus vel facilisis.
+            <p className="text-2xl">
+              Joseph&apos;s &mdash; grily, které staví na tradici, kvalitě a
+              jednoduchosti. Objevte řadu našich grilů a připojte se k rodině
+              spokojených nadšenců do grilování.
             </p>
           </div>
+          <video
+            autoPlay
+            loop
+            muted
+            id="heroVideo"
+            className="absolute h-screen w-screen object-cover z-10"
+          >
+            <source src="/video/placeholder.webm" type="video/webm" />
+          </video>
+          <div className="h-full w-full bg-black absolute top-0 left-0 z-20 opacity-50"></div>
         </section>
 
         <section className="relative w-full" ref={productSecRef}>
@@ -320,7 +326,7 @@ const HomePage = () => {
           <div ref={product1Ref}>
             <HomeProduct
               name="John"
-              tagline="Váš parťák na grilování na cestách."
+              tagline="Gril pro dobrodruhy"
               weight="6"
               height="23"
               length="25"
@@ -329,12 +335,17 @@ const HomePage = () => {
               image="john-comparison.webp"
               leftRef={product1InfoLeftRef}
               rightRef={product1InfoRightRef}
-            />
+            >
+              Představujeme vám Johna, malý, ale mimořádně šikovný gril, který
+              se stane vaším nezbytným společníkem na cestách. Díky svému
+              jedinečnému designu – tvořenému šesti čtvercovými ocelovými pláty,
+              se John skládá a rozkládá s dětskou snadností.
+            </HomeProduct>
           </div>
           <div ref={product2Ref}>
             <HomeProduct
               name="Peter"
-              tagline="To jedniné ohniště, které potřebujete."
+              tagline="To jediné ohniště, které potřebujete."
               weight="36"
               height="33,1"
               length="74,3"
@@ -343,12 +354,19 @@ const HomePage = () => {
               image="peter-comparison.webp"
               leftRef={product2InfoLeftRef}
               rightRef={product2InfoRightRef}
-            />
+            >
+              Peter transformuje každý venkovní prostor na místo plné tepla a
+              pohody. Díky svému inovativnímu designu, připomínajícímu kovovou
+              ošatku, se stane centrem pozornosti a místem setkávání pro rodinu
+              a přátele. Systém pro shromažďování popela zajišťuje snadnou
+              údržbu, zatímco jeho robustní konstrukce slibuje dlouholetou
+              spolehlivost.
+            </HomeProduct>
           </div>
           <div ref={product3Ref}>
             <HomeProduct
               name="Joseph"
-              tagline="Je to gril. A leccos ustojí."
+              tagline="Mistr grilování"
               weight="244"
               height="90"
               length="74"
@@ -357,7 +375,9 @@ const HomePage = () => {
               image="joseph-comparison.webp"
               leftRef={product3InfoLeftRef}
               rightRef={product3InfoRightRef}
-            />
+            >
+              Hello
+            </HomeProduct>
           </div>
         </section>
         <ContactFormSection />

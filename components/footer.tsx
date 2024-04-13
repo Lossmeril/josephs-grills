@@ -10,13 +10,15 @@ const Footer: React.FC = () => {
             <ul>
               <li>O nás</li>
               <li>E-shop</li>
+              <li>Obchodní podmínky</li>
             </ul>
           </div>
           <div className="text-center">
-            <h4 className="text-lg font-bold mb-3">Další stránky</h4>
+            <h4 className="text-lg font-bold mb-3">Naše grily</h4>
             <ul>
-              <li>O nás</li>
-              <li>E-shop</li>
+              <li>John</li>
+              <li>Peter</li>
+              <li>Joseph</li>
             </ul>
           </div>
           <div className="text-center">

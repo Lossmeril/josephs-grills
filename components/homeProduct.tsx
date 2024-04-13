@@ -36,6 +36,8 @@ interface HomeProductProps {
 
   leftRef: MutableRefObject<null>;
   rightRef: MutableRefObject<null>;
+
+  children: string | JSX.Element | JSX.Element[];
 }
 
 const HomeProduct: React.FC<HomeProductProps> = ({
@@ -49,11 +51,12 @@ const HomeProduct: React.FC<HomeProductProps> = ({
   image,
   leftRef,
   rightRef,
+  children,
 }) => {
   return (
     <div className="min-h-screen bg-white border-t border-[#ededed] section-3 relative flex flex-col justify-center items-center ">
       <div className="flex flex-col flex-nowrap justify-start">
-        <div className="flex flex-row flex-nowrap items-center max-w-[1340px] h-[70vh]">
+        <div className="flex flex-row flex-nowrap items-center w-[1340px] h-[70vh]">
           {/* PRVNÍ SLOUPEC */}
           <div
             className="flex flex-col flex-nowrap w-1/3 h-full items-start py-20 opacity-0"
@@ -62,7 +65,7 @@ const HomeProduct: React.FC<HomeProductProps> = ({
             <p className="text-2xl mb-6">{tagline}</p>
             <h2
               className={
-                "text-6xl font-bold leading-[1.25em] mb-12 -mt-6 " +
+                "text-6xl font-bold leading-[1.25em] mb-12 -mt-6 uppercase " +
                 unbounded.className
               }
             >
@@ -103,11 +106,8 @@ const HomeProduct: React.FC<HomeProductProps> = ({
             <h3 className="text-2xl font-bold leading-[1.25em] mb-6">
               Popisek
             </h3>
-            <p className="text-lg leading-relaxed mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-              ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
-              accumsan lacus vel facilisis.
+            <p className="text-md text-[#2e2e2e] leading-relaxed mb-6">
+              {children}
             </p>
           </div>
         </div>
