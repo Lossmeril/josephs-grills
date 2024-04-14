@@ -264,26 +264,23 @@ const HomePage = () => {
   return (
     <>
       <main className="max-w-screen overflow-x-hidden">
-        <section className="h-screen w-[1200px] mx-auto bg-white overflow-x-hidden relative flex flex-row flex-nowrap overflow-visible">
-          <div className="w-1/2 h-full flex flex-col justify-center overflow-visible">
-            <h1 className="text-4xl mb-6 font-bold">
+        <section className="h-screen w-[1500px] mx-auto bg-white relative flex flex-row flex-nowrap hero">
+          <div className="w-2/5 h-full flex flex-col justify-end clip relative">
+            <h1
+              className={
+                "text-[7em] font-bold mb-[25vh] mr-10 leading-[1em] z-10 " +
+                unbounded.className
+              }
+            >
               Rodina grilů Joseph&apos;s
             </h1>
-            <div className="relative w-[450px] aspect-video">
-              <Image
-                src="/img/logo-full-color.png"
-                alt="Fresh Lobster logo"
-                fill
-                className="object-contain"
-              />
-            </div>
           </div>
-          <div className="w-1/2 h-full relative overflow-visible">
+          <div className="w-3/5 h-full relative">
             <Image
               src="/img/products/family.png"
               alt="Rodina grilů Joseph's"
               fill
-              className="object-cover overflow-visible"
+              className="object-cover"
             />
           </div>
         </section>
@@ -343,7 +340,7 @@ const HomePage = () => {
               weight="6"
               height="23"
               length="25"
-              pageLink="./products/john"
+              pageLink="./grily/john"
               eshopLink=""
               image="john-comparison.webp"
               leftRef={product1InfoLeftRef}
@@ -351,8 +348,8 @@ const HomePage = () => {
             >
               Představujeme vám Johna, malý, ale mimořádně šikovný gril, který
               se stane vaším nezbytným společníkem na cestách. Díky svému
-              jedinečnému designu – tvořenému šesti čtvercovými ocelovými pláty,
-              se John skládá a rozkládá s dětskou snadností.
+              jedinečnému designu &mdash; tvořenému šesti čtvercovými ocelovými
+              pláty, se John skládá a rozkládá s dětskou snadností.
             </HomeProduct>
           </div>
           <div ref={product2Ref}>
@@ -362,7 +359,7 @@ const HomePage = () => {
               weight="36"
               height="33,1"
               length="74,3"
-              pageLink="./products/peter"
+              pageLink="./grily/peter"
               eshopLink=""
               image="peter-comparison.webp"
               leftRef={product2InfoLeftRef}
@@ -383,7 +380,7 @@ const HomePage = () => {
               weight="244"
               height="90"
               length="74"
-              pageLink="./products/joseph"
+              pageLink="./grily/joseph"
               eshopLink=""
               image="joseph-comparison.webp"
               leftRef={product3InfoLeftRef}

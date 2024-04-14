@@ -23,7 +23,7 @@ const NavbarLink: React.FC<NavbarLinkProps> = ({ children, link }) => {
   return (
     <a
       href={link}
-      className="font-medium text-lg rotate-hover hover:text-lobster"
+      className="link font-medium text-lg rotate-hover hover:text-lobster"
     >
       <p>{children}</p>
     </a>

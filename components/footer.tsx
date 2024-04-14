@@ -16,9 +16,21 @@ const Footer: React.FC = () => {
           <div className="text-center">
             <h4 className="text-lg font-bold mb-3">Naše grily</h4>
             <ul>
-              <li>John</li>
-              <li>Peter</li>
-              <li>Joseph</li>
+              <li>
+                <a className="link" href="/grily/john">
+                  John
+                </a>
+              </li>
+              <li>
+                <a className="link" href="/grily/john">
+                  Peter
+                </a>
+              </li>
+              <li>
+                <a className="link" href="/grily/john">
+                  Joseph
+                </a>
+              </li>
             </ul>
           </div>
           <div className="text-center">

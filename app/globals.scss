@@ -2,9 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+a.link {
+  position: relative;
+  z-index: 2;
+}
+
+a.link::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -25%;
+
+  width: 0;
+  height: 15px;
+
+  background-color: #f45d2f40;
+
+  transition: all 0.5s ease-in-out;
+
+  z-index: 0;
+  mix-blend-mode: multiply;
+}
+
+a.link:hover::after {
+  width: 150%;
+}
+
 .contact-form-section {
   background-image: url("/img/products/placeholder1.jpg");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+}
+
+.hero {
+  background-image: url("/img/bg-01.png");
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
 }
