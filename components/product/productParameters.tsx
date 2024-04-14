@@ -12,8 +12,8 @@ const ProductParameter: React.FC<ProductParameterProps> = ({
   return (
     <div
       className={
-        "w-full flex flex-row flex-nowrap border-[#dedede] border-b h-10 items-center justify-center " +
-        (inverted ? "bg-white" : "bg-[#dedede]")
+        "w-full flex flex-row flex-nowrap border-[#1e1e1e] border-b h-10 items-center justify-center " +
+        (inverted ? "bg-black" : "bg-[#1e1e1e]")
       }
     >
       <div className="w-1/2 p-4">{name}</div>

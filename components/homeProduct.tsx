@@ -106,7 +106,7 @@ const HomeProduct: React.FC<HomeProductProps> = ({
             <h3 className="text-2xl font-bold leading-[1.25em] mb-6">
               Popisek
             </h3>
-            <p className="text-md text-[#2e2e2e] leading-relaxed mb-6">
+            <p className="text-md text-mutedtext-dark leading-relaxed mb-6">
               {children}
             </p>
           </div>

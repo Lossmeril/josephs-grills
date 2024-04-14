@@ -10,16 +10,16 @@ import React, { useState } from "react";
 const unbounded = Unbounded({ subsets: ["latin"] });
 
 const JohnProductPage: React.FC = () => {
-  const [currentImg, setCurrentImg] = useState(2);
+  const [currentImg, setCurrentImg] = useState("1");
 
   return (
-    <>
-      <main className="max-w-[1200px] overflow-x-hidden mx-auto">
-        <section className="min-h-screen bg-white overflow-x-hidden flex flex-row flex-nowrap pt-20">
+    <div className="w-full bg-black">
+      <main className="max-w-[1200px] overflow-x-hidden mx-auto  text-white">
+        <section className="min-h-screen  overflow-x-hidden flex flex-row flex-nowrap pt-20">
           <div className="w-1/2 p-20 pr-10">
             <div className="relative overflow-hidden w-full aspect-[3/4] bg-[#dedede] ml-auto mb-8">
               <Image
-                src={"/img/products/placeholder" + currentImg + ".jpg"}
+                src={"/img/products/john/john-" + currentImg + ".jpg"}
                 alt=""
                 fill
                 className="object-cover"
@@ -28,10 +28,10 @@ const JohnProductPage: React.FC = () => {
             <div className="flex flex-row flex-nowrap w-full h-28 gap-4 mb-8">
               <div
                 className="w-1/4 relative overflow-hidden bg-red"
-                onMouseOver={() => setCurrentImg(1)}
+                onMouseOver={() => setCurrentImg("1")}
               >
                 <Image
-                  src="/img/products/placeholder1.jpg"
+                  src="/img/products/john/john-1.jpg"
                   alt=""
                   fill
                   className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
@@ -43,7 +43,7 @@ const JohnProductPage: React.FC = () => {
                   alt=""
                   fill
                   className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
-                  onMouseOver={() => setCurrentImg(2)}
+                  onMouseOver={() => setCurrentImg("2")}
                 />
               </div>
               <div className="w-1/4 relative overflow-hidden bg-red">
@@ -52,16 +52,16 @@ const JohnProductPage: React.FC = () => {
                   alt=""
                   fill
                   className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
-                  onMouseOver={() => setCurrentImg(3)}
+                  onMouseOver={() => setCurrentImg("3")}
                 />
               </div>
               <div className="w-1/4 relative overflow-hidden bg-red">
                 <Image
-                  src="/img/products/placeholder4.jpg"
+                  src="/img/products/john/john-disassembled.jpg"
                   alt=""
                   fill
                   className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
-                  onMouseOver={() => setCurrentImg(4)}
+                  onMouseOver={() => setCurrentImg("disassembled")}
                 />
               </div>
             </div>
@@ -90,7 +90,7 @@ const JohnProductPage: React.FC = () => {
             </div>
           </div>
         </section>
-        <section className="border-t border-[#ededed] bg-white overflow-x-hidden flex flex-col flex-nowrap p-20">
+        <section className="border-t border-[#ededed]overflow-x-hidden flex flex-col flex-nowrap p-20">
           <h2 className="text-4xl font-bold leading-[1.25em] mb-8 -mt-4 ">
             Popisek
           </h2>
@@ -133,7 +133,7 @@ const JohnProductPage: React.FC = () => {
             bez nežádoucích látek.
           </p>
         </section>
-        <section className="border-t border-[#ededed] bg-white overflow-x-hidden flex flex-col flex-nowrap p-20">
+        <section className="border-t border-[#ededed] overflow-x-hidden flex flex-col flex-nowrap p-20">
           <h2 className="text-4xl font-bold leading-[1.25em] mb-8 -mt-4 ">
             Parametry
           </h2>
@@ -156,7 +156,7 @@ const JohnProductPage: React.FC = () => {
         </section>
       </main>
       <ContactFormSection />
-    </>
+    </div>
   );
 };
 

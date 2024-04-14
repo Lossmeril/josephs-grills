@@ -16,14 +16,29 @@ const AboutPage = () => {
           </p>
         </section>
         <section className="min-h-[800px] py-5 bg-white overflow-x-hidden flex flex-row flex-nowrap justify-center items-center gap-40 text-center border-t border-[#ededed]">
-          <div className="w-full flex flex-col">
+          <div className="w-full flex flex-col text-mutedtext-dark">
             <h2 className="text-4xl font-bold leading-[1.25em] mb-8 -mt-4">
               Náš příběh
             </h2>
-            <p className="text-xl mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-              ipsum suspendisse ultrices gravida.
+            <p className="text-md mb-6">
+              V srdci každého kusu kovu, který prošel rukama naší rodinné firmy
+              je ukryt příběh. Příběh o tradici, řemeslu a rodinné vášni, která
+              překračuje generace. Značka Joseph&apos;s Grills není výjimkou. Je
+              to odkaz na dědečka Josefa, zakladatele, a také Petra jehož vášeň
+              pro grilování byla vpletena do každého detailu našich grilů.
+            </p>
+            <p className="text-md mb-6">
+              Léta strávená obráběním kovu a snaha pochopit jeho tajemství vedla
+              Petra k nápadu &mdash; vytvořit gril, který by nejen splňoval
+              všechna očekávání v oblasti kvality a funkčnosti, ale také byl
+              jednoduchý na obsluhu a vydržel po dlouhé roky.
+            </p>
+            <p className="text-md mb-6">
+              S touto vizí Joseph&apos;s přináší na trh tři unikátní typy grilů
+              &mdash; každý pojmenovaný na počest jednoho z členů rodiny:
+              Joseph, Peter a John. Každý z nich reprezentuje různé aspekty
+              grilovacích předností a stylů, aby vyhověl každému nadšenci
+              venkovní přípravy jídla.
             </p>
           </div>
           <div className="w-full h-[500px] relative">

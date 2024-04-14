@@ -264,13 +264,26 @@ const HomePage = () => {
   return (
     <>
       <main className="max-w-screen overflow-x-hidden">
-        <section className="h-screen bg-white overflow-x-hidden">
-          <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-[750px] aspect-video z-30">
+        <section className="h-screen w-[1200px] mx-auto bg-white overflow-x-hidden relative flex flex-row flex-nowrap overflow-visible">
+          <div className="w-1/2 h-full flex flex-col justify-center overflow-visible">
+            <h1 className="text-4xl mb-6 font-bold">
+              Rodina grilů Joseph&apos;s
+            </h1>
+            <div className="relative w-[450px] aspect-video">
+              <Image
+                src="/img/logo-full-color.png"
+                alt="Fresh Lobster logo"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
+          <div className="w-1/2 h-full relative overflow-visible">
             <Image
-              src="/img/logo-full-color.png"
-              alt="Fresh Lobster logo"
+              src="/img/products/family.png"
+              alt="Rodina grilů Joseph's"
               fill
-              className="object-contain"
+              className="object-cover overflow-visible"
             />
           </div>
         </section>
