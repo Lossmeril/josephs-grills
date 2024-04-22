@@ -8,6 +8,10 @@ a.link {
   color: #dd2c2c;
 }
 
+nav a.link {
+  color: #000 !important;
+}
+
 a.link::after {
   content: "";
   position: absolute;
