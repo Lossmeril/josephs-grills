@@ -4,6 +4,10 @@ const ContactFormSection: React.FC = () => {
       <div className="w-1/2"></div>
       <div className="bg-white p-20 w-1/2 text-center">
         <h2 className="text-3xl mb-6 font-bold">Kontaktujte nás!</h2>
+        <iframe
+          className="w-full h-[500px]"
+          src="http://cms.josephsgrills.cz/kontaktni-formular/"
+        />
       </div>
     </section>
   );
