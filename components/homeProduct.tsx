@@ -22,6 +22,24 @@ const InfoBox: React.FC<InfoBoxProps> = ({ value, unit, property }) => {
   );
 };
 
+interface PropBoxProps {
+  name: string;
+  children: React.ReactNode;
+}
+
+const PropBox: React.FC<PropBoxProps> = ({ name, children }) => {
+  return (
+    <div className="flex flex-col flex-nowrap w-1/3 justify-between items-center">
+      <div className="border border-[#dedede] rounded-full w-full aspect-square flex justify-center items-center mb-5 text-orange">
+        {children}
+      </div>
+      <h3 className="text-center font-bold leading-none text-mutedtext-dark">
+        {name}
+      </h3>
+    </div>
+  );
+};
+
 interface HomeProductProps {
   name: string;
   tagline: string;
@@ -33,6 +51,15 @@ interface HomeProductProps {
   eshopLink: string;
 
   image: string;
+
+  prop1: string;
+  prop1Icon: React.ReactNode;
+
+  prop2: string;
+  prop2Icon: React.ReactNode;
+
+  prop3: string;
+  prop3Icon: React.ReactNode;
 
   leftRef: MutableRefObject<null>;
   rightRef: MutableRefObject<null>;
@@ -49,6 +76,12 @@ const HomeProduct: React.FC<HomeProductProps> = ({
   pageLink,
   eshopLink,
   image,
+  prop1,
+  prop1Icon,
+  prop2,
+  prop2Icon,
+  prop3,
+  prop3Icon,
   leftRef,
   rightRef,
   children,
@@ -109,6 +142,11 @@ const HomeProduct: React.FC<HomeProductProps> = ({
             <p className="text-md text-mutedtext-dark leading-relaxed mb-6">
               {children}
             </p>
+            <div className="flex flex-row flex-nowrap justify-center gap-6 mt-10">
+              <PropBox name={prop1}>{prop1Icon}</PropBox>
+              <PropBox name={prop2}>{prop2Icon}</PropBox>
+              <PropBox name={prop3}>{prop3Icon}</PropBox>
+            </div>
           </div>
         </div>
       </div>

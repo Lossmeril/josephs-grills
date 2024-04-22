@@ -11,6 +11,8 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ContactFormSection from "@/components/contactFormSection";
 import { Unbounded } from "next/font/google";
+import { HiOutlineArchiveBox, HiOutlineWrench } from "react-icons/hi2";
+import { PiForkKnife } from "react-icons/pi";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
@@ -343,6 +345,12 @@ const HomePage = () => {
               pageLink="./grily/john"
               eshopLink=""
               image="john-comparison.webp"
+              prop1="Kompaktní a přenosný"
+              prop1Icon={<HiOutlineArchiveBox size={25} />}
+              prop2="Snadná montáž i demontáž"
+              prop2Icon={<HiOutlineWrench size={25} />}
+              prop3="Zdravé stravování na cestách"
+              prop3Icon={<PiForkKnife size={25} />}
               leftRef={product1InfoLeftRef}
               rightRef={product1InfoRightRef}
             >
@@ -362,6 +370,12 @@ const HomePage = () => {
               pageLink="./grily/peter"
               eshopLink=""
               image="peter-comparison.webp"
+              prop1="Kompaktní a přenosný"
+              prop1Icon={<HiOutlineArchiveBox size={25} />}
+              prop2="Snadná montáž i demontáž"
+              prop2Icon={<HiOutlineWrench size={25} />}
+              prop3="Zdravé stravování na cestách"
+              prop3Icon={<PiForkKnife size={25} />}
               leftRef={product2InfoLeftRef}
               rightRef={product2InfoRightRef}
             >
@@ -383,6 +397,12 @@ const HomePage = () => {
               pageLink="./grily/joseph"
               eshopLink=""
               image="joseph-comparison.webp"
+              prop1="Kompaktní a přenosný"
+              prop1Icon={<HiOutlineArchiveBox size={25} />}
+              prop2="Snadná montáž i demontáž"
+              prop2Icon={<HiOutlineWrench size={25} />}
+              prop3="Zdravé stravování na cestách"
+              prop3Icon={<PiForkKnife size={25} />}
               leftRef={product3InfoLeftRef}
               rightRef={product3InfoRightRef}
             >
