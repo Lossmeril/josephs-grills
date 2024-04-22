@@ -266,33 +266,29 @@ const HomePage = () => {
   return (
     <>
       <main className="max-w-screen overflow-x-hidden">
-        <section className="h-screen w-[1500px] mx-auto bg-white relative flex flex-row flex-nowrap hero">
-          <div className="w-2/5 h-full flex flex-col justify-end clip relative">
+        <section className="h-screen w-full xl:w-[1500px] mx-auto bg-white relative flex flex-col md:flex-row flex-nowrap hero">
+          <div className="w-full xl:w-2/5 h-full flex flex-col justify-end clip relative">
             <h1
               className={
-                "text-[7em] font-bold mb-[25vh] mr-10 leading-[1em] z-10 " +
+                "text-[4em] md:text-[6em] xl:text-[7em] font-bold mt-[5vh] xl:mt-0 mb-[15vh] xl:mb-[25vh] mr-0 xl:mr-10 leading-[1em] z-10 text-center md:text-left " +
                 unbounded.className
               }
             >
               Rodina grilů Joseph&apos;s
             </h1>
           </div>
-          <div className="w-3/5 h-full relative">
+          <div className="w-full xl:w-3/5 h-full relative">
             <Image
               src="/img/products/family.png"
               alt="Rodina grilů Joseph's"
               fill
-              className="object-cover"
+              className="object-cover h-[50vh]"
             />
           </div>
         </section>
 
-        <section className="h-[65vh] bg-white section-2 relative flex flex-col justify-center items-center overflow-hidden text-white">
-          <div
-            id="square"
-            className="w-40 h-40 absolute top-[20%] left-[50%] translate-x-[-50%] scale-100 rotate-45 z-0"
-          ></div>
-          <div className="text-center z-30 w-[40vw] text-white">
+        <section className="h-[85vh] md:h-[65vh] bg-white section-2 relative flex flex-col justify-center items-center overflow-hidden text-white">
+          <div className="text-center z-30 w-[90vw] md:w-[60vw] xl:w-[40vw] text-white">
             <div className="relative w-10 h-10 mx-auto mb-6">
               <Image
                 src="/img/favicon.png"
@@ -301,21 +297,24 @@ const HomePage = () => {
                 className="object-contain"
               />
             </div>
-            <h2 className="text-3xl mb-6">Joseph&apos;s</h2>
+            <h2 className="text-xl md:text-2xl xl:text-3xl mb-6">
+              Joseph&apos;s
+            </h2>
             <p
               className={
-                "text-6xl font-bold leading-[1.25em] mb-6 " +
+                "text-4xl md:text-5xl xl:text-6xl font-bold leading-[1.25em] mb-6 " +
                 unbounded.className
               }
             >
               Grily. Jednoduše.
             </p>
-            <p className="text-2xl">
+            <p className="text-lg md:text-xl xl:text-2xl">
               Joseph&apos;s &mdash; grily, které staví na tradici, kvalitě a
               jednoduchosti. Objevte řadu našich grilů a připojte se k rodině
               spokojených nadšenců do grilování.
             </p>
           </div>
+
           <video
             autoPlay
             loop
@@ -333,7 +332,11 @@ const HomePage = () => {
             ref={manRef}
             className="man absolute top-[16.667%] left-1/2 -translate-y-1/2 z-10 h-[550px] w-full"
           >
-            <img src="/img/average-man.png" className="object-contain" alt="" />
+            <img
+              src="/img/average-man.png"
+              className="hidden xl:block object-contain"
+              alt=""
+            />
           </div>
           <div ref={product1Ref}>
             <HomeProduct

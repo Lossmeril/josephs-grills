@@ -46,3 +46,10 @@ a.link:hover::after {
   background-position: top center;
   background-repeat: no-repeat;
 }
+
+@media screen and (max-width: 768px) {
+  .hero {
+    background-size: cover;
+    background-position: center -25vh;
+  }
+}
