@@ -47,6 +47,8 @@ interface HomeProductProps {
   height: string;
   length: string;
 
+  price: string;
+
   pageLink: string;
   eshopLink: string;
 
@@ -73,6 +75,7 @@ const HomeProduct: React.FC<HomeProductProps> = ({
   weight,
   height,
   length,
+  price,
   pageLink,
   eshopLink,
   image,
@@ -98,18 +101,18 @@ const HomeProduct: React.FC<HomeProductProps> = ({
             <p className="text-2xl mb-6">{tagline}</p>
             <h2
               className={
-                "text-6xl font-bold leading-[1.25em] mb-12 -mt-6 uppercase " +
+                "text-6xl font-bold leading-[1.25em] mb-4 -mt-6 uppercase " +
                 unbounded.className
               }
             >
               {name}
             </h2>
+            <p className="text-red text-2xl font-bold mb-12">{price}</p>
             <div className="flex flex-row flex-nowrap gap-5">
               <InfoBox value={weight} unit="kg" property="hmotnost" />
               <InfoBox value={height} unit="cm" property="výška" />
               <InfoBox value={length} unit="cm" property="šířka/délka" />
             </div>
-
             <div className="flex flex-row flex-nowrap gap-5 mt-10">
               <Button link={pageLink} inverse={false}>
                 Více informací &raquo;
