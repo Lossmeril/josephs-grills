@@ -17,7 +17,7 @@ const JohnProductPage: React.FC = () => {
       <main className="max-w-[1200px] overflow-x-hidden mx-auto  text-white">
         <section className="min-h-screen  overflow-x-hidden flex flex-row flex-nowrap pt-20">
           <div className="w-1/2 p-20 pr-10">
-            <div className="relative overflow-hidden w-full aspect-[3/4] bg-[#dedede] ml-auto mb-8">
+            <div className="relative overflow-hidden w-full aspect-[3/4] bg-mutedtext-light ml-auto mb-8">
               <Image
                 src={"/img/products/john/john-" + currentImg + ".jpg"}
                 alt=""
@@ -90,7 +90,7 @@ const JohnProductPage: React.FC = () => {
             </div>
           </div>
         </section>
-        <section className="border-t border-[#ededed]overflow-x-hidden flex flex-col flex-nowrap p-20">
+        <section className="border-t border-mutedtext-lightoverflow-x-hidden flex flex-col flex-nowrap p-20">
           <h2 className="text-4xl font-bold leading-[1.25em] mb-8 -mt-4 ">
             Popisek
           </h2>
@@ -133,7 +133,7 @@ const JohnProductPage: React.FC = () => {
             bez nežádoucích látek.
           </p>
         </section>
-        <section className="border-t border-[#ededed] overflow-x-hidden flex flex-col flex-nowrap p-20">
+        <section className="border-t border-mutedtext-light overflow-x-hidden flex flex-col flex-nowrap p-20">
           <h2 className="text-4xl font-bold leading-[1.25em] mb-8 -mt-4 ">
             Parametry
           </h2>

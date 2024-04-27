@@ -14,7 +14,7 @@ interface InfoBoxProps {
 
 const InfoBox: React.FC<InfoBoxProps> = ({ value, unit, property }) => {
   return (
-    <div className="flex flex-col flex-nowrap justify-center items-center border border-[#dedede] border-solid p-5 w-24 aspect-square">
+    <div className="flex flex-col flex-nowrap justify-center items-center border border-mutedtext-light border-solid p-5 w-24 aspect-square">
       <p className="text-3xl font-bold -mb-2">{value}</p>
       <p className="text-lg font-bold mb-1">{unit}</p>
       <p className="text-xs uppercase">{property}</p>
@@ -30,7 +30,7 @@ interface PropBoxProps {
 const PropBox: React.FC<PropBoxProps> = ({ name, children }) => {
   return (
     <div className="flex flex-col flex-nowrap w-1/3 justify-start items-center">
-      <div className="border border-[#dedede] rounded-full w-full aspect-square flex justify-center items-center mb-5 text-orange">
+      <div className="border border-mutedtext-light rounded-full w-full aspect-square flex justify-center items-center mb-5 text-orange">
         {children}
       </div>
       <h3 className="text-center font-bold leading-none text-mutedtext-dark">
@@ -94,7 +94,7 @@ const HomeProduct: React.FC<HomeProductProps> = ({
   return (
     <>
       {/* MOBILE */}
-      <div className="flex xl:hidden min-h-screen bg-white border-t border-[#ededed] relative flex-col justify-center items-center text-center ">
+      <div className="flex xl:hidden min-h-screen bg-white border-t border-mutedtext-light relative flex-col justify-center items-center text-center ">
         {/* PRVNÍ SEKCE */}
         <div
           className="flex flex-col flex-nowrap w-full h-full items-center text-center px-10 py-20 "
@@ -150,7 +150,7 @@ const HomeProduct: React.FC<HomeProductProps> = ({
       </div>
 
       {/* XL DESKTOP */}
-      <div className="hidden xl:flex min-h-screen bg-white border-t border-[#ededed] section-3 relative flex-col justify-center items-center ">
+      <div className="hidden xl:flex min-h-screen bg-white border-t border-mutedtext-light section-3 relative flex-col justify-center items-center ">
         <div className="flex flex-col flex-nowrap justify-start">
           <div className="flex flex-row flex-nowrap items-center w-[1340px] h-[70vh]">
             {/* PRVNÍ SLOUPEC */}

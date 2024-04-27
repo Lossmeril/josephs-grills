@@ -349,7 +349,7 @@ const HomePage = () => {
           <div className="h-full w-full bg-black absolute top-0 left-0 z-20 opacity-50"></div>
         </section>
 
-        <section className="relative w-full" ref={productSecRef}>
+        <section className="relative w-full" ref={productSecRef} id="grily">
           <div
             ref={manRef}
             className="man absolute top-[16.667%] left-1/2 -translate-y-1/2 z-10 h-[550px] w-full"

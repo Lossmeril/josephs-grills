@@ -18,7 +18,8 @@ const config: Config = {
       black: "#000000",
       mutedtext: {
         dark: "#2e2e2e",
-      }
+        light: "#dedede",
+      },
     },
   },
   plugins: [],

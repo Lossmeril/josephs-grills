@@ -3,7 +3,7 @@ import Image from "next/image";
 const Footer: React.FC = () => {
   return (
     <footer>
-      <div className="w-full h-auto md:h-60 pb-5 pt-10 md:py-0 bg-white shadow-sm z-50 border-t border-[#ededed]">
+      <div className="w-full h-auto md:h-60 pb-5 pt-10 md:py-0 bg-white shadow-sm z-50 border-t border-mutedtext-light">
         <div className="grid grid-cols-[1fr] lg:grid-cols-[1fr_1fr_1fr] h-full mx-[5vw] lg:mx-[10vw] gap-x-5 items-center">
           <div className="text-center mb-8">
             <h4 className="text-lg font-bold mb-3">Další stránky</h4>
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="w-full h-20 bg-white shadow-sm z-50 border-t border-[#ededed]">
+      <div className="w-full h-20 bg-white shadow-sm z-50 border-t border-mutedtext-light">
         <div className="h-20 flex flex-nowrap justify-center items-center mx-[5vw] lg:mx-[10vw]">
           Vytvořilo AURORA studio, {new Date().getFullYear()}
         </div>
