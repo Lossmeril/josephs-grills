@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
       <div className="w-full h-auto md:h-60 pb-5 pt-10 md:py-0 bg-white shadow-sm z-50 border-t border-mutedtext-light">
         <div className="grid grid-cols-[1fr] lg:grid-cols-[1fr_1fr_1fr] h-full mx-[5vw] lg:mx-[10vw] gap-x-5 items-center">
           <div className="text-center mb-8">
-            <h4 className="text-lg font-bold mb-3">Další stránky</h4>
+            <h3 className="text-lg font-bold mb-3">Další stránky</h3>
             <ul>
               <li>O nás</li>
               <li>E-shop</li>
@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           <div className="text-center mb-8">
-            <h4 className="text-lg font-bold mb-3">Naše grily</h4>
+            <h3 className="text-lg font-bold mb-3">Naše grily</h3>
             <ul>
               <li>
                 <a className="link" href="/grily/john">

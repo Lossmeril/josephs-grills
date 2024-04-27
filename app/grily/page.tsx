@@ -18,7 +18,7 @@ const ProductCard: React.FC<ProductProps> = ({ name, img, link, children }) => {
         <div className="h-28 lg:h-40 aspect-square relative mb-8">
           <Image
             src="/img/favicon.png"
-            alt=""
+            alt={name}
             fill
             className="object-contain"
           />
