@@ -11,9 +11,18 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ContactFormSection from "@/components/contactFormSection";
 import { Unbounded } from "next/font/google";
-import { HiOutlineArchiveBox, HiOutlineWrench } from "react-icons/hi2";
-import { PiForkKnife } from "react-icons/pi";
 import Button from "@/components/button";
+
+import { HiOutlineArchiveBox, HiOutlineWrench } from "react-icons/hi2";
+import {
+  PiCheckSquareOffset,
+  PiForkKnife,
+  PiGear,
+  PiSparkle,
+} from "react-icons/pi";
+import { RxRulerSquare } from "react-icons/rx";
+import { SlFire } from "react-icons/sl";
+import { AiOutlineSafetyCertificate } from "react-icons/ai";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
@@ -358,6 +367,7 @@ const HomePage = () => {
               weight="6"
               height="23"
               length="25"
+              descHeading="O Johnovi"
               price="1 999,-"
               pageLink="./grily/john"
               eshopLink=""
@@ -384,16 +394,17 @@ const HomePage = () => {
               weight="36"
               height="33,1"
               length="74,3"
+              descHeading="O Peterovi"
               price="8 200,-"
               pageLink="./grily/peter"
               eshopLink=""
               image="peter-comparison.webp"
-              prop1="Kompaktní a přenosný"
-              prop1Icon={<HiOutlineArchiveBox size={25} />}
-              prop2="Snadná montáž i demontáž"
-              prop2Icon={<HiOutlineWrench size={25} />}
-              prop3="Zdravé stravování na cestách"
-              prop3Icon={<PiForkKnife size={25} />}
+              prop1="Unikátní design"
+              prop1Icon={<RxRulerSquare size={25} />}
+              prop2="Estetický a praktický"
+              prop2Icon={<PiSparkle size={25} />}
+              prop3="Snadné přikládání"
+              prop3Icon={<SlFire size={25} />}
               leftRef={product2InfoLeftRef}
               rightRef={product2InfoRightRef}
             >
@@ -412,20 +423,26 @@ const HomePage = () => {
               weight="244"
               height="90"
               length="74"
+              descHeading="O Josephovi"
               price="48 400,-"
               pageLink="./grily/joseph"
               eshopLink=""
               image="joseph-comparison.webp"
-              prop1="Kompaktní a přenosný"
-              prop1Icon={<HiOutlineArchiveBox size={25} />}
-              prop2="Snadná montáž i demontáž"
-              prop2Icon={<HiOutlineWrench size={25} />}
-              prop3="Zdravé stravování na cestách"
-              prop3Icon={<PiForkKnife size={25} />}
+              prop1="Kvalita a výkon"
+              prop1Icon={<AiOutlineSafetyCertificate size={25} />}
+              prop2="Robustní konstrukce"
+              prop2Icon={<PiCheckSquareOffset size={25} />}
+              prop3="Možnost rozšíření"
+              prop3Icon={<PiGear size={25} />}
               leftRef={product3InfoLeftRef}
               rightRef={product3InfoRightRef}
             >
-              Hello
+              Joseph je výsledkem vrcholové řemeslné zručnosti a navržen je pro
+              ty, kteří od svého grilu očekávají nekompromisní kvalitu a výkon.
+              Jeho geometrický design nejen osloví oko, ale také slibuje
+              jedinečný zážitek z grilování. Díky certifikované potravinářské
+              nerezové grilovací desce a možnosti přidání dalšího roštu nabízí
+              Joseph nevídanou flexibilitu a odolnost.
             </HomeProduct>
           </div>
         </section>

@@ -29,7 +29,7 @@ interface PropBoxProps {
 
 const PropBox: React.FC<PropBoxProps> = ({ name, children }) => {
   return (
-    <div className="flex flex-col flex-nowrap w-1/3 justify-between items-center">
+    <div className="flex flex-col flex-nowrap w-1/3 justify-start items-center">
       <div className="border border-[#dedede] rounded-full w-full aspect-square flex justify-center items-center mb-5 text-orange">
         {children}
       </div>
@@ -47,6 +47,7 @@ interface HomeProductProps {
   height: string;
   length: string;
 
+  descHeading: string;
   price: string;
 
   pageLink: string;
@@ -75,6 +76,7 @@ const HomeProduct: React.FC<HomeProductProps> = ({
   weight,
   height,
   length,
+  descHeading,
   price,
   pageLink,
   eshopLink,
@@ -119,6 +121,7 @@ const HomeProduct: React.FC<HomeProductProps> = ({
             />
           </div>
 
+          <h3 className="text-lg font-bold mb-4">{descHeading}</h3>
           <p className="text-md text-mutedtext-dark leading-relaxed">
             {children}
           </p>
@@ -130,11 +133,11 @@ const HomeProduct: React.FC<HomeProductProps> = ({
           </div>
 
           <div className="flex flex-row flex-nowrap gap-5 mt-10">
-            <Button link={pageLink} inverse={false}>
-              Více informací &raquo;
-            </Button>
-            <Button link={eshopLink} inverse={true}>
+            <Button link={eshopLink} inverse={false}>
               Do e-shopu &raquo;
+            </Button>
+            <Button link={pageLink} inverse={true}>
+              Více informací &raquo;
             </Button>
           </div>
 
@@ -171,11 +174,11 @@ const HomeProduct: React.FC<HomeProductProps> = ({
                 <InfoBox value={length} unit="cm" property="šířka/délka" />
               </div>
               <div className="flex flex-row flex-nowrap gap-5 mt-10">
-                <Button link={pageLink} inverse={false}>
-                  Více informací &raquo;
-                </Button>
-                <Button link={eshopLink} inverse={true}>
+                <Button link={eshopLink} inverse={false}>
                   Do e-shopu &raquo;
+                </Button>
+                <Button link={pageLink} inverse={true}>
+                  Více informací &raquo;
                 </Button>
               </div>
             </div>
@@ -196,6 +199,7 @@ const HomeProduct: React.FC<HomeProductProps> = ({
               className="flex flex-col flex-nowrap w-1/3 pl-40 opacity-0"
               ref={rightRef}
             >
+              <h3 className="text-lg font-bold mb-4">{descHeading}</h3>
               <p className="text-md text-mutedtext-dark leading-relaxed mb-6">
                 {children}
               </p>
