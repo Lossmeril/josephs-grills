@@ -13,6 +13,7 @@ import ContactFormSection from "@/components/contactFormSection";
 import { Unbounded } from "next/font/google";
 import { HiOutlineArchiveBox, HiOutlineWrench } from "react-icons/hi2";
 import { PiForkKnife } from "react-icons/pi";
+import Button from "@/components/button";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
@@ -267,15 +268,27 @@ const HomePage = () => {
     <>
       <main className="max-w-screen overflow-x-hidden">
         <section className="h-screen w-full xl:w-[1500px] mx-auto bg-white relative flex flex-col md:flex-row flex-nowrap hero">
-          <div className="w-full xl:w-2/5 h-full flex flex-col justify-end clip relative">
+          <div className="w-full xl:w-2/5 h-full flex flex-col justify-end clip relative pb-[15vh] xl:pb-[25vh]">
             <h1
               className={
-                "text-[4em] md:text-[6em] xl:text-[7em] font-bold mt-[5vh] xl:mt-0 mb-[15vh] xl:mb-[25vh] mr-0 xl:mr-10 leading-[1em] z-10 text-center md:text-left " +
+                "text-[4em] md:text-[6em] xl:text-[7em] font-bold mb-16 mt-[5vh] xl:mt-0 mr-0 xl:mr-10 leading-[1em] z-10 text-center md:text-left " +
                 unbounded.className
               }
             >
               Rodina grilů Joseph&apos;s
             </h1>
+            <div className="flex flex-row flex-nowrap gap-10 w-full">
+              <div className="w-1/2">
+                <Button link={"#grily"} inverse={false}>
+                  Naše grily &raquo;
+                </Button>
+              </div>
+              <div className="w-1/2">
+                <Button link={"#grily"} inverse={true}>
+                  Do e-shopu &raquo;
+                </Button>
+              </div>
+            </div>
           </div>
           <div className="w-full xl:w-3/5 h-full relative">
             <Image
