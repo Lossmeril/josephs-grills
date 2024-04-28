@@ -1,10 +1,14 @@
+import { Inter } from "next/font/google";
 import Image from "next/image";
+import { MdEmail, MdPhone } from "react-icons/md";
+
+const inter = Inter({ subsets: ["latin"] });
 
 const Footer: React.FC = () => {
   return (
     <footer>
       <div className="w-full h-auto md:h-60 pb-5 pt-10 md:py-0 bg-white shadow-sm z-50 border-t border-mutedtext-light">
-        <div className="grid grid-cols-[1fr] lg:grid-cols-[1fr_1fr_1fr] h-full mx-[5vw] lg:mx-[10vw] gap-x-5 items-center">
+        <div className="grid grid-cols-[1fr] lg:grid-cols-[1fr_1fr_1fr_1fr] h-full mx-[5vw] lg:mx-[10vw] gap-x-5 items-start mt-12">
           <div className="text-center mb-8">
             <h3 className="text-lg font-bold mb-3">Další stránky</h3>
             <ul>
@@ -32,6 +36,25 @@ const Footer: React.FC = () => {
                 </a>
               </li>
             </ul>
+          </div>
+          <div className="text-center mb-8">
+            <h3 className="text-lg font-bold mb-3">Kontakt</h3>
+            <div className="flex flex-row flex-nowrap justify-center gap-5">
+              <p className="text-left">
+                <a href="tel:'+420606727976'" className="link">
+                  +420 606 727 976
+                </a>
+              </p>
+            </div>
+
+            <div className="flex flex-row flex-nowrap justify-center gap-5">
+              <p className="text-left">
+                <a href="mailto:'info@josephsgrills.cz'" className="link">
+                  info<span className={inter.className}>@</span>
+                  josephsgrills.cz
+                </a>
+              </p>
+            </div>
           </div>
           <div className="text-center">
             <div className="relative w-40 h-10 mx-auto mb-6">
