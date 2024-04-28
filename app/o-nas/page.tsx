@@ -52,39 +52,39 @@ const AboutPage = () => {
       }
     );
 
-    gsap.fromTo(
-      text1,
-      { opacity: 0, y: "50px" },
-      {
-        ease: "sine.inOut",
-        opacity: 1,
-        y: 0,
-        duration: 1.5,
-        scrollTrigger: {
-          trigger: section1,
-          start: "top center",
-          end: "25% center",
-          scrub: true,
-        },
-      }
-    );
+    // gsap.fromTo(
+    //   text1,
+    //   { opacity: 0, y: "50px" },
+    //   {
+    //     ease: "sine.inOut",
+    //     opacity: 1,
+    //     y: 0,
+    //     duration: 1.5,
+    //     scrollTrigger: {
+    //       trigger: section1,
+    //       start: "top center",
+    //       end: "25% center",
+    //       scrub: true,
+    //     },
+    //   }
+    // );
 
-    gsap.fromTo(
-      img1,
-      { opacity: 0, y: "-50px" },
-      {
-        ease: "sine.inOut",
-        opacity: 1,
-        y: 0,
-        duration: 1.5,
-        scrollTrigger: {
-          trigger: section1,
-          start: "top center",
-          end: "25% center",
-          scrub: true,
-        },
-      }
-    );
+    // gsap.fromTo(
+    //   img1,
+    //   { opacity: 0, y: "-50px" },
+    //   {
+    //     ease: "sine.inOut",
+    //     opacity: 1,
+    //     y: 0,
+    //     duration: 1.5,
+    //     scrollTrigger: {
+    //       trigger: section1,
+    //       start: "top center",
+    //       end: "25% center",
+    //       scrub: true,
+    //     },
+    //   }
+    // );
 
     gsap.fromTo(
       underline2,

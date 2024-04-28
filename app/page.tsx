@@ -356,7 +356,7 @@ const HomePage = () => {
           >
             <img
               src="/img/average-man.png"
-              className="hidden xl:block object-contain"
+              className="hidden xl:block object-contain opacity-50"
               alt=""
             />
           </div>
