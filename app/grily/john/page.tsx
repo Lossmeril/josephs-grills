@@ -2,10 +2,13 @@
 
 import Button from "@/components/button";
 import ContactFormSection from "@/components/contactFormSection";
+import { PropBox } from "@/components/homeProduct";
 import ProductParameter from "@/components/product/productParameters";
 import { Unbounded } from "next/font/google";
 import Image from "next/image";
 import React, { useState } from "react";
+import { HiOutlineArchiveBox, HiOutlineWrench } from "react-icons/hi2";
+import { PiForkKnife } from "react-icons/pi";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
@@ -77,16 +80,44 @@ const JohnProductPage: React.FC = () => {
               John
             </h1>
             <p className="text-red text-2xl font-bold mb-4">1 999,-</p>
+            <div className="flex flex-row flex-nowrap justify-center gap-8 my-10">
+              <PropBox name={"Kompaktní a přenosný"} inv>
+                <HiOutlineArchiveBox size={25} />
+              </PropBox>
+              <PropBox name={"Snadná montáž i demontáž"} inv>
+                <HiOutlineWrench size={25} />
+              </PropBox>
+              <PropBox name={"Zdravé stravování na cestách"} inv>
+                <PiForkKnife size={25} />
+              </PropBox>
+            </div>
             <p className="mb-6">
               Představujeme vám Johna, malý, ale mimořádně šikovný gril, který
               se stane vaším nezbytným společníkem na cestách. Díky svému
               jedinečnému designu &mdash; tvořenému šesti čtvercovými ocelovými
               pláty, se John skládá a rozkládá s dětskou snadností.
             </p>
-            <div className="w-40">
-              <Button link={""} inverse={false}>
-                Do e-shopu &raquo;
-              </Button>
+            <p className="mb-6">
+              Ve složené formě nabízí nevídanou kompaktnost, což jej činí
+              ideálním pro milovníky cestování, co si chtějí jídlo vychutnávat s
+              pohledem na přírodní krásy pod širým nebem. Je vyroben z
+              certifikované nerezové potravinářské oceli, díky čemuž slibuje
+              bezpečné grilování bez obav. Jeho koupí získáte nejen
+              spolehlivost, ale i styl. přesně to na cestách potřebujete &mdash;
+              Johna, který je vždy připraven podpořit vaše kulinářské
+              dobrodružství.
+            </p>
+            <div className="flex flex-row flex-nowrap gap-10">
+              <div className="w-40">
+                <Button link={""} inverse={false}>
+                  Do e-shopu &raquo;
+                </Button>
+              </div>
+              <div className="w-40">
+                <Button link={"/grily"} inverse={true}>
+                  Všechny grily &raquo;
+                </Button>
+              </div>
             </div>
           </div>
         </section>
@@ -100,15 +131,7 @@ const JohnProductPage: React.FC = () => {
             designu &mdash; tvořenému šesti čtvercovými ocelovými pláty, se John
             skládá a rozkládá s dětskou snadností.
           </p>
-          <p className="mb-6">
-            Ve složené formě nabízí nevídanou kompaktnost, což jej činí ideálním
-            pro milovníky cestování, co si chtějí jídlo vychutnávat s pohledem
-            na přírodní krásy pod širým nebem. Je vyroben z certifikované
-            nerezové potravinářské oceli, díky čemuž slibuje bezpečné grilování
-            bez obav. Jeho koupí získáte nejen spolehlivost, ale i styl. přesně
-            to na cestách potřebujete &mdash; Johna, který je vždy připraven
-            podpořit vaše kulinářské dobrodružství.
-          </p>
+
           <h3 className="text-xl font-bold leading-[1.25em] mb-4 ">
             Kompaktní a přenosný
           </h3>
@@ -142,7 +165,7 @@ const JohnProductPage: React.FC = () => {
             value="250 × 250 × 15 mm"
           />
           <ProductParameter
-            name="Rozměr (složený)"
+            name="Rozměr (sestavený)"
             value="250 × 250 × 230 mm"
             inverted
           />

@@ -24,16 +24,27 @@ const InfoBox: React.FC<InfoBoxProps> = ({ value, unit, property }) => {
 
 interface PropBoxProps {
   name: string;
+  inv?: boolean;
   children: React.ReactNode;
 }
 
-const PropBox: React.FC<PropBoxProps> = ({ name, children }) => {
+export const PropBox: React.FC<PropBoxProps> = ({ name, inv, children }) => {
   return (
     <div className="flex flex-col flex-nowrap w-1/3 justify-start items-center">
-      <div className="border border-mutedtext-light rounded-full w-full aspect-square flex justify-center items-center mb-5 text-orange">
+      <div
+        className={
+          "border  rounded-full w-full max-w-20 aspect-square flex justify-center items-center mb-5 text-orange " +
+          (!inv ? "border-mutedtext-light" : "border-mutedtext-dark")
+        }
+      >
         {children}
       </div>
-      <h3 className="text-center font-bold leading-none text-mutedtext-dark">
+      <h3
+        className={
+          "text-center font-bold leading-none " +
+          (!inv ? "text-mutedtext-dark" : "text-mutedtext-light")
+        }
+      >
         {name}
       </h3>
     </div>
