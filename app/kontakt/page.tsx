@@ -53,8 +53,8 @@ const ContactPage = () => {
             <div className="flex flex-row flex-nowrap justify-start gap-5">
               <MdPhone size={25} />
               <p className="text-lg text-left">
-                <a href="tel:'+420123456789'" className="link">
-                  +420 123 456 789
+                <a href="tel:'+420606727976'" className="link">
+                  +420 606 727 976
                 </a>
               </p>
             </div>
@@ -63,9 +63,9 @@ const ContactPage = () => {
               <MdEmail size={25} />
 
               <p className="text-lg text-left">
-                <a href="mailto:'ifo@josephs-grills.cz'" className="link">
+                <a href="mailto:'info@josephsgrills.cz'" className="link">
                   info<span className={inter.className}>@</span>
-                  josephs-grills.cz
+                  josephsgrills.cz
                 </a>
               </p>
             </div>
