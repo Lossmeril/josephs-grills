@@ -1,4 +1,5 @@
 import Button from "@/components/button";
+import ContactFormSection from "@/components/contactFormSection";
 import { Unbounded } from "next/font/google";
 import Image from "next/image";
 
@@ -100,6 +101,7 @@ const GrillsPage = () => {
           </div>
         </section>
       </main>
+      <ContactFormSection />
     </>
   );
 };
