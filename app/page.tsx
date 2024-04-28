@@ -310,7 +310,7 @@ const HomePage = () => {
         </section>
 
         <section className="h-[85vh] md:h-[65vh] bg-white section-2 relative flex flex-col justify-center items-center overflow-hidden text-white">
-          <div className="text-center z-30 w-[90vw] md:w-[60vw] xl:w-[40vw] text-white">
+          <div className="flex flex-col text-center items-center z-30 w-[90vw] md:w-[60vw] xl:w-[40vw] text-white">
             <div className="relative w-10 h-10 mx-auto mb-6">
               <Image
                 src="/img/favicon.png"
@@ -330,11 +330,16 @@ const HomePage = () => {
             >
               Grily. Jednoduše.
             </p>
-            <p className="text-lg md:text-xl xl:text-2xl">
+            <p className="text-lg md:text-xl xl:text-2xl mb-10">
               Joseph&apos;s &mdash; grily, které staví na tradici, kvalitě a
               jednoduchosti. Objevte řadu našich grilů a připojte se k rodině
               spokojených nadšenců do grilování.
             </p>
+            <div className="w-48">
+              <Button link={"/o-nas"} inverse={false}>
+                Náš příběh &raquo;
+              </Button>
+            </div>
           </div>
 
           <video
