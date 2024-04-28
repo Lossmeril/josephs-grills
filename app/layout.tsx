@@ -21,7 +21,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="cs">
+    <html
+      lang="cs"
+      className="scroll-smooth"
+      style={{ scrollBehavior: "smooth" }}
+    >
       <body className={cabin.className + " max-w-[100vw] overflow-x-hidden"}>
         <Header />
         {children}

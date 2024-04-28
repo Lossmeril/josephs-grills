@@ -150,9 +150,8 @@ const AboutPage = () => {
             Vítejte v rodině Joseph&apos;s!
           </h1>
           <p className="text-3xl font-bold mb-6 text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-            ipsum suspendisse ultrices gravida.
+            Grilování je naše vášeň! A jelikož věříme, že není zapotřebí
+            složitých
           </p>
         </section>
         <section

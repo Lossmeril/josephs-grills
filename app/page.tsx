@@ -301,7 +301,7 @@ const HomePage = () => {
           </div>
           <div className="w-full xl:w-3/5 h-full relative">
             <Image
-              src="/img/products/family.png"
+              src="/img/products/family.webp"
               alt="Rodina grilů Joseph's"
               fill
               className="object-cover h-[50vh]"

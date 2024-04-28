@@ -190,7 +190,7 @@ const HomeProduct: React.FC<HomeProductProps> = ({
                 alt=""
                 width={450}
                 height={450}
-                className="z-30 w-[450px] h-[450px]"
+                className="z-30 w-auto h-auto"
               />
             </div>
 

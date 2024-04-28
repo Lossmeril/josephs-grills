@@ -39,7 +39,7 @@ const JohnProductPage: React.FC = () => {
               </div>
               <div className="w-1/4 relative overflow-hidden bg-red">
                 <Image
-                  src="/img/products/placeholder2.jpg"
+                  src="/img/products/john/john-2.jpg"
                   alt=""
                   fill
                   className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
@@ -48,7 +48,7 @@ const JohnProductPage: React.FC = () => {
               </div>
               <div className="w-1/4 relative overflow-hidden bg-red">
                 <Image
-                  src="/img/products/placeholder3.jpg"
+                  src="/img/products/john/john-3.jpg"
                   alt=""
                   fill
                   className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
