@@ -80,7 +80,7 @@ const JohnProductPage: React.FC = () => {
               John
             </h1>
             <p className="text-red text-2xl font-bold mb-4">1 999,-</p>
-            <div className="flex flex-row flex-nowrap justify-center gap-8 my-10">
+            {/* <div className="flex flex-row flex-nowrap justify-center gap-8 my-10">
               <PropBox name={"Kompaktní a přenosný"} inv>
                 <HiOutlineArchiveBox size={25} />
               </PropBox>
@@ -90,7 +90,7 @@ const JohnProductPage: React.FC = () => {
               <PropBox name={"Zdravé stravování na cestách"} inv>
                 <PiForkKnife size={25} />
               </PropBox>
-            </div>
+            </div> */}
             <p className="mb-6">
               Představujeme vám Johna, malý, ale mimořádně šikovný gril, který
               se stane vaším nezbytným společníkem na cestách. Díky svému
@@ -121,42 +121,51 @@ const JohnProductPage: React.FC = () => {
             </div>
           </div>
         </section>
-        <section className="border-t border-mutedtext-lightoverflow-x-hidden flex flex-col flex-nowrap p-20">
-          <h2 className="text-4xl font-bold leading-[1.25em] mb-8 -mt-4 ">
-            Popisek
-          </h2>
-          <p className="mb-6">
-            Představujeme vám Johna, malý, ale mimořádně šikovný gril, který se
-            stane vaším nezbytným společníkem na cestách. Díky svému jedinečnému
-            designu &mdash; tvořenému šesti čtvercovými ocelovými pláty, se John
-            skládá a rozkládá s dětskou snadností.
-          </p>
-
-          <h3 className="text-xl font-bold leading-[1.25em] mb-4 ">
-            Kompaktní a přenosný
-          </h3>
-          <p className="mb-6">
-            Unikátní skládací design, s váhou pouhých 6 kg a malé rozměry v
-            složeném stavu z něj dělají dokonalého společníka na cesty.
-          </p>
-          <h3 className="text-xl font-bold leading-[1.25em] mb-4 ">
-            Snadná montáž i demontáž
-          </h3>
-          <p className="mb-6">
-            Díky složení z 6 čtvercových ocelových plátů je John snadno
-            sestavitelný a rozložitelný bez potřeby nářadí, což šetří čas a
-            usnadňuje jeho používání na jakémkoliv místě.
-          </p>
-          <h3 className="text-xl font-bold leading-[1.25em] mb-4 ">
-            Zdravé stravování na cestách
-          </h3>
-          <p className="mb-6">
-            John je vyroben z kvalitní nerezové oceli certifikované pro
-            potravinářské účely, což zajišťuje, že vaše jídlo bude vždy chutné a
-            bez nežádoucích látek.
-          </p>
-        </section>
-        <section className="border-t border-mutedtext-light overflow-x-hidden flex flex-col flex-nowrap p-20">
+        <section className="border-t border-mutedtext-light overflow-x-hidden flex flex-col flex-nowrap p-20 bg-white text-black mb-20">
+          {/* --------- UNIQUE SELLING POINTS --------- */}
+          <div className="w-full flex flex-row flex-nowrap mb-16">
+            {/* --------- USP 1  --------- */}
+            <div className="w-1/3 flex flex-col items-center p-8">
+              <PropBox name={""}>
+                <HiOutlineArchiveBox size={25} />
+              </PropBox>
+              <h2 className="text-center text-xl font-bold mb-8">
+                Kompaktní a přenosný
+              </h2>
+              <p className="text-mutedtext-dark text-center">
+                Unikátní skládací design, s váhou pouhých 6 kg a malé rozměry v
+                složeném stavu z něj dělají dokonalého společníka na cesty.
+              </p>
+            </div>
+            {/* --------- USP 2  --------- */}
+            <div className="w-1/3 flex flex-col items-center border-l border-mutedtext-light p-8">
+              <PropBox name={""}>
+                <HiOutlineWrench size={25} />
+              </PropBox>
+              <h2 className="text-center text-xl font-bold mb-8">
+                Snadná montáž i demontáž
+              </h2>
+              <p className="text-mutedtext-dark text-center">
+                Díky složení z 6 čtvercových ocelových plátů je John snadno
+                sestavitelný a rozložitelný bez potřeby nářadí, což šetří čas a
+                usnadňuje jeho používání na jakémkoliv místě.
+              </p>
+            </div>
+            {/* --------- USP 3  --------- */}
+            <div className="w-1/3 flex flex-col items-center border-l border-mutedtext-light p-8">
+              <PropBox name={""}>
+                <PiForkKnife size={25} />
+              </PropBox>
+              <h2 className="text-center text-xl font-bold mb-8">
+                Zdravé stravování na cestách
+              </h2>
+              <p className="text-mutedtext-dark text-center">
+                John je vyroben z kvalitní nerezové oceli certifikované pro
+                potravinářské účely, což zajišťuje, že vaše jídlo bude vždy
+                chutné a bez nežádoucích látek.
+              </p>
+            </div>
+          </div>
           <h2 className="text-4xl font-bold leading-[1.25em] mb-8 -mt-4 ">
             Parametry
           </h2>
