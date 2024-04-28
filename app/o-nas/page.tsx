@@ -140,7 +140,7 @@ const AboutPage = () => {
   return (
     <>
       <main className="max-w-[1200px] overflow-x-hidden mx-auto">
-        <section className="min-h-[800px] bg-white overflow-x-hidden flex flex-col flex-nowrap justify-center items-center text-center pt-20 hero">
+        <section className="min-h-[500px] bg-white overflow-x-hidden flex flex-col flex-nowrap justify-center items-center text-center pt-20 hero">
           <h1
             className={
               "text-6xl font-bold leading-[1.25em] mb-8 -mt-4 " +
@@ -149,14 +149,14 @@ const AboutPage = () => {
           >
             Vítejte v rodině Joseph&apos;s!
           </h1>
-          <p className="text-3xl font-bold mb-6 text-center">
-            Grilování je naše vášeň! A jelikož věříme, že není zapotřebí
-            složitých
+          <p className="text-xl mb-6">
+            Grilování je naše vášeň, protože u grilu nejlépe poznáte jaký člověk
+            doopravdy je. Poznejte jací jsme v naší rodině a přidejte se k nám!
           </p>
         </section>
         <section
           ref={section1Ref}
-          className="min-h-[800px] py-5 bg-white overflow-x-hidden flex flex-col lg:flex-row flex-nowrap justify-center items-center gap-40 text-center border-t border-mutedtext-light"
+          className="min-h-[800px] py-5 bg-white overflow-x-hidden flex flex-col lg:flex-row flex-nowrap justify-center items-center gap-40 text-center"
         >
           <div
             ref={text1Ref}
@@ -191,7 +191,7 @@ const AboutPage = () => {
               jednoduchý na obsluhu a vydržel po dlouhé roky.
             </p>
           </div>
-          <div ref={img1Ref} className="w-full h-[700px] relative">
+          <div ref={img1Ref} className="w-full h-[500px] relative">
             <Image
               src="/img/products/placeholder1.jpg"
               alt=""
@@ -204,7 +204,7 @@ const AboutPage = () => {
           ref={section2Ref}
           className="min-h-[800px] py-5 bg-white overflow-x-hidden flex flex-row flex-nowrap justify-center items-center gap-40 text-center border-t border-mutedtext-light"
         >
-          <div ref={img2Ref} className="w-full h-[700px] relative">
+          <div ref={img2Ref} className="w-full h-[500px] relative">
             <Image
               src="/img/products/placeholder1.jpg"
               alt=""
