@@ -274,7 +274,7 @@ const HomePage = () => {
   return (
     <>
       <main className="max-w-screen overflow-x-hidden">
-        <section className="h-screen w-[full] px-4 mx-auto bg-white relative flex flex-col md:flex-row flex-nowrap hero xl:w-[1500px] xl:px-0">
+        <section className="h-screen w-[full] px-4 mx-auto bg-white relative flex flex-col md:flex-row flex-nowrap hero home xl:w-[1500px] xl:px-0">
           <div className="w-full h-full flex flex-col justify-end clip relative pt-[10vh] pb-[5vh] xl:pt-0 xl:w-2/5 xl:pb-[25vh]">
             <h1
               className={

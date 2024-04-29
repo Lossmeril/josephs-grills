@@ -58,7 +58,7 @@ const GrillsPage = () => {
   return (
     <>
       <main className="max-w-[1200px] overflow-x-hidden mx-auto">
-        <section className="min-h-[800px] bg-white overflow-x-hidden flex flex-col flex-nowrap justify-center items-center text-center pt-40 hero">
+        <section className="min-h-[800px] bg-white overflow-x-hidden flex flex-col flex-nowrap justify-center items-center text-center pt-40 hero px-4 lg:px-0">
           <h1
             className={
               "text-6xl font-bold leading-[1.25em] mb-16 -mt-4 " +
@@ -67,7 +67,7 @@ const GrillsPage = () => {
           >
             Naše grily
           </h1>
-          <div className="flex flex-col md:flex-row flex-wrap xl:flex-nowrap gap-5 w-[80wv] xl:w-full mb-40 justify-center">
+          <div className="flex flex-col md:flex-row flex-wrap xl:flex-nowrap gap-5 w-[80wv] xl:w-full lg:mb-40 justify-center">
             <ProductCard
               name="John"
               image="john.webp"

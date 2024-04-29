@@ -18,8 +18,8 @@ const JohnProductPage: React.FC = () => {
   return (
     <div className="w-full bg-black">
       <main className="max-w-[1200px] overflow-x-hidden mx-auto  text-white">
-        <section className="min-h-screen  overflow-x-hidden flex flex-row flex-nowrap pt-20">
-          <div className="w-1/2 p-20 pr-10">
+        <section className="min-h-screen overflow-x-hidden flex flex-col-reverse lg:flex-row flex-nowrap pt-20">
+          <div className="hidden lg:block w-full lg:w-1/2 p-4 lg:p-20 lg:pr-10">
             <div className="relative overflow-hidden w-full aspect-[3/4] bg-mutedtext-light ml-auto mb-8">
               <Image
                 src={"/img/products/john/john-" + currentImg + ".jpg"}
@@ -69,17 +69,21 @@ const JohnProductPage: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="w-1/2 p-20 pl-10">
-            <p className="text-xl mb-6">Gril pro dobrodruhy</p>
+          <div className="w-full lg:w-1/2 pt-10 p-6 lg:p-20 lg:pl-10">
+            <p className="text-xl mb-6 text-center lg:text-left">
+              Gril pro dobrodruhy
+            </p>
             <h1
               className={
-                "text-6xl font-bold leading-[1.25em] mb-8 -mt-4 " +
+                "text-6xl font-bold leading-[1.25em] mb-8 -mt-4 text-center lg:text-left" +
                 unbounded.className
               }
             >
               John
             </h1>
-            <p className="text-red text-2xl font-bold mb-4">1 999,-</p>
+            <p className="text-red text-2xl font-bold mb-4 text-center lg:text-left">
+              1 999,-
+            </p>
             {/* <div className="flex flex-row flex-nowrap justify-center gap-8 my-10">
               <PropBox name={"Kompaktní a přenosný"} inv>
                 <HiOutlineArchiveBox size={25} />
@@ -91,13 +95,64 @@ const JohnProductPage: React.FC = () => {
                 <PiForkKnife size={25} />
               </PropBox>
             </div> */}
-            <p className="mb-6">
+            <div className="block lg:hidden w-full lg:w-1/2 p-4 lg:p-20 lg:pr-10">
+              <div className="relative overflow-hidden w-full aspect-[3/4] bg-mutedtext-light ml-auto mb-8">
+                <Image
+                  src={"/img/products/john/john-" + currentImg + ".jpg"}
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="flex flex-row flex-nowrap w-full h-28 gap-4 mb-8">
+                <div
+                  className="w-1/4 relative overflow-hidden bg-red"
+                  onMouseOver={() => setCurrentImg("1")}
+                >
+                  <Image
+                    src="/img/products/john/john-1.jpg"
+                    alt=""
+                    fill
+                    className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
+                  />
+                </div>
+                <div className="w-1/4 relative overflow-hidden bg-red">
+                  <Image
+                    src="/img/products/john/john-2.jpg"
+                    alt=""
+                    fill
+                    className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
+                    onMouseOver={() => setCurrentImg("2")}
+                  />
+                </div>
+                <div className="w-1/4 relative overflow-hidden bg-red">
+                  <Image
+                    src="/img/products/john/john-3.jpg"
+                    alt=""
+                    fill
+                    className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
+                    onMouseOver={() => setCurrentImg("3")}
+                  />
+                </div>
+                <div className="w-1/4 relative overflow-hidden bg-red">
+                  <Image
+                    src="/img/products/john/john-disassembled.jpg"
+                    alt=""
+                    fill
+                    className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
+                    onMouseOver={() => setCurrentImg("disassembled")}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <p className="mb-6 text-center lg:text-left">
               Představujeme vám Johna, malý, ale mimořádně šikovný gril, který
               se stane vaším nezbytným společníkem na cestách. Díky svému
               jedinečnému designu &mdash; tvořenému šesti čtvercovými ocelovými
               pláty, se John skládá a rozkládá s dětskou snadností.
             </p>
-            <p className="mb-6">
+            <p className="mb-6 text-center lg:text-left">
               Ve složené formě nabízí nevídanou kompaktnost, což jej činí
               ideálním pro milovníky cestování, co si chtějí jídlo vychutnávat s
               pohledem na přírodní krásy pod širým nebem. Je vyroben z
@@ -107,7 +162,7 @@ const JohnProductPage: React.FC = () => {
               Johna, který je vždy připraven podpořit vaše kulinářské
               dobrodružství.
             </p>
-            <div className="flex flex-row flex-nowrap gap-10">
+            <div className="mt-10 md:mt-0 flex flex-col items-center md:flex-row flex-nowrap gap-4 md:gap-10 mb-20 lg:mb-0">
               <div className="w-40">
                 <Button link={""} inverse={false}>
                   Do e-shopu &raquo;
@@ -121,11 +176,11 @@ const JohnProductPage: React.FC = () => {
             </div>
           </div>
         </section>
-        <section className="border-t border-mutedtext-light overflow-x-hidden flex flex-col flex-nowrap p-20 bg-white text-black mb-20">
+        <section className="border-t border-mutedtext-light overflow-x-hidden flex flex-col flex-nowrap p-6 lg:p-20 bg-white text-black mb-0">
           {/* --------- UNIQUE SELLING POINTS --------- */}
-          <div className="w-full flex flex-row flex-nowrap mb-16">
+          <div className="w-full flex flex-col lg:flex-row flex-nowrap mb-16">
             {/* --------- USP 1  --------- */}
-            <div className="w-1/3 flex flex-col items-center p-8">
+            <div className="w-full lg:w-1/3 flex flex-col items-center py-10 lg:p-8">
               <PropBox name={""}>
                 <HiOutlineArchiveBox size={25} />
               </PropBox>
@@ -138,7 +193,7 @@ const JohnProductPage: React.FC = () => {
               </p>
             </div>
             {/* --------- USP 2  --------- */}
-            <div className="w-1/3 flex flex-col items-center border-l border-mutedtext-light p-8">
+            <div className="w-full lg:w-1/3 flex flex-col items-center border-t lg:border-l lg:border-t-0 border-mutedtext-light py-10 lg:p-8">
               <PropBox name={""}>
                 <HiOutlineWrench size={25} />
               </PropBox>
@@ -152,7 +207,7 @@ const JohnProductPage: React.FC = () => {
               </p>
             </div>
             {/* --------- USP 3  --------- */}
-            <div className="w-1/3 flex flex-col items-center border-l border-mutedtext-light p-8">
+            <div className="w-full lg:w-1/3 flex flex-col items-center border-t lg:border-l lg:border-t-0 border-mutedtext-light py-10 lg:p-8">
               <PropBox name={""}>
                 <PiForkKnife size={25} />
               </PropBox>
