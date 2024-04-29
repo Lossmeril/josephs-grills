@@ -12,12 +12,14 @@ const ProductParameter: React.FC<ProductParameterProps> = ({
   return (
     <div
       className={
-        "w-full flex flex-row flex-nowrap border-mutedtext-light border-b h-10 items-center justify-center " +
+        "w-full flex flex-col md:flex-row flex-nowrap border-mutedtext-light border-b h-auto md:h-10 text-center md:text-left items-center justify-center " +
         (inverted ? "bg-white" : "bg-mutedtext-light")
       }
     >
-      <div className="w-1/2 p-4">{name}</div>
-      <div className="w-1/2 p-4">{value}</div>
+      <div className="w-1/2 px-4 pt-2 md:p-4 font-bold md:font-normal">
+        {name}
+      </div>
+      <div className="w-1/2 px-4 pb-2 md:p-4">{value}</div>
     </div>
   );
 };

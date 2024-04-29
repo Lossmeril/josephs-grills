@@ -176,7 +176,7 @@ const JohnProductPage: React.FC = () => {
             </div>
           </div>
         </section>
-        <section className="border-t border-mutedtext-light overflow-x-hidden flex flex-col flex-nowrap p-6 lg:p-20 bg-white text-black mb-0">
+        <section className="border-t border-mutedtext-light overflow-x-hidden flex flex-col flex-nowrap p-6 pb-16 lg:p-20 bg-white text-black mb-0">
           {/* --------- UNIQUE SELLING POINTS --------- */}
           <div className="w-full flex flex-col lg:flex-row flex-nowrap mb-16">
             {/* --------- USP 1  --------- */}
@@ -221,7 +221,7 @@ const JohnProductPage: React.FC = () => {
               </p>
             </div>
           </div>
-          <h2 className="text-4xl font-bold leading-[1.25em] mb-8 -mt-4 ">
+          <h2 className="text-4xl font-bold leading-[1.25em] text-center md:text-left mb-8 -mt-4 ">
             Parametry
           </h2>
           <ProductParameter
