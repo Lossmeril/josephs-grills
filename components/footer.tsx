@@ -8,8 +8,16 @@ const Footer: React.FC = () => {
   return (
     <footer>
       <div className="w-full py-10 md:py-0 bg-white shadow-sm z-50 border-t border-mutedtext-light">
-        <div className="grid grid-cols-[1fr] lg:grid-cols-[1fr_1fr_1fr] h-full mx-[5vw] lg:mx-[10vw] gap-x-5 items-start pt-12 pb-6">
+        <div className="grid grid-cols-[1fr] h-full mx-[5vw] gap-x-5 items-start pt-12 pb-6 lg:grid-cols-[1fr_1fr_1fr] lg:mx-[10vw] ">
           <div className="text-center mb-8">
+            <div className="block relative w-48 h-10 mx-auto mb-12 lg:hidden ">
+              <Image
+                src="/img/logo-full-black.png"
+                alt=""
+                fill
+                className="object-contain"
+              />
+            </div>
             <h3 className="text-lg font-bold mb-3">Naše grily</h3>
             <ul>
               <li>
@@ -28,7 +36,7 @@ const Footer: React.FC = () => {
                 </a>
               </li>
             </ul>
-            <div className="relative w-48 h-10 mx-auto mt-12 ">
+            <div className="hidden relative w-48 h-10 mx-auto mt-12 lg:block ">
               <Image
                 src="/img/logo-full-black.png"
                 alt=""

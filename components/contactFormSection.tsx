@@ -8,8 +8,8 @@ const ContactFormSection: React.FC = () => {
   return (
     <section className="contact-form-section section-2 min-h-[120vh] relative flex flex-row justify-start items-center xl:px-40">
       <div className="hidden xl:block w-2/5"></div>
-      <div className="bg-white xl:p-20 xl:pb-0 w-full xl:w-3/5 m-4 text-left">
-        <div className="py-10 px-[10px] flex flex-row flex-nowrap gap-16">
+      <div className="bg-white p-4 xl:p-20 xl:pb-0 w-full xl:w-3/5 m-4 text-left">
+        <div className="py-4 px-[10px] flex flex-col flex-nowrap gap-4 lg:py-10 lg:gap-16 lg:flex-row">
           <div className="flex flex-row flex-nowrap justify-start gap-5">
             <MdPhone size={28} />
             <p className="text-xl text-left">
@@ -39,7 +39,8 @@ const ContactFormSection: React.FC = () => {
           Napište nám!
         </h2>
         <iframe
-          className="w-full min-h-[80vh]"
+          title="Kontaktní formulář"
+          className="w-full min-h-[100vh] lg:min-h-[80vh] overflow-visible"
           src="https://cms.josephsgrills.cz/kontaktni-formular/"
         />
       </div>
