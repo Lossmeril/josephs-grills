@@ -26,6 +26,16 @@ export default function RootLayout({
       className="scroll-smooth"
       style={{ scrollBehavior: "smooth" }}
     >
+      <head>
+        <script
+          id="Cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="7f5529fc-082d-493d-aae3-c002a59490b1"
+          data-blockingmode="auto"
+          type="text/javascript"
+          defer
+        ></script>
+      </head>
       <body className={cabin.className + " max-w-[100vw] overflow-x-hidden"}>
         <Header />
         {children}
