@@ -153,7 +153,6 @@ const HomePage = () => {
           start: "-10% center",
           end: "25% center",
           scrub: true,
-          markers: true,
         },
       }
     );
@@ -219,7 +218,6 @@ const HomePage = () => {
           start: "-10% center",
           end: "25% center",
           scrub: true,
-          markers: true,
         },
       }
     );
