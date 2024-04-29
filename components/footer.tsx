@@ -8,27 +8,7 @@ const Footer: React.FC = () => {
   return (
     <footer>
       <div className="w-full py-10 md:py-0 bg-white shadow-sm z-50 border-t border-mutedtext-light">
-        <div className="grid grid-cols-[1fr] lg:grid-cols-[1fr_1fr_1fr_1fr] h-full mx-[5vw] lg:mx-[10vw] gap-x-5 items-start pt-12 pb-6">
-          <div className="text-center mb-8">
-            <h3 className="text-lg font-bold mb-3">Další stránky</h3>
-            <ul>
-              <li>
-                <a className="link" href="/o-nas">
-                  O nás
-                </a>
-              </li>
-              <li>
-                <a className="link" href="">
-                  E-shop
-                </a>
-              </li>
-              <li>
-                <a className="link" href="">
-                  Obchodní podmínky
-                </a>
-              </li>
-            </ul>
-          </div>
+        <div className="grid grid-cols-[1fr] lg:grid-cols-[1fr_1fr_1fr] h-full mx-[5vw] lg:mx-[10vw] gap-x-5 items-start pt-12 pb-6">
           <div className="text-center mb-8">
             <h3 className="text-lg font-bold mb-3">Naše grily</h3>
             <ul>
@@ -48,9 +28,35 @@ const Footer: React.FC = () => {
                 </a>
               </li>
             </ul>
+            <div className="relative w-48 h-10 mx-auto mt-12 ">
+              <Image
+                src="/img/logo-full-black.png"
+                alt=""
+                fill
+                className="object-contain"
+              />
+            </div>
           </div>
           <div className="text-center mb-8">
-            <h3 className="text-lg font-bold mb-3">Kontakt</h3>
+            <h3 className="text-lg font-bold mb-3">Další stránky</h3>
+            <ul>
+              <li>
+                <a className="link" href="/o-nas">
+                  O nás
+                </a>
+              </li>
+              <li>
+                <a className="link" href="">
+                  E-shop
+                </a>
+              </li>
+              <li>
+                <a className="link" href="">
+                  Obchodní podmínky
+                </a>
+              </li>
+            </ul>
+            <h3 className="text-lg font-bold mt-6 mb-3">Kontakt</h3>
             <ul>
               <li>
                 <a href="tel:'+420606727976'" className="link">
@@ -65,30 +71,23 @@ const Footer: React.FC = () => {
                   josephsgrills.cz
                 </a>
               </li>
+            </ul>
+          </div>
+          <div className="text-center">
+            <h3 className="text-lg font-bold mb-3">Joseph&apos;s grills</h3>
+            <ul className="mb-6">
+              <li>IČO: 04143779</li>
+              <li>DIČ: CZ04143779</li>
+            </ul>
+            <ul>
               <li>
-                Adresa 1<br />
-                123 45 Štíty
+                Na Pilníku 292,
+                <br />
+                789 91 Štíty
                 <br />
                 Česká Republika
               </li>
             </ul>
-          </div>
-          <div className="text-center">
-            <h3 className="text-lg font-bold mb-3">
-              Joseph&apos;s grills, s.r.o.
-            </h3>
-            <ul className="mb-6">
-              <li>IČO: 1111111111</li>
-              <li>DIČ: CZ1111111111</li>
-            </ul>
-            <div className="relative w-40 h-10 mx-auto ">
-              <Image
-                src="/img/logo-simple-black.png"
-                alt=""
-                fill
-                className="object-contain"
-              />
-            </div>
           </div>
         </div>
       </div>

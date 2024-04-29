@@ -60,8 +60,9 @@ const ContactPage = () => {
             <div className="flex flex-row flex-nowrap justify-start gap-5">
               <IoMdPin size={25} />
               <p className="text-lg text-left">
-                Adresa 1<br />
-                123 45 Štíty
+                Na Pilníku 292,
+                <br />
+                789 91 Štíty
                 <br />
                 Česká Republika
               </p>
