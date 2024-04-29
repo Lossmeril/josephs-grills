@@ -9,6 +9,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ContactFormSection from "@/components/contactFormSection";
 import Image from "next/image";
 import { Unbounded } from "next/font/google";
+import Button from "@/components/button";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
@@ -271,7 +272,7 @@ const AboutPage = () => {
         </section>
         <section
           ref={footnoteRef}
-          className="h-[500px] bg-white overflow-x-hidden flex flex-col flex-nowrap justify-center items-center text-center pb-10 "
+          className="h-[750px] bg-white overflow-x-hidden flex flex-col flex-nowrap justify-start items-center text-center pt-16 "
         >
           <div className="relative w-10 h-10 mx-auto mb-6">
             <Image
@@ -295,6 +296,18 @@ const AboutPage = () => {
               ref={underlineFootnoteRef}
               className="bg-orange opacity-25 h-10 absolute top-[10%] z-0"
             ></div>
+          </div>
+          <div className="flex flex-row flex-nowrap gap-10 w-[650px] mt-10">
+            <div className="w-1/2">
+              <Button link={""} inverse={false}>
+                Do e-shopu &raquo;
+              </Button>
+            </div>
+            <div className="w-1/2">
+              <Button link={"/grily"} inverse={true}>
+                Naše grily &raquo;
+              </Button>
+            </div>
           </div>
         </section>
       </main>
