@@ -141,7 +141,7 @@ const AboutPage = () => {
   return (
     <>
       <main className="max-w-[1200px] overflow-x-hidden mx-auto">
-        <section className="min-h-[500px] bg-white overflow-x-hidden flex flex-col flex-nowrap justify-center items-center text-center pt-20 hero">
+        <section className="min-h-[500px]  p-4 lg:p-0 bg-white overflow-x-hidden flex flex-col flex-nowrap justify-center items-center text-center pt-28 lg:pt-20 hero">
           <h1
             className={
               "text-6xl font-bold leading-[1.25em] mb-8 -mt-4 " +
@@ -157,11 +157,11 @@ const AboutPage = () => {
         </section>
         <section
           ref={section1Ref}
-          className="min-h-[800px] py-5 bg-white overflow-x-hidden flex flex-col lg:flex-row flex-nowrap justify-center items-center gap-40 text-center"
+          className="min-h-[800px] p-4 lg:p-0 py-5 bg-white overflow-x-hidden flex flex-col lg:flex-row flex-nowrap justify-center items-center gap-10 xl:gap-40 text-center"
         >
           <div
             ref={text1Ref}
-            className="w-full flex flex-col text-mutedtext-dark"
+            className="w-full flex flex-col text-mutedtext-dark pt-10"
           >
             <div className="relative">
               <h2
@@ -194,7 +194,7 @@ const AboutPage = () => {
           </div>
           <div ref={img1Ref} className="w-full h-[500px] relative">
             <Image
-              src="/img/products/placeholder1.jpg"
+              src="/img/bg-img-1.webp"
               alt=""
               fill
               className="object-cover"
@@ -203,17 +203,17 @@ const AboutPage = () => {
         </section>
         <section
           ref={section2Ref}
-          className="min-h-[800px] py-5 bg-white overflow-x-hidden flex flex-row flex-nowrap justify-center items-center gap-40 text-center border-t border-mutedtext-light"
+          className="min-h-[800px] p-4 lg:p-0 py-5 bg-white overflow-x-hidden flex flex-col-reverse lg:flex-row flex-nowrap justify-center items-center gap-10 xl:gap-40 text-center border-t border-mutedtext-light"
         >
           <div ref={img2Ref} className="w-full h-[500px] relative">
             <Image
-              src="/img/products/placeholder1.jpg"
+              src="/img/bg-img-1.webp"
               alt=""
               fill
               className="object-cover"
             />
           </div>
-          <div ref={text2Ref} className="w-full flex flex-col">
+          <div ref={text2Ref} className="w-full flex flex-col pt-10">
             <div className="relative">
               <h2
                 className={
