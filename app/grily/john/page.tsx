@@ -162,7 +162,7 @@ const JohnProductPage: React.FC = () => {
               Johna, který je vždy připraven podpořit vaše kulinářské
               dobrodružství.
             </p>
-            <div className="mt-10 md:mt-0 flex flex-col items-center md:flex-row flex-nowrap gap-4 md:gap-10 mb-20 lg:mb-0">
+            <div className="mt-10 lg:mt-0 flex flex-col items-center justify-center lg:justify-start md:flex-row flex-nowrap gap-4 md:gap-10 mb-20 lg:mb-0">
               <div className="w-40">
                 <Button link={""} inverse={false}>
                   Do e-shopu &raquo;
@@ -176,7 +176,7 @@ const JohnProductPage: React.FC = () => {
             </div>
           </div>
         </section>
-        <section className="border-t border-mutedtext-light overflow-x-hidden flex flex-col flex-nowrap p-6 pb-16 lg:p-20 bg-white text-black mb-0">
+        <section className="border-t border-mutedtext-light overflow-x-hidden flex flex-col flex-nowrap p-6 pb-16 lg:p-20 bg-white text-black mb-0 lg:mb-20">
           {/* --------- UNIQUE SELLING POINTS --------- */}
           <div className="w-full flex flex-col lg:flex-row flex-nowrap mb-16">
             {/* --------- USP 1  --------- */}

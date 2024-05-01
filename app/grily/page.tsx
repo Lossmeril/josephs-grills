@@ -3,6 +3,8 @@ import ContactFormSection from "@/components/contactFormSection";
 import { Unbounded } from "next/font/google";
 import Image from "next/image";
 
+import { Metadata } from "next";
+
 const unbounded = Unbounded({ subsets: ["latin"] });
 
 interface ProductProps {
@@ -52,6 +54,14 @@ const ProductCard: React.FC<ProductProps> = ({
       </div>
     </div>
   );
+};
+
+export const GrillsMetadata: Metadata = {
+  title: "Naše grily | Joseph's",
+  description:
+    "Prozkoumejte naši kolekci prémiových grilů na Joseph's Grills. Od kompaktního grilu John, přes stylový gril Peter, až po exkluzivní model Joseph, najdete u nás gril pro každý venkovní prostor.",
+  keywords:
+    "prémiové grily, gril Joseph, gril Peter, gril John, venkovní grilování, grilovací příslušenství, Joseph's Grills, grily na prodej",
 };
 
 const GrillsPage = () => {
