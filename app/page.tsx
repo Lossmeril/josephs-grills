@@ -23,6 +23,7 @@ import {
 import { RxRulerSquare } from "react-icons/rx";
 import { SlFire } from "react-icons/sl";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
+import ExploreSection from "@/components/exploreSection";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
@@ -449,6 +450,9 @@ const HomePage = () => {
             </HomeProduct>
           </div>
         </section>
+        <div className="max-w-[1200px] overflow-x-hidden mx-auto">
+          <ExploreSection />
+        </div>
         <ContactFormSection />
       </main>
     </>
