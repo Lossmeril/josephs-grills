@@ -124,7 +124,7 @@ const HomeProduct: React.FC<HomeProductProps> = ({
 
           <div className="relative z-30 overflow-visible my-6">
             <Image
-              src={"/img/products/" + image}
+              src={"/img/products/" + image + "-mobile.webp"}
               alt=""
               width={450}
               height={450}
@@ -197,7 +197,7 @@ const HomeProduct: React.FC<HomeProductProps> = ({
             {/* DRUHÝ SLOUPEC */}
             <div className="relative w-1/3 h-full z-30 flex flex-col justify-end overflow-visible">
               <Image
-                src={"/img/products/" + image}
+                src={"/img/products/" + image + ".webp"}
                 alt=""
                 width={450}
                 height={450}

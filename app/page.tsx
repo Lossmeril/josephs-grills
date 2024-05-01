@@ -375,7 +375,7 @@ const HomePage = () => {
               price="1 999,-"
               pageLink="./grily/john"
               eshopLink=""
-              image="john-comparison.webp"
+              image="john-comparison"
               prop1="Kompaktní a přenosný"
               prop1Icon={<HiOutlineArchiveBox size={25} />}
               prop2="Snadná montáž i demontáž"
@@ -402,7 +402,7 @@ const HomePage = () => {
               price="8 200,-"
               pageLink="./grily/peter"
               eshopLink=""
-              image="peter-comparison.webp"
+              image="peter-comparison"
               prop1="Unikátní design"
               prop1Icon={<RxRulerSquare size={25} />}
               prop2="Estetický a praktický"
@@ -431,7 +431,7 @@ const HomePage = () => {
               price="48 400,-"
               pageLink="./grily/joseph"
               eshopLink=""
-              image="joseph-comparison.webp"
+              image="joseph-comparison"
               prop1="Kvalita a výkon"
               prop1Icon={<AiOutlineSafetyCertificate size={25} />}
               prop2="Robustní konstrukce"
