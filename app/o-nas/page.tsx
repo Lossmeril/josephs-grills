@@ -182,8 +182,9 @@ const AboutPage = () => {
               V srdci každého kusu kovu, který prošel rukama naší rodinné firmy
               je ukryt příběh. Příběh o tradici, řemeslu a rodinné vášni, která
               překračuje generace. Značka Joseph&apos;s Grills není výjimkou. Je
-              to odkaz na dědečka Josefa, zakladatele, a také Petra jehož vášeň
-              pro grilování byla vpletena do každého detailu našich grilů.
+              to odkaz na dědečka Josefa, zakladatele, a také Petra, jeho
+              pokračovatele, jehož vášeň pro grilování byla zakována do každého
+              detailu našich grilů.
             </p>
             <p className="text-md mb-6">
               Léta strávená obráběním kovu a snaha pochopit jeho tajemství vedla

@@ -279,13 +279,13 @@ const HomePage = () => {
           <div className="w-full h-full flex flex-col justify-end clip relative pt-[10vh] pb-[5vh] xl:pt-0 xl:w-2/5 xl:pb-[25vh]">
             <h1
               className={
-                "text-[3.5em] md:text-[6em] xl:text-[7em] font-bold mb-16 mt-[5vh] xl:mt-0 mr-0 xl:mr-10 leading-[1em] z-10 text-center md:text-left " +
+                "text-[3.5em] md:text-[6em] xl:text-[7em] font-bold mb-8 xl:mb-16 mt-[5vh] xl:mt-0 mr-0 xl:mr-10 leading-[1em] z-10 text-center md:text-left " +
                 unbounded.className
               }
             >
               Rodina grilů Joseph&apos;s
             </h1>
-            <div className="w-full flex flex-row flex-nowrap gap-4 xl:gap-10">
+            <div className="w-full flex flex-row flex-nowrap gap-4 xl:gap-10 z-20">
               <div className="w-1/2">
                 <Button link={"#grily"} inverse={false}>
                   Naše grily &raquo;
@@ -303,7 +303,7 @@ const HomePage = () => {
               src="/img/products/family.webp"
               alt="Rodina grilů Joseph's"
               fill
-              className="object-cover h-[50vh]"
+              className="object-cover xl:h-[50vh]"
             />
           </div>
         </section>
