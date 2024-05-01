@@ -56,7 +56,7 @@ const ProductCard: React.FC<ProductProps> = ({
   );
 };
 
-export const GrillsMetadata: Metadata = {
+export const metadata: Metadata = {
   title: "Naše grily | Joseph's",
   description:
     "Prozkoumejte naši kolekci prémiových grilů na Joseph's Grills. Od kompaktního grilu John, přes stylový gril Peter, až po exkluzivní model Joseph, najdete u nás gril pro každý venkovní prostor.",
