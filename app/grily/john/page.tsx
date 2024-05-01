@@ -75,7 +75,7 @@ const JohnProductPage: React.FC = () => {
             </p>
             <h1
               className={
-                "text-6xl font-bold leading-[1.25em] mb-8 -mt-4 text-center lg:text-left" +
+                "text-6xl font-bold leading-[1.25em] mb-8 -mt-4 text-center lg:text-left " +
                 unbounded.className
               }
             >

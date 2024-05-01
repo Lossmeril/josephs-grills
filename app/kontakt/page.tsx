@@ -37,7 +37,7 @@ const ContactPage = () => {
       <section className="min-h-[800px] py-5 bg-white overflow-x-hidden flex flex-col lg:flex-row flex-nowrap justify-center items-center gap-40 text-center ">
         <div className="flex flex-col xl:flex-row flex-nowrap w-full">
           <div className="w-full xl:w-2/5 p-10 px-20 flex flex-col flex-nowrap gap-5">
-            <div className="flex flex-row flex-nowrap justify-between gap-5">
+            <div className="flex flex-row flex-nowrap justify-start gap-5">
               <MdPhone size={25} />
               <p className="text-lg text-left">
                 <a href="tel:'+420606727976'" className="link">

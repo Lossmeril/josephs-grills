@@ -143,7 +143,7 @@ const HomeProduct: React.FC<HomeProductProps> = ({
             <InfoBox value={length} unit="cm" property="šířka/délka" />
           </div>
 
-          <div className="flex flex-row flex-nowrap gap-5 mt-10">
+          <div className="flex flex-col lg:flex-row flex-nowrap gap-5 mt-10">
             <Button link={eshopLink} inverse={false}>
               Do e-shopu &raquo;
             </Button>
