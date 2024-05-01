@@ -35,7 +35,6 @@ export default function RootLayout({
           type="text/javascript"
           defer
         ></script> */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={cabin.className + " max-w-[100vw] overflow-x-hidden"}>
         <Header />
