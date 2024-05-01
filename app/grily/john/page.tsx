@@ -17,7 +17,7 @@ const JohnProductPage: React.FC = () => {
 
   return (
     <div className="w-full bg-black">
-      <main className="max-w-[1200px] overflow-x-hidden mx-auto  text-white">
+      <main className="max-w-[1200px] overflow-x-hidden mx-auto text-white">
         <section className="min-h-screen overflow-x-hidden flex flex-col-reverse lg:flex-row flex-nowrap pt-20">
           <div className="hidden lg:block w-full lg:w-1/2 p-4 lg:p-20 lg:pr-10">
             <div className="relative overflow-hidden w-full aspect-[3/4] bg-mutedtext-light ml-auto mb-8">
