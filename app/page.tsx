@@ -288,12 +288,13 @@ const HomePage = () => {
             <div className="w-full flex flex-row flex-nowrap gap-4 xl:gap-10 z-20">
               <div className="w-1/2">
                 <Button link={"#grily"} inverse={false}>
-                  Naše grily &raquo;
+                  Do e-shopu &raquo;
                 </Button>
               </div>
+              S
               <div className="w-1/2">
                 <Button link={"#grily"} inverse={true}>
-                  Do e-shopu &raquo;
+                  Naše grily &raquo;
                 </Button>
               </div>
             </div>
