@@ -7,13 +7,14 @@ import ProductParameter from "@/components/product/productParameters";
 import { Unbounded } from "next/font/google";
 import Image from "next/image";
 import React, { useState } from "react";
-import { PiSparkle } from "react-icons/pi";
+import { AiOutlineSafetyCertificate } from "react-icons/ai";
+import { PiCheckSquareOffset, PiGear, PiSparkle } from "react-icons/pi";
 import { RxRulerSquare } from "react-icons/rx";
 import { SlFire } from "react-icons/sl";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
-const PeterProductPage: React.FC = () => {
+const JosephProductPage: React.FC = () => {
   const [currentImg, setCurrentImg] = useState("1");
 
   return (
@@ -23,7 +24,7 @@ const PeterProductPage: React.FC = () => {
           <div className="hidden lg:block w-full lg:w-1/2 p-4 lg:p-20 lg:pr-10">
             <div className="relative overflow-hidden w-full aspect-[3/4] bg-mutedtext-light ml-auto mb-8">
               <Image
-                src={"/img/products/peter/peter-" + currentImg + ".jpg"}
+                src={"/img/products/joseph/joseph-" + currentImg + ".jpg"}
                 alt=""
                 fill
                 className="object-cover"
@@ -36,7 +37,7 @@ const PeterProductPage: React.FC = () => {
                 onMouseOver={() => setCurrentImg("1")}
               >
                 <Image
-                  src="/img/products/peter/peter-1.jpg"
+                  src="/img/products/joseph/joseph-1.jpg"
                   alt=""
                   fill
                   className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
@@ -44,7 +45,7 @@ const PeterProductPage: React.FC = () => {
               </div>
               <div className="w-1/4 relative overflow-hidden bg-red">
                 <Image
-                  src="/img/products/peter/peter-2.jpg"
+                  src="/img/products/joseph/joseph-2.jpg"
                   alt=""
                   fill
                   className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
@@ -53,7 +54,7 @@ const PeterProductPage: React.FC = () => {
               </div>
               <div className="w-1/4 relative overflow-hidden bg-red">
                 <Image
-                  src="/img/products/peter/peter-3.jpg"
+                  src="/img/products/joseph/joseph-3.jpg"
                   alt=""
                   fill
                   className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
@@ -62,7 +63,7 @@ const PeterProductPage: React.FC = () => {
               </div>
               <div className="w-1/4 relative overflow-hidden bg-red">
                 <Image
-                  src="/img/products/peter/peter-4.jpg"
+                  src="/img/products/joseph/joseph-4.jpg"
                   alt=""
                   fill
                   className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
@@ -73,7 +74,7 @@ const PeterProductPage: React.FC = () => {
           </div>
           <div className="w-full lg:w-1/2 pt-10 p-6 lg:p-20 lg:pl-10">
             <p className="text-xl mb-6 text-center lg:text-left">
-              To jediné ohniště, které potřebujete.
+              Mistr grilování
             </p>
             <h1
               className={
@@ -81,16 +82,24 @@ const PeterProductPage: React.FC = () => {
                 unbounded.className
               }
             >
-              Peter
+              Joseph
             </h1>
-            <p className="text-red text-2xl font-bold mb-4 text-center lg:text-left">
-              8 200,-
+            <p className="text-red text-2xl font-bold text-center lg:text-left mb-2">
+              48 400,-
+            </p>
+            <p className="text-white text-md text-center lg:text-left mb-2">
+              &bull; Nerezový rošt{" "}
+              <span className="text-red font-bold">+ 4 000,-</span>
+            </p>
+            <p className="text-white text-md text-center lg:text-left mb-10">
+              &bull; Nerezový dekl{" "}
+              <span className="text-red font-bold">+ 4 000,-</span>
             </p>
 
             <div className="block lg:hidden w-full lg:w-1/2 p-4 lg:p-20 lg:pr-10">
               <div className="relative overflow-hidden w-full aspect-[3/4] bg-mutedtext-light ml-auto mb-8">
                 <Image
-                  src={"/img/products/peter/peter-" + currentImg + ".jpg"}
+                  src={"/img/products/joseph/joseph-" + currentImg + ".jpg"}
                   alt=""
                   fill
                   className="object-cover"
@@ -103,7 +112,7 @@ const PeterProductPage: React.FC = () => {
                   onMouseOver={() => setCurrentImg("1")}
                 >
                   <Image
-                    src="/img/products/peter/peter-1.jpg"
+                    src="/img/products/joseph/joseph-1.jpg"
                     alt=""
                     fill
                     className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
@@ -111,7 +120,7 @@ const PeterProductPage: React.FC = () => {
                 </div>
                 <div className="w-1/4 relative overflow-hidden bg-red">
                   <Image
-                    src="/img/products/peter/peter-2.jpg"
+                    src="/img/products/joseph/joseph-2.jpg"
                     alt=""
                     fill
                     className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
@@ -120,7 +129,7 @@ const PeterProductPage: React.FC = () => {
                 </div>
                 <div className="w-1/4 relative overflow-hidden bg-red">
                   <Image
-                    src="/img/products/peter/peter-3.jpg"
+                    src="/img/products/joseph/joseph-3.jpg"
                     alt=""
                     fill
                     className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
@@ -129,7 +138,7 @@ const PeterProductPage: React.FC = () => {
                 </div>
                 <div className="w-1/4 relative overflow-hidden bg-red">
                   <Image
-                    src="/img/products/peter/peter-4.jpg"
+                    src="/img/products/joseph/joseph-4.jpg"
                     alt=""
                     fill
                     className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
@@ -140,23 +149,22 @@ const PeterProductPage: React.FC = () => {
             </div>
 
             <p className="mb-6 text-center lg:text-left">
-              Peter transformuje každý venkovní prostor na místo plné tepla a
-              pohody. Díky svému inovativnímu designu, připomínajícímu kovovou
-              ošatku, se stane centrem pozornosti a místem setkávání pro rodinu
-              a přátele. Systém pro shromažďování popela zajišťuje snadnou
-              údržbu, zatímco jeho robustní konstrukce slibuje dlouholetou
-              spolehlivost.
+              Joseph je výsledkem vrcholové řemeslné zručnosti a navržen je pro
+              ty, kteří od svého grilu očekávají nekompromisní kvalitu a výkon.
+              Jeho geometrický design nejen osloví oko, ale také slibuje
+              jedinečný zážitek z grilování. Díky certifikované potravinářské
+              nerezové grilovací desce a možnosti přidání dalšího roštu nabízí
+              Joseph nevídanou flexibilitu a odolnost.
             </p>
             <p className="mb-6 text-center lg:text-left">
-              Jeho unikátní konstrukce z černé oceli nejen zajišťuje vynikající
-              odolnost proti povětrnostním vlivům, ale také optimalizuje přívod
-              vzduchu pro rovnoměrné spalování bez nadměrného kouře. Ocelové
-              tyče, pevně spojené do tvaru ošatky, umožňují efektivní udržení
-              paliva a zároveň poskytují dostatečný prostor pro přikládání, což
-              usnadňuje obsluhu. Díky snadno přístupnému popelníku ulehčuje
-              odstranění popela a čištění po každém použití. Peter tak přináší
-              nejen teplo a světlo, ale i pohodlí a praktičnost, které očekáváte
-              od venkovního ohniště.
+              Speciálně navržený systém pro efektivní přívod kyslíku zajišťuje
+              optimální spalování a umožňuje přikládání paliva přímo uprostřed
+              grilovací desky, což zvyšuje efektivitu a pohodlí při grilování.
+              Připraven na všechny druhy počasí, přináší tento gril industriální
+              eleganci do vašeho venkovního prostoru a slibuje roky spolehlivého
+              užívání. K dispozici je také nerezový dekl, navržený k ochraně
+              grilu před nepříznivými povětrnostními podmínkami, když se na něm
+              právě negriluje, čímž prodlužuje jeho životnost.
             </p>
             <div className="mt-10 lg:mt-0 flex flex-col items-center justify-center lg:justify-start md:flex-row flex-nowrap gap-4 md:gap-10 mb-20 lg:mb-0">
               <div className="w-40">
@@ -178,51 +186,65 @@ const PeterProductPage: React.FC = () => {
             {/* --------- USP 1  --------- */}
             <div className="w-full lg:w-1/3 flex flex-col items-center py-10 lg:p-8">
               <PropBox name={""}>
-                <RxRulerSquare size={25} />
+                <AiOutlineSafetyCertificate size={25} />
               </PropBox>
               <h2 className="text-center text-xl font-bold mb-8">
-                Unikátní design
+                Kvalita a výkon
               </h2>
               <p className="text-mutedtext-dark text-center">
-                Peterovo inovativní designové řešení nejen přitahuje pohledy,
-                ale také zajišťuje optimální přívod vzduchu pro rovnoměrné
-                spalování, což znamená méně kouře a efektivnější využití paliva.
+                Navržen s ohledem na nejvyšší požadavky, kvalitu a výkon, Joseph
+                je ideální pro milovníky a nadšence do grilování, kteří
+                očekávají nejlepší výsledky.
               </p>
             </div>
             {/* --------- USP 2  --------- */}
             <div className="w-full lg:w-1/3 flex flex-col items-center border-t lg:border-l lg:border-t-0 border-mutedtext-light py-10 lg:p-8">
               <PropBox name={""}>
-                <PiSparkle size={25} />
+                <PiCheckSquareOffset size={25} />
               </PropBox>
               <h2 className="text-center text-xl font-bold mb-8">
-                Estetický a praktický
+                Robustní konstrukce
               </h2>
               <p className="text-mutedtext-dark text-center">
-                Nejen že zajišťuje optimální přívod vzduchu pro rovnoměrné
-                spalování, ale také je to designový prvek, který oživí každou
-                zahradu nebo venkovní prostor svým industriálním vzhledem.
+                Gril odolá všem druhům počasí, a tak slibuje roky spolehlivého
+                užívání, což z něj činí výbornou investici pro každého, kdo chce
+                spolehlivého partnera v přípravě grilovaných pochoutek.
               </p>
             </div>
             {/* --------- USP 3  --------- */}
             <div className="w-full lg:w-1/3 flex flex-col items-center border-t lg:border-l lg:border-t-0 border-mutedtext-light py-10 lg:p-8">
               <PropBox name={""}>
-                <SlFire size={25} />
+                <PiGear size={25} />
               </PropBox>
               <h2 className="text-center text-xl font-bold mb-8">
-                Snadné přikládání
+                Možnost rozšíření
               </h2>
               <p className="text-mutedtext-dark text-center">
-                Otevřený design umožňuje snadné přikládání dřeva bez nutnosti
-                přerušovat grilování nebo opékání.
+                Nabízí rozšíření s doplňkovým příslušenstvím, jako je přídavný
+                rošt pro další potraviny připravované společně s masem, či
+                nerezový dekl pro ochranu grilu, což zvyšuje jeho užitnou
+                hodnotu a životnost.
               </p>
             </div>
           </div>
           <h2 className="text-4xl font-bold leading-[1.25em] text-center md:text-left mb-8 -mt-4 ">
             Parametry
           </h2>
-          <ProductParameter name="Rozměr" value="743 × 743 × 331 mm" />
-          <ProductParameter name="Materiál" value="černá ocel" inverted />
-          <ProductParameter name="Hmotnost" value="36 kg" />
+          <ProductParameter name="Výška" value="900 mm" />
+          <ProductParameter name="Šířka" value="740 mm" inverted />
+          <ProductParameter name="Tloušťka nerezové desky" value="10 mm" />
+          <ProductParameter name="Hmotnost" value="36 kg" inverted />
+          <ProductParameter
+            name="Materiál"
+            value="nerezová potravinářská ocel"
+          />
+          <ProductParameter name="Hmotnost" value="244 kg" inverted />
+          <ProductParameter name="Hmotnost nerezového roštu" value="6 kg" />
+          <ProductParameter
+            name="Hmotnost nerezového deklu"
+            value="8 kg"
+            inverted
+          />
         </section>
       </main>
       <ContactFormSection />
@@ -230,4 +252,4 @@ const PeterProductPage: React.FC = () => {
   );
 };
 
-export default PeterProductPage;
+export default JosephProductPage;
