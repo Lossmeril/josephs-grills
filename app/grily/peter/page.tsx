@@ -8,7 +8,9 @@ import { Unbounded } from "next/font/google";
 import Image from "next/image";
 import React, { useState } from "react";
 import { HiOutlineArchiveBox, HiOutlineWrench } from "react-icons/hi2";
-import { PiForkKnife } from "react-icons/pi";
+import { PiForkKnife, PiSparkle } from "react-icons/pi";
+import { RxRulerSquare } from "react-icons/rx";
+import { SlFire } from "react-icons/sl";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
@@ -22,7 +24,7 @@ const JohnProductPage: React.FC = () => {
           <div className="hidden lg:block w-full lg:w-1/2 p-4 lg:p-20 lg:pr-10">
             <div className="relative overflow-hidden w-full aspect-[3/4] bg-mutedtext-light ml-auto mb-8">
               <Image
-                src={"/img/products/john/john-" + currentImg + ".jpg"}
+                src={"/img/products/peter/peter-" + currentImg + ".jpg"}
                 alt=""
                 fill
                 className="object-cover"
@@ -35,7 +37,7 @@ const JohnProductPage: React.FC = () => {
                 onMouseOver={() => setCurrentImg("1")}
               >
                 <Image
-                  src="/img/products/john/john-1.jpg"
+                  src="/img/products/peter/peter-1.jpg"
                   alt=""
                   fill
                   className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
@@ -43,7 +45,7 @@ const JohnProductPage: React.FC = () => {
               </div>
               <div className="w-1/4 relative overflow-hidden bg-red">
                 <Image
-                  src="/img/products/john/john-2.jpg"
+                  src="/img/products/peter/peter-2.jpg"
                   alt=""
                   fill
                   className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
@@ -52,7 +54,7 @@ const JohnProductPage: React.FC = () => {
               </div>
               <div className="w-1/4 relative overflow-hidden bg-red">
                 <Image
-                  src="/img/products/john/john-3.jpg"
+                  src="/img/products/peter/peter-3.jpg"
                   alt=""
                   fill
                   className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
@@ -61,18 +63,18 @@ const JohnProductPage: React.FC = () => {
               </div>
               <div className="w-1/4 relative overflow-hidden bg-red">
                 <Image
-                  src="/img/products/john/john-disassembled.jpg"
+                  src="/img/products/peter/peter-4.jpg"
                   alt=""
                   fill
                   className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
-                  onMouseOver={() => setCurrentImg("disassembled")}
+                  onMouseOver={() => setCurrentImg("4")}
                 />
               </div>
             </div>
           </div>
           <div className="w-full lg:w-1/2 pt-10 p-6 lg:p-20 lg:pl-10">
             <p className="text-xl mb-6 text-center lg:text-left">
-              Gril pro dobrodruhy
+              To jediné ohniště, které potřebujete.
             </p>
             <h1
               className={
@@ -80,26 +82,16 @@ const JohnProductPage: React.FC = () => {
                 unbounded.className
               }
             >
-              John
+              Peter
             </h1>
             <p className="text-red text-2xl font-bold mb-4 text-center lg:text-left">
-              1 999,-
+              8 200,-
             </p>
-            {/* <div className="flex flex-row flex-nowrap justify-center gap-8 my-10">
-              <PropBox name={"Kompaktní a přenosný"} inv>
-                <HiOutlineArchiveBox size={25} />
-              </PropBox>
-              <PropBox name={"Snadná montáž i demontáž"} inv>
-                <HiOutlineWrench size={25} />
-              </PropBox>
-              <PropBox name={"Zdravé stravování na cestách"} inv>
-                <PiForkKnife size={25} />
-              </PropBox>
-            </div> */}
+
             <div className="block lg:hidden w-full lg:w-1/2 p-4 lg:p-20 lg:pr-10">
               <div className="relative overflow-hidden w-full aspect-[3/4] bg-mutedtext-light ml-auto mb-8">
                 <Image
-                  src={"/img/products/john/john-" + currentImg + ".jpg"}
+                  src={"/img/products/peter/peter-" + currentImg + ".jpg"}
                   alt=""
                   fill
                   className="object-cover"
@@ -112,7 +104,7 @@ const JohnProductPage: React.FC = () => {
                   onMouseOver={() => setCurrentImg("1")}
                 >
                   <Image
-                    src="/img/products/john/john-1.jpg"
+                    src="/img/products/peter/peter-1.jpg"
                     alt=""
                     fill
                     className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
@@ -120,7 +112,7 @@ const JohnProductPage: React.FC = () => {
                 </div>
                 <div className="w-1/4 relative overflow-hidden bg-red">
                   <Image
-                    src="/img/products/john/john-2.jpg"
+                    src="/img/products/peter/peter-2.jpg"
                     alt=""
                     fill
                     className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
@@ -129,7 +121,7 @@ const JohnProductPage: React.FC = () => {
                 </div>
                 <div className="w-1/4 relative overflow-hidden bg-red">
                   <Image
-                    src="/img/products/john/john-3.jpg"
+                    src="/img/products/peter/peter-3.jpg"
                     alt=""
                     fill
                     className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
@@ -138,31 +130,34 @@ const JohnProductPage: React.FC = () => {
                 </div>
                 <div className="w-1/4 relative overflow-hidden bg-red">
                   <Image
-                    src="/img/products/john/john-disassembled.jpg"
+                    src="/img/products/peter/peter-4.jpg"
                     alt=""
                     fill
                     className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
-                    onMouseOver={() => setCurrentImg("disassembled")}
+                    onMouseOver={() => setCurrentImg("4")}
                   />
                 </div>
               </div>
             </div>
 
             <p className="mb-6 text-center lg:text-left">
-              Představujeme vám Johna, malý, ale mimořádně šikovný gril, který
-              se stane vaším nezbytným společníkem na cestách. Díky svému
-              jedinečnému designu &mdash; tvořenému šesti čtvercovými ocelovými
-              pláty, se John skládá a rozkládá s dětskou snadností.
+              Peter transformuje každý venkovní prostor na místo plné tepla a
+              pohody. Díky svému inovativnímu designu, připomínajícímu kovovou
+              ošatku, se stane centrem pozornosti a místem setkávání pro rodinu
+              a přátele. Systém pro shromažďování popela zajišťuje snadnou
+              údržbu, zatímco jeho robustní konstrukce slibuje dlouholetou
+              spolehlivost.
             </p>
             <p className="mb-6 text-center lg:text-left">
-              Ve složené formě nabízí nevídanou kompaktnost, což jej činí
-              ideálním pro milovníky cestování, co si chtějí jídlo vychutnávat s
-              pohledem na přírodní krásy pod širým nebem. Je vyroben z
-              certifikované nerezové potravinářské oceli, díky čemuž slibuje
-              bezpečné grilování bez obav. Jeho koupí získáte nejen
-              spolehlivost, ale i styl. přesně to na cestách potřebujete &mdash;
-              Johna, který je vždy připraven podpořit vaše kulinářské
-              dobrodružství.
+              Jeho unikátní konstrukce z černé oceli nejen zajišťuje vynikající
+              odolnost proti povětrnostním vlivům, ale také optimalizuje přívod
+              vzduchu pro rovnoměrné spalování bez nadměrného kouře. Ocelové
+              tyče, pevně spojené do tvaru ošatky, umožňují efektivní udržení
+              paliva a zároveň poskytují dostatečný prostor pro přikládání, což
+              usnadňuje obsluhu. Díky snadno přístupnému popelníku ulehčuje
+              odstranění popela a čištění po každém použití. Peter tak přináší
+              nejen teplo a světlo, ale i pohodlí a praktičnost, které očekáváte
+              od venkovního ohniště.
             </p>
             <div className="mt-10 lg:mt-0 flex flex-col items-center justify-center lg:justify-start md:flex-row flex-nowrap gap-4 md:gap-10 mb-20 lg:mb-0">
               <div className="w-40">
@@ -184,64 +179,51 @@ const JohnProductPage: React.FC = () => {
             {/* --------- USP 1  --------- */}
             <div className="w-full lg:w-1/3 flex flex-col items-center py-10 lg:p-8">
               <PropBox name={""}>
-                <HiOutlineArchiveBox size={25} />
+                <RxRulerSquare size={25} />
               </PropBox>
               <h2 className="text-center text-xl font-bold mb-8">
-                Kompaktní a přenosný
+                Unikátní design
               </h2>
               <p className="text-mutedtext-dark text-center">
-                Unikátní skládací design, s váhou pouhých 6 kg a malé rozměry v
-                složeném stavu z něj dělají dokonalého společníka na cesty.
+                Peterovo inovativní designové řešení nejen přitahuje pohledy,
+                ale také zajišťuje optimální přívod vzduchu pro rovnoměrné
+                spalování, což znamená méně kouře a efektivnější využití paliva.
               </p>
             </div>
             {/* --------- USP 2  --------- */}
             <div className="w-full lg:w-1/3 flex flex-col items-center border-t lg:border-l lg:border-t-0 border-mutedtext-light py-10 lg:p-8">
               <PropBox name={""}>
-                <HiOutlineWrench size={25} />
+                <PiSparkle size={25} />
               </PropBox>
               <h2 className="text-center text-xl font-bold mb-8">
-                Snadná montáž i demontáž
+                Estetický a praktický
               </h2>
               <p className="text-mutedtext-dark text-center">
-                Díky složení z 6 čtvercových ocelových plátů je John snadno
-                sestavitelný a rozložitelný bez potřeby nářadí, což šetří čas a
-                usnadňuje jeho používání na jakémkoliv místě.
+                Nejen že zajišťuje optimální přívod vzduchu pro rovnoměrné
+                spalování, ale také je to designový prvek, který oživí každou
+                zahradu nebo venkovní prostor svým industriálním vzhledem.
               </p>
             </div>
             {/* --------- USP 3  --------- */}
             <div className="w-full lg:w-1/3 flex flex-col items-center border-t lg:border-l lg:border-t-0 border-mutedtext-light py-10 lg:p-8">
               <PropBox name={""}>
-                <PiForkKnife size={25} />
+                <SlFire size={25} />
               </PropBox>
               <h2 className="text-center text-xl font-bold mb-8">
-                Zdravé stravování na cestách
+                Snadné přikládání
               </h2>
               <p className="text-mutedtext-dark text-center">
-                John je vyroben z kvalitní nerezové oceli certifikované pro
-                potravinářské účely, což zajišťuje, že vaše jídlo bude vždy
-                chutné a bez nežádoucích látek.
+                Otevřený design umožňuje snadné přikládání dřeva bez nutnosti
+                přerušovat grilování nebo opékání.
               </p>
             </div>
           </div>
           <h2 className="text-4xl font-bold leading-[1.25em] text-center md:text-left mb-8 -mt-4 ">
             Parametry
           </h2>
-          <ProductParameter
-            name="Rozměr (rozložený)"
-            value="250 × 250 × 15 mm"
-          />
-          <ProductParameter
-            name="Rozměr (sestavený)"
-            value="250 × 250 × 230 mm"
-            inverted
-          />
-          <ProductParameter name="Tloušťka oceli" value="2 mm" />
-          <ProductParameter
-            name="Materiál"
-            value="Nerezová potravinářská ocel"
-            inverted
-          />
-          <ProductParameter name="Hmotnost" value="6 kg" />
+          <ProductParameter name="Rozměr)" value="743 × 743 × 331 mm" />
+          <ProductParameter name="Materiál" value="černá ocel" inverted />
+          <ProductParameter name="Hmotnost" value="36 kg" />
         </section>
       </main>
       <ContactFormSection />

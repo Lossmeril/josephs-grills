@@ -291,7 +291,7 @@ const HomePage = () => {
                   Do e-shopu &raquo;
                 </Button>
               </div>
-              S
+
               <div className="w-1/2">
                 <Button link={"#grily"} inverse={true}>
                   Naše grily &raquo;

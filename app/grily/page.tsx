@@ -91,7 +91,7 @@ const GrillsPage = () => {
             <ProductCard
               name="Peter"
               image="peter.webp"
-              link=""
+              link="/grily/peter"
               eshopLink=""
               price="8 200"
             >
@@ -101,7 +101,7 @@ const GrillsPage = () => {
             <ProductCard
               name="Joseph"
               image="joseph.webp"
-              link=""
+              link="/grily/joseph"
               eshopLink=""
               price="48 400"
             >
