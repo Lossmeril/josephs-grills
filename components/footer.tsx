@@ -1,3 +1,4 @@
+import { globalLinks } from "@/data/links";
 import { Inter } from "next/font/google";
 import Image from "next/image";
 import { MdEmail, MdPhone } from "react-icons/md";
@@ -59,8 +60,26 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a className="link" href="">
+                <a
+                  className="link"
+                  href={globalLinks.termsAndConditions.cs}
+                  target="_blank"
+                >
                   Obchodní podmínky
+                </a>
+              </li>
+              <li>
+                <a className="link" href={globalLinks.GDPR.cs} target="_blank">
+                  Ochrana osobních údajů a GDPR
+                </a>
+              </li>
+              <li>
+                <a
+                  className="link"
+                  href={globalLinks.certification.cs}
+                  target="_blank"
+                >
+                  Certifikace kovu
                 </a>
               </li>
             </ul>

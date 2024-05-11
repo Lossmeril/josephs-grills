@@ -9,6 +9,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Inter, Unbounded } from "next/font/google";
 import { IoMdPin } from "react-icons/io";
 import { MdEmail, MdPhone } from "react-icons/md";
+import Button from "@/components/button";
+import { globalLinks } from "@/data/links";
 
 const inter = Inter({ subsets: ["latin"] });
 const unbounded = Unbounded({ subsets: ["latin"] });
@@ -66,6 +68,23 @@ const ContactPage = () => {
                 <br />
                 Česká Republika
               </p>
+            </div>
+            <div className="mt-5 flex flex-col gap-5 max-w-80">
+              <Button
+                link={globalLinks.termsAndConditions.cs}
+                inverse={false}
+                blank
+              >
+                Obchodní podmínky &raquo;
+              </Button>
+
+              <Button link={globalLinks.GDPR.cs} inverse={false} blank>
+                Ochrana osobních údajů a GDPR &raquo;
+              </Button>
+
+              <Button link={globalLinks.certification.cs} inverse={false} blank>
+                Certifikace nerezové oceli &raquo;
+              </Button>
             </div>
           </div>
           <div className="bg-white w-full xl:w-3/5 m-4 text-left">
