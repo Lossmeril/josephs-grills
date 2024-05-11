@@ -1,7 +1,5 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -69,7 +67,10 @@ const ContactPage = () => {
                 Česká Republika
               </p>
             </div>
-            <div className="mt-5 flex flex-col gap-5 max-w-80">
+            <div
+              id="#terms-of-service-gdpr"
+              className="mt-5 flex flex-col gap-5 max-w-80"
+            >
               <Button
                 link={globalLinks.termsAndConditions.cs}
                 inverse={false}

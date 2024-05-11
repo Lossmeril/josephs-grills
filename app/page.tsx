@@ -24,6 +24,7 @@ import { RxRulerSquare } from "react-icons/rx";
 import { SlFire } from "react-icons/sl";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import ExploreSection from "@/components/exploreSection";
+import { globalLinks } from "@/data/links";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
@@ -287,7 +288,7 @@ const HomePage = () => {
             </h1>
             <div className="w-full flex flex-row flex-nowrap gap-4 xl:gap-10 z-20">
               <div className="w-1/2">
-                <Button link={"#grily"} inverse={false}>
+                <Button link={globalLinks.eshop.cs} inverse={false} blank>
                   Do e-shopu &raquo;
                 </Button>
               </div>
@@ -375,7 +376,7 @@ const HomePage = () => {
               descHeading="O Johnovi"
               price="1 999,-"
               pageLink="./grily/john"
-              eshopLink=""
+              eshopLink={globalLinks.eshopJohn.cs}
               image="john-comparison"
               prop1="Kompaktní a přenosný"
               prop1Icon={<HiOutlineArchiveBox size={25} />}
@@ -402,7 +403,7 @@ const HomePage = () => {
               descHeading="O Peterovi"
               price="8 200,-"
               pageLink="./grily/peter"
-              eshopLink=""
+              eshopLink={globalLinks.eshopPeter.cs}
               image="peter-comparison"
               prop1="Unikátní design"
               prop1Icon={<RxRulerSquare size={25} />}
@@ -431,7 +432,7 @@ const HomePage = () => {
               descHeading="O Josephovi"
               price="48 400,-"
               pageLink="./grily/joseph"
-              eshopLink=""
+              eshopLink={globalLinks.eshopJoseph.cs}
               image="joseph-comparison"
               prop1="Kvalita a výkon"
               prop1Icon={<AiOutlineSafetyCertificate size={25} />}

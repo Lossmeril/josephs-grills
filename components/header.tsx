@@ -6,6 +6,7 @@ import Button from "./button";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import { MdClose } from "react-icons/md";
+import { globalLinks } from "@/data/links";
 
 const links = [
   ["/", "Domů"],
@@ -85,7 +86,7 @@ const Header = () => {
 
           <div className="hidden md:flex flex-nowrap justify-end">
             <div className="flex flex-grow"></div>
-            <Button link="/" inverse={false}>
+            <Button link={globalLinks.eshop.cs} inverse={false} blank>
               Do e-shopu &raquo;
             </Button>
           </div>

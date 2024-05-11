@@ -6,6 +6,7 @@ import { Unbounded } from "next/font/google";
 import Button from "./button";
 
 import { gsap } from "gsap";
+import { globalLinks } from "@/data/links";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
@@ -59,7 +60,7 @@ const ExploreSection: React.FC = () => {
       </div>
       <div className="flex flex-col lg:flex-row flex-nowrap gap-5 lg:gap-10 lg:w-[650px] mt-10 mb-24 lg:mb-0 lg:mt-10">
         <div className="lg:w-1/2">
-          <Button link={""} inverse={false}>
+          <Button link={globalLinks.eshop.cs} inverse={false} blank>
             Do e-shopu &raquo;
           </Button>
         </div>

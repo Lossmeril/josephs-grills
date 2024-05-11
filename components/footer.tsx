@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a className="link" href="">
+                <a className="link" href={globalLinks.eshop.cs} target="_blank">
                   E-shop
                 </a>
               </li>

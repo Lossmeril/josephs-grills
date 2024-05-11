@@ -4,6 +4,7 @@ import { Unbounded } from "next/font/google";
 import Image from "next/image";
 
 import { Metadata } from "next";
+import { globalLinks } from "@/data/links";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
@@ -44,7 +45,7 @@ const ProductCard: React.FC<ProductProps> = ({
       <p className="text-red text-2xl font-bold mb-8">{price},-</p>
       <div className="flex flex-col">
         <div className="flex flex-col gap-4">
-          <Button link={eshopLink} inverse={false}>
+          <Button link={eshopLink} inverse={false} blank>
             Do e-shopu &raquo;
           </Button>
           <Button link={link} inverse={true}>
@@ -82,7 +83,7 @@ const GrillsPage = () => {
               name="John"
               image="john.webp"
               link="/grily/john"
-              eshopLink=""
+              eshopLink={globalLinks.eshopJohn.cs}
               price="1 999"
             >
               Představujeme vám Johna, malý, ale mimořádně šikovný gril, který
@@ -92,7 +93,7 @@ const GrillsPage = () => {
               name="Peter"
               image="peter.webp"
               link="/grily/peter"
-              eshopLink=""
+              eshopLink={globalLinks.eshopPeter.cs}
               price="8 200"
             >
               Peter transformuje každý venkovní prostor na místo plné tepla a
@@ -102,7 +103,7 @@ const GrillsPage = () => {
               name="Joseph"
               image="joseph.webp"
               link="/grily/joseph"
-              eshopLink=""
+              eshopLink={globalLinks.eshopJoseph.cs}
               price="48 400"
             >
               Joseph je výsledkem vrcholové řemeslné zručnosti a navržen je pro

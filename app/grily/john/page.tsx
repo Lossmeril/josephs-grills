@@ -4,6 +4,7 @@ import Button from "@/components/button";
 import ContactFormSection from "@/components/contactFormSection";
 import { PropBox } from "@/components/homeProduct";
 import ProductParameter from "@/components/product/productParameters";
+import { globalLinks } from "@/data/links";
 import { Unbounded } from "next/font/google";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -166,7 +167,7 @@ const JohnProductPage: React.FC = () => {
             </p>
             <div className="mt-10 lg:mt-0 flex flex-col items-center justify-center lg:justify-start md:flex-row flex-nowrap gap-4 md:gap-10 mb-20 lg:mb-0">
               <div className="w-40">
-                <Button link={""} inverse={false}>
+                <Button link={globalLinks.eshopPeter.cs} inverse={false} blank>
                   Do e-shopu &raquo;
                 </Button>
               </div>

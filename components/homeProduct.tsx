@@ -14,7 +14,7 @@ interface InfoBoxProps {
 
 const InfoBox: React.FC<InfoBoxProps> = ({ value, unit, property }) => {
   return (
-    <div className="flex flex-col flex-nowrap justify-center items-center border border-mutedtext-light border-solid p-5 w-24 aspect-square">
+    <div className="flex flex-col flex-nowrap justify-center items-center border border-mutedtext-light border-solid p-4 w-28 aspect-square">
       <p className="text-3xl font-bold -mb-2">{value}</p>
       <p className="text-lg font-bold mb-1">{unit}</p>
       <p className="text-xs uppercase">{property}</p>
@@ -179,13 +179,13 @@ const HomeProduct: React.FC<HomeProductProps> = ({
                 {name}
               </h2>
               <p className="text-red text-2xl font-bold mb-12">{price}</p>
-              <div className="flex flex-row flex-nowrap gap-5">
+              <div className="flex flex-row flex-nowrap gap-3">
                 <InfoBox value={weight} unit="kg" property="hmotnost" />
                 <InfoBox value={height} unit="cm" property="výška" />
                 <InfoBox value={length} unit="cm" property="šířka/délka" />
               </div>
               <div className="flex flex-row flex-nowrap gap-5 mt-10">
-                <Button link={eshopLink} inverse={false}>
+                <Button link={eshopLink} inverse={false} blank>
                   Do e-shopu &raquo;
                 </Button>
                 <Button link={pageLink} inverse={true}>
