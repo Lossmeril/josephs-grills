@@ -169,7 +169,7 @@ const JosephProductPage: React.FC = () => {
             </p>
             <div className="mt-10 lg:mt-0 flex flex-col items-center justify-center lg:justify-start md:flex-row flex-nowrap gap-4 md:gap-10 mb-20 lg:mb-0">
               <div className="w-40">
-                <Button link={globalLinks.eshopPeter.cs} inverse={false} blank>
+                <Button link={globalLinks.eshopJoseph.cs} inverse={false} blank>
                   Do e-shopu &raquo;
                 </Button>
               </div>
