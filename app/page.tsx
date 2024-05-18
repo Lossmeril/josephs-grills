@@ -26,6 +26,8 @@ import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import ExploreSection from "@/components/exploreSection";
 import { globalLinks } from "@/data/links";
 
+import { useTranslation } from "react-i18next";
+
 const unbounded = Unbounded({ subsets: ["latin"] });
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
@@ -273,6 +275,8 @@ const HomePage = () => {
     );
   }, []);
 
+  const { t } = useTranslation();
+
   return (
     <>
       <main className="max-w-screen overflow-x-hidden">
@@ -284,7 +288,7 @@ const HomePage = () => {
                 unbounded.className
               }
             >
-              Rodina grilů Joseph&apos;s
+              {t("indexTitle")}
             </h1>
             <div className="w-full flex flex-row flex-nowrap gap-4 xl:gap-10 z-20">
               <div className="w-1/2">
