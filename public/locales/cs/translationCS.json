@@ -1,3 +1,57 @@
 {
-  "indexTitle": "Rodina grilů Joseph's"
+  "slogan": "Grily. Jednoduše",
+  "CTOslogan": "Vítejte v rodině Joseph's!",
+
+  "johnTagline": "Gril pro dobrodruhy",
+  "johnPrice": "1 999,-",
+  "johnSubheading": "O Johnovi",
+  "johnParagraph1": "Představujeme vám Johna, malý, ale mimořádně šikovný gril, který se stane vaším nezbytným společníkem na cestách. Díky svému jedinečnému designu &mdash; tvořenému šesti čtvercovými ocelovými pláty, se John skládá a rozkládá s dětskou snadností.",
+  "johnParagraph2": "Ve složené formě nabízí nevídanou kompaktnost, což jej činí ideálním pro milovníky cestování, co si chtějí jídlo vychutnávat s pohledem na přírodní krásy pod širým nebem. Je vyroben z certifikované nerezové potravinářské oceli, díky čemuž slibuje bezpečné grilování bez obav. Jeho koupí získáte nejen spolehlivost, ale i styl. přesně to na cestách potřebujete — Johna, který je vždy připraven podpořit vaše kulinářské dobrodružství.",
+  "johnUSP1": "Kompaktní a přenosný",
+  "johnUSP1Text": "Unikátní skládací design, s váhou pouhých 6 kg a malé rozměry v složeném stavu z něj dělají dokonalého společníka na cesty.",
+  "johnUSP2": "Snadná montáž i demontáž",
+  "johnUSP2Text": "Díky složení ze šesti čtvercových ocelových plátů je John snadno sestavitelný a rozložitelný bez potřeby nářadí, což šetří čas a usnadňuje jeho používání na jakémkoliv místě.",
+  "johnUSP3": "Zdravé stravování na cestách",
+  "johnUSP3Text": "John je vyroben z kvalitní nerezové oceli certifikované pro potravinářské účely, což zajišťuje, že vaše jídlo bude vždy chutné a bez nežádoucích látek.",
+  "johnMaterial": "Nerezová potravinářská ocel",
+
+  "peterTagline": "To jediné ohniště, které potřebujete.",
+  "peterPrice": "8 200,-",
+  "peterSubheading": "O Peterovi",
+  "peterParagraph1": "Peter transformuje každý venkovní prostor na místo plné tepla a pohody. Díky svému inovativnímu designu, připomínajícímu kovovou ošatku, se stane centrem pozornosti a místem setkávání pro rodinu a přátele. Systém pro shromažďování popela zajišťuje snadnou údržbu, zatímco jeho robustní konstrukce slibuje dlouholetou spolehlivost.",
+  "peterParagraph2": "Jeho unikátní konstrukce z černé oceli nejen zajišťuje vynikající odolnost proti povětrnostním vlivům, ale také optimalizuje přívod vzduchu pro rovnoměrné spalování bez nadměrného kouře. Ocelové tyče, pevně spojené do tvaru ošatky, umožňují efektivní udržení paliva a zároveň poskytují dostatečný prostor pro přikládání, což usnadňuje obsluhu. Díky snadno přístupnému popelníku ulehčuje odstranění popela a čištění po každém použití. Peter tak přináší nejen teplo a světlo, ale i pohodlí a praktičnost, které očekáváte od venkovního ohniště.",
+  "peterUSP1": "Unikátní design",
+  "peterUSP1Text": "Peterovo inovativní designové řešení nejen přitahuje pohledy, ale také zajišťuje optimální přívod vzduchu pro rovnoměrné spalování, což znamená méně kouře a efektivnější využití paliva.",
+  "peterUSP2": "Estetický a praktický",
+  "peterUSP2Text": "Nejen že zajišťuje optimální přívod vzduchu pro rovnoměrné spalování, ale také je to designový prvek, který oživí každou zahradu nebo venkovní prostor svým industriálním vzhledem.",
+  "peterUSP3": "Snadné přikládání",
+  "peterUSP3Text": "Otevřený design umožňuje snadné přikládání dřeva bez nutnosti přerušovat grilování nebo opékání.",
+  "peterMaterial": "černá ocel",
+
+  "josephTagline": "Mistr grilování",
+  "josephPrice": "48 400,-",
+  "josephSubheading": "O Josephovi",
+  "josephParagraph1": "Joseph je výsledkem vrcholové řemeslné zručnosti a navržen je pro ty, kteří od svého grilu očekávají nekompromisní kvalitu a výkon. Jeho geometrický design nejen osloví oko, ale také slibuje jedinečný zážitek z grilování. Díky certifikované potravinářské nerezové grilovací desce a možnosti přidání dalšího roštu nabízí Joseph nevídanou flexibilitu a odolnost.",
+  "josephParagraph2": "Speciálně navržený systém pro efektivní přívod kyslíku zajišťuje optimální spalování a umožňuje přikládání paliva přímo uprostřed grilovací desky, což zvyšuje efektivitu a pohodlí při grilování. Připraven na všechny druhy počasí, přináší tento gril industriální eleganci do vašeho venkovního prostoru a slibuje roky spolehlivého užívání. K dispozici je také nerezový dekl, navržený k ochraně grilu před nepříznivými povětrnostními podmínkami, když se na něm právě negriluje, čímž prodlužuje jeho životnost.",
+  "josephUSP1": "Kvalita a výkon",
+  "josephUSP1Text": "Navržen s ohledem na nejvyšší požadavky, kvalitu a výkon, Joseph je ideální pro milovníky a nadšence do grilování, kteří očekávají nejlepší výsledky.",
+  "josephUSP2": "Robustní konstrukce",
+  "josephUSP2Text": "Gril odolá všem druhům počasí, a tak slibuje roky spolehlivého užívání, což z něj činí výbornou investici pro každého, kdo chce spolehlivého partnera v přípravě grilovaných pochoutek.",
+  "josephUSP3": "Možnost rozšíření",
+  "josephUSP3Text": "Nabízí rozšíření s doplňkovým příslušenstvím, jako je přídavný rošt pro další potraviny připravované společně s masem, či nerezový dekl pro ochranu grilu, což zvyšuje jeho užitnou hodnotu a životnost.",
+  "josephMaterial": "nerezová potravinářská ocel",
+
+  "buttonEshop": "Do e-shopu",
+  "buttonOurStory": "Náš příběh",
+
+  "indexHeroTitle": "Rodina grilů Joseph's",
+  "indexHeroButton2": "Naše grily",
+  "indexSection1Text": "Joseph's — grily, které staví na tradici, kvalitě a jednoduchosti. Objevte řadu našich grilů a připojte se k rodině spokojených nadšenců do grilování.",
+
+  "linkTermsAndConditions": "https://download.josephsgrills.cz/Obchodni-podminky_Josephs-Grills_CZ.pdf",
+  "linkGDPR": "https://download.josephsgrills.cz/GDPR_Josephs-Grills_CZ.pdf",
+  "linkCertification": "https://download.josephsgrills.cz/Certifikat-kovu_Josephs-Grills_CZ.pdf",
+
+  "linkEshopGeneral": "https://eshop.josephsgrills.cz/",
+  "linkEshopJohn": "https://eshop.josephsgrills.cz/products/gril-johns"
 }

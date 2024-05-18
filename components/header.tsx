@@ -9,7 +9,6 @@ import { MdClose } from "react-icons/md";
 import { globalLinks } from "@/data/links";
 
 import i18n from "@/modules/i18n";
-import { useTranslation } from "react-i18next";
 
 const links = [
   ["/", "Domů"],
@@ -50,7 +49,6 @@ const Header = () => {
   const [localeFlag, setLocaleFlag] = useState(i18n.language === "cs" ? 1 : 0);
 
   const changeLang = () => {
-    console.log("click");
     return () => {
       if (i18n.language === "cs") {
         i18n?.changeLanguage("en");

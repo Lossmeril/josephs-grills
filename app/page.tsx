@@ -288,18 +288,18 @@ const HomePage = () => {
                 unbounded.className
               }
             >
-              {t("indexTitle")}
+              {t("indexHeroTitle")}
             </h1>
             <div className="w-full flex flex-row flex-nowrap gap-4 xl:gap-10 z-20">
               <div className="w-1/2">
                 <Button link={globalLinks.eshop.cs} inverse={false} blank>
-                  Do e-shopu &raquo;
+                  {t("buttonEshopGeneral")} &raquo;
                 </Button>
               </div>
 
               <div className="w-1/2">
                 <Button link={"#grily"} inverse={true}>
-                  Naše grily &raquo;
+                  {t("indexHeroButton2")} &raquo;
                 </Button>
               </div>
             </div>
@@ -333,16 +333,14 @@ const HomePage = () => {
                 unbounded.className
               }
             >
-              Grily. Jednoduše.
+              {t("slogan")}
             </p>
             <p className="text-lg md:text-xl xl:text-2xl mb-10">
-              Joseph&apos;s &mdash; grily, které staví na tradici, kvalitě a
-              jednoduchosti. Objevte řadu našich grilů a připojte se k rodině
-              spokojených nadšenců do grilování.
+              {t("indexSection1Text")}
             </p>
             <div className="w-48">
               <Button link={"/o-nas"} inverse={false}>
-                Náš příběh &raquo;
+                {t("buttonOurStory")} &raquo;
               </Button>
             </div>
           </div>
@@ -373,86 +371,73 @@ const HomePage = () => {
           <div ref={product1Ref}>
             <HomeProduct
               name="John"
-              tagline="Gril pro dobrodruhy"
+              tagline={t("johnTagline")}
               weight="6"
               height="23"
               length="25"
-              descHeading="O Johnovi"
-              price="1 999,-"
+              descHeading={t("johnSubheading")}
+              price={t("johnPrice")}
               pageLink="./grily/john"
-              eshopLink={globalLinks.eshopJohn.cs}
+              eshopLink={t("linkEshopJohn")}
               image="john-comparison"
-              prop1="Kompaktní a přenosný"
+              prop1={t("johnUSP1")}
               prop1Icon={<HiOutlineArchiveBox size={25} />}
-              prop2="Snadná montáž i demontáž"
+              prop2={t("johnUSP2")}
               prop2Icon={<HiOutlineWrench size={25} />}
-              prop3="Zdravé stravování na cestách"
+              prop3={t("johnUSP3")}
               prop3Icon={<PiForkKnife size={25} />}
               leftRef={product1InfoLeftRef}
               rightRef={product1InfoRightRef}
             >
-              Představujeme vám Johna, malý, ale mimořádně šikovný gril, který
-              se stane vaším nezbytným společníkem na cestách. Díky svému
-              jedinečnému designu &mdash; tvořenému šesti čtvercovými ocelovými
-              pláty, se John skládá a rozkládá s dětskou snadností.
+              {t("johnParagraph1")}
             </HomeProduct>
           </div>
           <div ref={product2Ref}>
             <HomeProduct
               name="Peter"
-              tagline="To jediné ohniště, které potřebujete."
+              tagline={t("peterTagline")}
               weight="36"
               height="33,1"
               length="74,3"
-              descHeading="O Peterovi"
-              price="8 200,-"
+              descHeading={t("peterSubheading")}
+              price={t("peterPrice")}
               pageLink="./grily/peter"
               eshopLink={globalLinks.eshopPeter.cs}
               image="peter-comparison"
-              prop1="Unikátní design"
+              prop1={t("peterUSP1")}
               prop1Icon={<RxRulerSquare size={25} />}
-              prop2="Estetický a praktický"
+              prop2={t("peterUSP2")}
               prop2Icon={<PiSparkle size={25} />}
-              prop3="Snadné přikládání"
+              prop3={t("peterUSP3")}
               prop3Icon={<SlFire size={25} />}
               leftRef={product2InfoLeftRef}
               rightRef={product2InfoRightRef}
             >
-              Peter transformuje každý venkovní prostor na místo plné tepla a
-              pohody. Díky svému inovativnímu designu, připomínajícímu kovovou
-              ošatku, se stane centrem pozornosti a místem setkávání pro rodinu
-              a přátele. Systém pro shromažďování popela zajišťuje snadnou
-              údržbu, zatímco jeho robustní konstrukce slibuje dlouholetou
-              spolehlivost.
+              {t("peterParagraph1")}
             </HomeProduct>
           </div>
           <div ref={product3Ref}>
             <HomeProduct
               name="Joseph"
-              tagline="Mistr grilování"
+              tagline={t("josephTagline")}
               weight="244"
               height="90"
               length="74"
-              descHeading="O Josephovi"
-              price="48 400,-"
+              descHeading={t("josephSubheading")}
+              price={t("josephPrice")}
               pageLink="./grily/joseph"
               eshopLink={globalLinks.eshopJoseph.cs}
               image="joseph-comparison"
-              prop1="Kvalita a výkon"
+              prop1={t("josephUSP1")}
               prop1Icon={<AiOutlineSafetyCertificate size={25} />}
-              prop2="Robustní konstrukce"
+              prop2={t("josephUSP2")}
               prop2Icon={<PiCheckSquareOffset size={25} />}
-              prop3="Možnost rozšíření"
+              prop3={t("josephUSP3")}
               prop3Icon={<PiGear size={25} />}
               leftRef={product3InfoLeftRef}
               rightRef={product3InfoRightRef}
             >
-              Joseph je výsledkem vrcholové řemeslné zručnosti a navržen je pro
-              ty, kteří od svého grilu očekávají nekompromisní kvalitu a výkon.
-              Jeho geometrický design nejen osloví oko, ale také slibuje
-              jedinečný zážitek z grilování. Díky certifikované potravinářské
-              nerezové grilovací desce a možnosti přidání dalšího roštu nabízí
-              Joseph nevídanou flexibilitu a odolnost.
+              {t("josephParagraph1")}
             </HomeProduct>
           </div>
         </section>
