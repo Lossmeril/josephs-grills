@@ -115,7 +115,7 @@ const Header = () => {
             <Button link={globalLinks.eshop.cs} inverse={false} blank>
               Do e-shopu &raquo;
             </Button>
-            <button onClick={changeLang()}>
+            <button onClick={changeLang()} className="ml-8">
               <img
                 alt={localeFlags[localeFlag].name}
                 src={localeFlags[localeFlag].img}
