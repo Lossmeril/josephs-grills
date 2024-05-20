@@ -72,6 +72,46 @@ const JosephProductPage: React.FC = () => {
                 />
               </div>
             </div>
+            <div className="flex flex-row flex-nowrap w-full h-28 gap-4 mb-8">
+              <div
+                className="w-1/4 relative overflow-hidden bg-red"
+                onMouseOver={() => setCurrentImg("5")}
+              >
+                <Image
+                  src="/img/products/joseph/joseph-5.jpg"
+                  alt=""
+                  fill
+                  className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
+                />
+              </div>
+              <div className="w-1/4 relative overflow-hidden bg-red">
+                <Image
+                  src="/img/products/joseph/joseph-6.jpg"
+                  alt=""
+                  fill
+                  className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
+                  onMouseOver={() => setCurrentImg("6")}
+                />
+              </div>
+              <div className="w-1/4 relative overflow-hidden bg-red">
+                <Image
+                  src="/img/products/joseph/joseph-7.jpg"
+                  alt=""
+                  fill
+                  className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
+                  onMouseOver={() => setCurrentImg("7")}
+                />
+              </div>
+              <div className="w-1/4 relative overflow-hidden bg-red">
+                <Image
+                  src="/img/products/joseph/joseph-8.jpg"
+                  alt=""
+                  fill
+                  className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
+                  onMouseOver={() => setCurrentImg("8")}
+                />
+              </div>
+            </div>
           </div>
           <div className="w-full lg:w-1/2 pt-10 p-6 lg:p-20 lg:pl-10">
             <p className="text-xl mb-6 text-center lg:text-left">
@@ -144,6 +184,46 @@ const JosephProductPage: React.FC = () => {
                     fill
                     className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
                     onMouseOver={() => setCurrentImg("4")}
+                  />
+                </div>
+              </div>
+              <div className="flex flex-row flex-nowrap w-full h-28 gap-4 mb-8">
+                <div
+                  className="w-1/4 relative overflow-hidden bg-red"
+                  onMouseOver={() => setCurrentImg("5")}
+                >
+                  <Image
+                    src="/img/products/joseph/joseph-5.jpg"
+                    alt=""
+                    fill
+                    className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
+                  />
+                </div>
+                <div className="w-1/4 relative overflow-hidden bg-red">
+                  <Image
+                    src="/img/products/joseph/joseph-6.jpg"
+                    alt=""
+                    fill
+                    className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
+                    onMouseOver={() => setCurrentImg("6")}
+                  />
+                </div>
+                <div className="w-1/4 relative overflow-hidden bg-red">
+                  <Image
+                    src="/img/products/joseph/joseph-7.jpg"
+                    alt=""
+                    fill
+                    className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
+                    onMouseOver={() => setCurrentImg("7")}
+                  />
+                </div>
+                <div className="w-1/4 relative overflow-hidden bg-red">
+                  <Image
+                    src="/img/products/joseph/joseph-8.jpg"
+                    alt=""
+                    fill
+                    className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
+                    onMouseOver={() => setCurrentImg("8")}
                   />
                 </div>
               </div>
@@ -246,6 +326,9 @@ const JosephProductPage: React.FC = () => {
             value="8 kg"
             inverted
           />
+        </section>
+        <section className="overflow-x-hidden flex flex-col flex-nowrap p-6 pb-16 lg:p-20 mb-0 lg:mb-20">
+          <div className="w-full flex flex-row flex-nowrap gap-10 h-80"></div>
         </section>
       </main>
       <ContactFormSection />
