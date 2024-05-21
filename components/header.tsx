@@ -4,9 +4,8 @@ import Image from "next/image";
 import Button from "./button";
 
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { MdClose } from "react-icons/md";
-import { globalLinks } from "@/data/links";
 
 import i18n from "@/modules/i18n";
 import { useTranslation } from "react-i18next";
