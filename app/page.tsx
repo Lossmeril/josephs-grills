@@ -24,7 +24,6 @@ import { RxRulerSquare } from "react-icons/rx";
 import { SlFire } from "react-icons/sl";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import ExploreSection from "@/components/exploreSection";
-import { globalLinks } from "@/data/links";
 
 import { useTranslation } from "react-i18next";
 
@@ -292,14 +291,14 @@ const HomePage = () => {
             </h1>
             <div className="w-full flex flex-row flex-nowrap gap-4 xl:gap-10 z-20">
               <div className="w-1/2">
-                <Button link={globalLinks.eshop.cs} inverse={false} blank>
-                  {t("buttonEshopGeneral")} &raquo;
+                <Button link={t("linkEshopGeneral")} inverse={false} blank>
+                  {t("buttonEshop")} &raquo;
                 </Button>
               </div>
 
               <div className="w-1/2">
                 <Button link={"#grily"} inverse={true}>
-                  {t("indexHeroButton2")} &raquo;
+                  {t("buttonOurGrills")} &raquo;
                 </Button>
               </div>
             </div>
@@ -402,7 +401,7 @@ const HomePage = () => {
               descHeading={t("peterSubheading")}
               price={t("peterPrice")}
               pageLink="./grily/peter"
-              eshopLink={globalLinks.eshopPeter.cs}
+              eshopLink={t("linkEshopPeter")}
               image="peter-comparison"
               prop1={t("peterUSP1")}
               prop1Icon={<RxRulerSquare size={25} />}
@@ -426,7 +425,7 @@ const HomePage = () => {
               descHeading={t("josephSubheading")}
               price={t("josephPrice")}
               pageLink="./grily/joseph"
-              eshopLink={globalLinks.eshopJoseph.cs}
+              eshopLink={t("linkEshopJoseph")}
               image="joseph-comparison"
               prop1={t("josephUSP1")}
               prop1Icon={<AiOutlineSafetyCertificate size={25} />}

@@ -9,13 +9,7 @@ import { MdClose } from "react-icons/md";
 import { globalLinks } from "@/data/links";
 
 import i18n from "@/modules/i18n";
-
-const links = [
-  ["/", "Domů"],
-  ["/grily", "Grily"],
-  ["/o-nas", "O nás"],
-  ["/kontakt", "Kontakt"],
-];
+import { useTranslation } from "react-i18next";
 
 interface NavbarLinkProps {
   children: React.ReactNode;
@@ -48,6 +42,8 @@ const Header = () => {
   const [isMobileNavOpen, setMobileNavOpen] = useState(false);
   const [localeFlag, setLocaleFlag] = useState(i18n.language === "cs" ? 1 : 0);
 
+  const { t } = useTranslation();
+
   const changeLang = () => {
     return () => {
       if (i18n.language === "cs") {
@@ -59,6 +55,13 @@ const Header = () => {
       }
     };
   };
+
+  const links = [
+    ["/", t("navbarHome")],
+    ["/grily", t("navbarGrills")],
+    ["/o-nas", t("navbarAbout")],
+    ["/kontakt", t("navbarContact")],
+  ];
 
   return (
     <header>
@@ -103,7 +106,7 @@ const Header = () => {
             <div className="w-[150px] relative aspect-[15/5]">
               <Image
                 src="/img/logo-full-color.png"
-                alt="Fresh Lobster logo"
+                alt="Joesph's logo"
                 className="object-contain"
                 fill
               />
@@ -112,15 +115,15 @@ const Header = () => {
 
           <div className="hidden md:flex flex-nowrap justify-end">
             <div className="flex flex-grow"></div>
-            <Button link={globalLinks.eshop.cs} inverse={false} blank>
-              Do e-shopu &raquo;
-            </Button>
-            <button onClick={changeLang()}>
+            <button onClick={changeLang()} className="mr-8">
               <img
                 alt={localeFlags[localeFlag].name}
                 src={localeFlags[localeFlag].img}
               />
             </button>
+            <Button link={t("linkEshopGeneral")} inverse={false} blank>
+              {t("buttonEshop")} &raquo;
+            </Button>
           </div>
         </div>
       </div>

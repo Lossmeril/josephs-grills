@@ -5,10 +5,10 @@ import ContactFormSection from "@/components/contactFormSection";
 import { PropBox } from "@/components/homeProduct";
 import Gallery from "@/components/product/gallery";
 import ProductParameter from "@/components/product/productParameters";
-import { globalLinks } from "@/data/links";
 import { Unbounded } from "next/font/google";
 import Image from "next/image";
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { HiOutlineArchiveBox, HiOutlineWrench } from "react-icons/hi2";
 import { PiForkKnife } from "react-icons/pi";
 
@@ -27,6 +27,8 @@ const portfolio: Array<string> = [
 
 const JohnProductPage: React.FC = () => {
   const [currentImg, setCurrentImg] = useState("1");
+
+  const { t } = useTranslation();
 
   return (
     <div className="w-full bg-black">
@@ -85,7 +87,7 @@ const JohnProductPage: React.FC = () => {
           </div>
           <div className="w-full lg:w-1/2 pt-10 p-6 lg:p-20 lg:pl-10">
             <p className="text-xl mb-6 text-center lg:text-left">
-              Gril pro dobrodruhy
+              {t("johnTagline")}
             </p>
             <h1
               className={
@@ -96,19 +98,8 @@ const JohnProductPage: React.FC = () => {
               John
             </h1>
             <p className="text-red text-2xl font-bold mb-4 text-center lg:text-left">
-              1 999,-
+              {t("johnPrice")}
             </p>
-            {/* <div className="flex flex-row flex-nowrap justify-center gap-8 my-10">
-              <PropBox name={"Kompaktní a přenosný"} inv>
-                <HiOutlineArchiveBox size={25} />
-              </PropBox>
-              <PropBox name={"Snadná montáž i demontáž"} inv>
-                <HiOutlineWrench size={25} />
-              </PropBox>
-              <PropBox name={"Zdravé stravování na cestách"} inv>
-                <PiForkKnife size={25} />
-              </PropBox>
-            </div> */}
             <div className="block lg:hidden w-full lg:w-1/2 p-4 lg:p-20 lg:pr-10">
               <div className="relative overflow-hidden w-full aspect-[3/4] bg-mutedtext-light ml-auto mb-8">
                 <Image
@@ -162,30 +153,20 @@ const JohnProductPage: React.FC = () => {
             </div>
 
             <p className="mb-6 text-center lg:text-left">
-              Představujeme vám Johna, malý, ale mimořádně šikovný gril, který
-              se stane vaším nezbytným společníkem na cestách. Díky svému
-              jedinečnému designu &mdash; tvořenému šesti čtvercovými ocelovými
-              pláty, se John skládá a rozkládá s dětskou snadností.
+              {t("johnParagraph1")}
             </p>
             <p className="mb-6 text-center lg:text-left">
-              Ve složené formě nabízí nevídanou kompaktnost, což jej činí
-              ideálním pro milovníky cestování, co si chtějí jídlo vychutnávat s
-              pohledem na přírodní krásy pod širým nebem. Je vyroben z
-              certifikované nerezové potravinářské oceli, díky čemuž slibuje
-              bezpečné grilování bez obav. Jeho koupí získáte nejen
-              spolehlivost, ale i styl. přesně to na cestách potřebujete &mdash;
-              Johna, který je vždy připraven podpořit vaše kulinářské
-              dobrodružství.
+              {t("johnParagraph2")}
             </p>
             <div className="mt-10 lg:mt-0 flex flex-col items-center justify-center lg:justify-start md:flex-row flex-nowrap gap-4 md:gap-10 mb-20 lg:mb-0">
               <div className="w-40">
-                <Button link={globalLinks.eshopPeter.cs} inverse={false} blank>
-                  Do e-shopu &raquo;
+                <Button link={t("linkEshopJohn")} inverse={false} blank>
+                  {t("buttonEshop")} &raquo;
                 </Button>
               </div>
               <div className="w-40">
                 <Button link={"/grily"} inverse={true}>
-                  Všechny grily &raquo;
+                  {t("buttonOurGrills")} &raquo;
                 </Button>
               </div>
             </div>
@@ -200,11 +181,10 @@ const JohnProductPage: React.FC = () => {
                 <HiOutlineArchiveBox size={25} />
               </PropBox>
               <h2 className="text-center text-xl font-bold mb-8">
-                Kompaktní a přenosný
+                {t("johnUSP1")}
               </h2>
               <p className="text-mutedtext-dark text-center">
-                Unikátní skládací design, s váhou pouhých 6 kg a malé rozměry v
-                složeném stavu z něj dělají dokonalého společníka na cesty.
+                {t("johnUSP1Text")}
               </p>
             </div>
             {/* --------- USP 2  --------- */}
@@ -213,12 +193,10 @@ const JohnProductPage: React.FC = () => {
                 <HiOutlineWrench size={25} />
               </PropBox>
               <h2 className="text-center text-xl font-bold mb-8">
-                Snadná montáž i demontáž
+                {t("johnUSP2")}
               </h2>
               <p className="text-mutedtext-dark text-center">
-                Díky složení z 6 čtvercových ocelových plátů je John snadno
-                sestavitelný a rozložitelný bez potřeby nářadí, což šetří čas a
-                usnadňuje jeho používání na jakémkoliv místě.
+                {t("johnUSP2Text")}
               </p>
             </div>
             {/* --------- USP 3  --------- */}
@@ -227,34 +205,35 @@ const JohnProductPage: React.FC = () => {
                 <PiForkKnife size={25} />
               </PropBox>
               <h2 className="text-center text-xl font-bold mb-8">
-                Zdravé stravování na cestách
+                {t("johnUSP3")}
               </h2>
               <p className="text-mutedtext-dark text-center">
-                John je vyroben z kvalitní nerezové oceli certifikované pro
-                potravinářské účely, což zajišťuje, že vaše jídlo bude vždy
-                chutné a bez nežádoucích látek.
+                {t("johnUSP3Text")}
               </p>
             </div>
           </div>
           <h2 className="text-4xl font-bold leading-[1.25em] text-center md:text-left mb-8 -mt-4 ">
-            Parametry
+            {t("productParametersHeading")}
           </h2>
           <ProductParameter
-            name="Rozměr (rozložený)"
+            name={t("productParameterSizeDis")}
             value="250 × 250 × 15 mm"
           />
           <ProductParameter
-            name="Rozměr (sestavený)"
+            name={t("productParameterSizeAss")}
             value="250 × 250 × 230 mm"
             inverted
           />
-          <ProductParameter name="Tloušťka oceli" value="2 mm" />
           <ProductParameter
-            name="Materiál"
-            value="Nerezová potravinářská ocel"
+            name={t("productParameterSteelThickness")}
+            value="2 mm"
+          />
+          <ProductParameter
+            name={t("productParameterMaterial")}
+            value={t("productParameterStainlessSteel")}
             inverted
           />
-          <ProductParameter name="Hmotnost" value="6 kg" />
+          <ProductParameter name={t("productParameterWeight")} value="6 kg" />
         </section>
 
         <Gallery grillName={"Joseph"} portfolioItems={portfolio} />

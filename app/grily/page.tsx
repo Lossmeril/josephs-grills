@@ -1,10 +1,11 @@
+"use client";
+
 import Button from "@/components/button";
 import ContactFormSection from "@/components/contactFormSection";
 import { Unbounded } from "next/font/google";
 import Image from "next/image";
 
-import { Metadata } from "next";
-import { globalLinks } from "@/data/links";
+import { useTranslation } from "react-i18next";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ const ProductCard: React.FC<ProductProps> = ({
   eshopLink,
   children,
 }) => {
+  const { t } = useTranslation();
   return (
     <div className="w-full md:w-2/5 xl:w-1/3 bg-[#ffffffa8] border border-mutedtext-light flex flex-col justify-between px-10 pt-8 pb-16">
       <div className="flex flex-col">
@@ -42,14 +44,14 @@ const ProductCard: React.FC<ProductProps> = ({
         </h2>
         <p className="text-sm text-mutedtext-dark mb-4">{children}</p>
       </div>
-      <p className="text-red text-2xl font-bold mb-8">{price},-</p>
+      <p className="text-red text-2xl font-bold mb-8">{price}</p>
       <div className="flex flex-col">
         <div className="flex flex-col gap-4">
           <Button link={eshopLink} inverse={false} blank>
-            Do e-shopu &raquo;
+            {t("buttonEshop")} &raquo;
           </Button>
           <Button link={link} inverse={true}>
-            Dozvědět se více &raquo;
+            {t("buttonMoreInfo")} &raquo;
           </Button>
         </div>
       </div>
@@ -57,15 +59,16 @@ const ProductCard: React.FC<ProductProps> = ({
   );
 };
 
-export const metadata: Metadata = {
-  title: "Naše grily | Joseph's",
-  description:
-    "Prozkoumejte naši kolekci prémiových grilů na Joseph's Grills. Od kompaktního grilu John, přes stylový gril Peter, až po exkluzivní model Joseph, najdete u nás gril pro každý venkovní prostor.",
-  keywords:
-    "prémiové grily, gril Joseph, gril Peter, gril John, venkovní grilování, grilovací příslušenství, Joseph's Grills, grily na prodej",
-};
+// export const metadata: Metadata = {
+//   title: "Naše grily | Joseph's",
+//   description:
+//     "Prozkoumejte naši kolekci prémiových grilů na Joseph's Grills. Od kompaktního grilu John, přes stylový gril Peter, až po exkluzivní model Joseph, najdete u nás gril pro každý venkovní prostor.",
+//   keywords:
+//     "prémiové grily, gril Joseph, gril Peter, gril John, venkovní grilování, grilovací příslušenství, Joseph's Grills, grily na prodej",
+// };
 
 const GrillsPage = () => {
+  const { t } = useTranslation();
   return (
     <>
       <main className="max-w-[1200px] overflow-x-hidden mx-auto">
@@ -76,38 +79,35 @@ const GrillsPage = () => {
               unbounded.className
             }
           >
-            Naše grily
+            {t("grillsHeroTitle")}
           </h1>
           <div className="flex flex-col md:flex-row flex-wrap xl:flex-nowrap gap-5 w-[80wv] xl:w-full lg:mb-40 justify-center">
             <ProductCard
               name="John"
               image="john.webp"
               link="/grily/john"
-              eshopLink={globalLinks.eshopJohn.cs}
-              price="1 999"
+              eshopLink={t("linkEshopJohn")}
+              price={t("johnPrice")}
             >
-              Představujeme vám Johna, malý, ale mimořádně šikovný gril, který
-              se stane vaším nezbytným společníkem na cestách.
+              {t("johnParagraph1short")}
             </ProductCard>
             <ProductCard
               name="Peter"
               image="peter.webp"
               link="/grily/peter"
-              eshopLink={globalLinks.eshopPeter.cs}
-              price="8 200"
+              eshopLink={t("linkEshopPeter")}
+              price={t("peterPrice")}
             >
-              Peter transformuje každý venkovní prostor na místo plné tepla a
-              pohody.
+              {t("peterParagraph1short")}
             </ProductCard>
             <ProductCard
               name="Joseph"
               image="joseph.webp"
               link="/grily/joseph"
-              eshopLink={globalLinks.eshopJoseph.cs}
-              price="48 400"
+              eshopLink={t("linkEshopJoseph")}
+              price={t("josephPrice")}
             >
-              Joseph je výsledkem vrcholové řemeslné zručnosti a navržen je pro
-              ty, kteří od svého grilu očekávají nekompromisní kvalitu a výkon.
+              {t("josephParagraph1short")}
             </ProductCard>
           </div>
         </section>

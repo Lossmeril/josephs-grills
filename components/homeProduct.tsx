@@ -3,6 +3,7 @@ import Button from "./button";
 
 import { Unbounded } from "next/font/google";
 import { MutableRefObject } from "react";
+import { useTranslation } from "react-i18next";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
@@ -102,6 +103,7 @@ const HomeProduct: React.FC<HomeProductProps> = ({
   rightRef,
   children,
 }) => {
+  const { t } = useTranslation();
   return (
     <>
       {/* MOBILE */}
@@ -145,10 +147,10 @@ const HomeProduct: React.FC<HomeProductProps> = ({
 
           <div className="flex flex-col lg:flex-row flex-nowrap gap-5 mt-10">
             <Button link={eshopLink} inverse={false}>
-              Do e-shopu &raquo;
+              {t("buttonEshop")} &raquo;
             </Button>
             <Button link={pageLink} inverse={true}>
-              Více informací &raquo;
+              {t("buttonMoreInfo")} &raquo;
             </Button>
           </div>
 
@@ -180,16 +182,28 @@ const HomeProduct: React.FC<HomeProductProps> = ({
               </h2>
               <p className="text-red text-2xl font-bold mb-12">{price}</p>
               <div className="flex flex-row flex-nowrap gap-3">
-                <InfoBox value={weight} unit="kg" property="hmotnost" />
-                <InfoBox value={height} unit="cm" property="výška" />
-                <InfoBox value={length} unit="cm" property="šířka/délka" />
+                <InfoBox
+                  value={weight}
+                  unit="kg"
+                  property={t("indexGrillWeight")}
+                />
+                <InfoBox
+                  value={height}
+                  unit="cm"
+                  property={t("indexGrillHeight")}
+                />
+                <InfoBox
+                  value={length}
+                  unit="cm"
+                  property={t("indexGrillLength")}
+                />
               </div>
               <div className="flex flex-row flex-nowrap gap-5 mt-10">
                 <Button link={eshopLink} inverse={false} blank>
-                  Do e-shopu &raquo;
+                  {t("buttonEshop")} &raquo;
                 </Button>
                 <Button link={pageLink} inverse={true}>
-                  Více informací &raquo;
+                  {t("buttonMoreInfo")} &raquo;
                 </Button>
               </div>
             </div>
