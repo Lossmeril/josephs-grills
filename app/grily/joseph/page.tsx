@@ -4,19 +4,19 @@ import Button from "@/components/button";
 import ContactFormSection from "@/components/contactFormSection";
 import { PropBox } from "@/components/homeProduct";
 import ProductParameter from "@/components/product/productParameters";
-import { globalLinks } from "@/data/links";
 import { Unbounded } from "next/font/google";
 import Image from "next/image";
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
-import { PiCheckSquareOffset, PiGear, PiSparkle } from "react-icons/pi";
-import { RxRulerSquare } from "react-icons/rx";
-import { SlFire } from "react-icons/sl";
+import { PiCheckSquareOffset, PiGear } from "react-icons/pi";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
 const JosephProductPage: React.FC = () => {
   const [currentImg, setCurrentImg] = useState("1");
+
+  const { t } = useTranslation();
 
   return (
     <div className="w-full bg-black">
@@ -75,7 +75,7 @@ const JosephProductPage: React.FC = () => {
           </div>
           <div className="w-full lg:w-1/2 pt-10 p-6 lg:p-20 lg:pl-10">
             <p className="text-xl mb-6 text-center lg:text-left">
-              Mistr grilování
+              {t("josephTagline")}
             </p>
             <h1
               className={
@@ -86,15 +86,19 @@ const JosephProductPage: React.FC = () => {
               Joseph
             </h1>
             <p className="text-red text-2xl font-bold text-center lg:text-left mb-2">
-              48 400,-
+              {t("josephPrice")}
             </p>
             <p className="text-white text-md text-center lg:text-left mb-2">
-              &bull; Nerezový rošt{" "}
-              <span className="text-red font-bold">+ 4 000,-</span>
+              <span className="text-red font-bold">
+                + {t("josephAccessoryGratePrice")}
+              </span>{" "}
+              {t("josephAccessoryGrate")}
             </p>
             <p className="text-white text-md text-center lg:text-left mb-10">
-              &bull; Nerezový dekl{" "}
-              <span className="text-red font-bold">+ 4 000,-</span>
+              <span className="text-red font-bold">
+                + {t("josephAccessoryCoverPrice")}
+              </span>{" "}
+              {t("josephAccessoryCover")}
             </p>
 
             <div className="block lg:hidden w-full lg:w-1/2 p-4 lg:p-20 lg:pr-10">
@@ -150,32 +154,20 @@ const JosephProductPage: React.FC = () => {
             </div>
 
             <p className="mb-6 text-center lg:text-left">
-              Joseph je výsledkem vrcholové řemeslné zručnosti a navržen je pro
-              ty, kteří od svého grilu očekávají nekompromisní kvalitu a výkon.
-              Jeho geometrický design nejen osloví oko, ale také slibuje
-              jedinečný zážitek z grilování. Díky certifikované potravinářské
-              nerezové grilovací desce a možnosti přidání dalšího roštu nabízí
-              Joseph nevídanou flexibilitu a odolnost.
+              {t("josephParagraph1")}
             </p>
             <p className="mb-6 text-center lg:text-left">
-              Speciálně navržený systém pro efektivní přívod kyslíku zajišťuje
-              optimální spalování a umožňuje přikládání paliva přímo uprostřed
-              grilovací desky, což zvyšuje efektivitu a pohodlí při grilování.
-              Připraven na všechny druhy počasí, přináší tento gril industriální
-              eleganci do vašeho venkovního prostoru a slibuje roky spolehlivého
-              užívání. K dispozici je také nerezový dekl, navržený k ochraně
-              grilu před nepříznivými povětrnostními podmínkami, když se na něm
-              právě negriluje, čímž prodlužuje jeho životnost.
+              {t("josephParagraph2")}
             </p>
             <div className="mt-10 lg:mt-0 flex flex-col items-center justify-center lg:justify-start md:flex-row flex-nowrap gap-4 md:gap-10 mb-20 lg:mb-0">
               <div className="w-40">
-                <Button link={globalLinks.eshopJoseph.cs} inverse={false} blank>
-                  Do e-shopu &raquo;
+                <Button link={t("linkEshopJoseph")} inverse={false} blank>
+                  {t("buttonEshop")} &raquo;
                 </Button>
               </div>
               <div className="w-40">
                 <Button link={"/grily"} inverse={true}>
-                  Všechny grily &raquo;
+                  {t("buttonOurGrills")} &raquo;
                 </Button>
               </div>
             </div>
@@ -190,12 +182,10 @@ const JosephProductPage: React.FC = () => {
                 <AiOutlineSafetyCertificate size={25} />
               </PropBox>
               <h2 className="text-center text-xl font-bold mb-8">
-                Kvalita a výkon
+                {t("josephUSP1")}
               </h2>
               <p className="text-mutedtext-dark text-center">
-                Navržen s ohledem na nejvyšší požadavky, kvalitu a výkon, Joseph
-                je ideální pro milovníky a nadšence do grilování, kteří
-                očekávají nejlepší výsledky.
+                {t("josephUSP1Text")}
               </p>
             </div>
             {/* --------- USP 2  --------- */}
@@ -204,12 +194,10 @@ const JosephProductPage: React.FC = () => {
                 <PiCheckSquareOffset size={25} />
               </PropBox>
               <h2 className="text-center text-xl font-bold mb-8">
-                Robustní konstrukce
+                {t("josephUSP2")}
               </h2>
               <p className="text-mutedtext-dark text-center">
-                Gril odolá všem druhům počasí, a tak slibuje roky spolehlivého
-                užívání, což z něj činí výbornou investici pro každého, kdo chce
-                spolehlivého partnera v přípravě grilovaných pochoutek.
+                {t("josephUSP2Text")}
               </p>
             </div>
             {/* --------- USP 3  --------- */}
@@ -218,33 +206,40 @@ const JosephProductPage: React.FC = () => {
                 <PiGear size={25} />
               </PropBox>
               <h2 className="text-center text-xl font-bold mb-8">
-                Možnost rozšíření
+                {t("josephUSP3")}
               </h2>
               <p className="text-mutedtext-dark text-center">
-                Nabízí rozšíření s doplňkovým příslušenstvím, jako je přídavný
-                rošt pro další potraviny připravované společně s masem, či
-                nerezový dekl pro ochranu grilu, což zvyšuje jeho užitnou
-                hodnotu a životnost.
+                {t("josephUSP3Text")}
               </p>
             </div>
           </div>
           <h2 className="text-4xl font-bold leading-[1.25em] text-center md:text-left mb-8 -mt-4 ">
-            Parametry
+            {t("productParametersHeading")}
           </h2>
-          <ProductParameter name="Výška" value="900 mm" />
-          <ProductParameter name="Šířka" value="740 mm" inverted />
-          <ProductParameter name="Tloušťka nerezové desky" value="10 mm" />
-          <ProductParameter name="Hmotnost" value="36 kg" inverted />
+          <ProductParameter name={t("produtParameterHeight")} value="900 mm" />
           <ProductParameter
-            name="Materiál"
-            value="nerezová potravinářská ocel"
-          />
-          <ProductParameter name="Hmotnost" value="244 kg" inverted />
-          <ProductParameter name="Hmotnost nerezového roštu" value="6 kg" />
-          <ProductParameter
-            name="Hmotnost nerezového deklu"
-            value="8 kg"
+            name={t("produtParameterWidth")}
+            value="740 mm"
             inverted
+          />
+          <ProductParameter
+            name={t("productParameterSteelPlateThickness")}
+            value="10 mm"
+          />
+          <ProductParameter
+            name={t("productParameterMaterial")}
+            value={t("productParameterStainlessSteel")}
+            inverted
+          />
+          <ProductParameter name={t("productParameterWeight")} value="244 kg" />
+          <ProductParameter
+            name={t("productParameterWeightOfAccessoryGrate")}
+            value="6 kg"
+            inverted
+          />
+          <ProductParameter
+            name={t("productParameterWeightOfAccessoryCover")}
+            value="8 kg"
           />
         </section>
       </main>

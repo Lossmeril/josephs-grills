@@ -7,6 +7,7 @@ import Button from "./button";
 
 import { gsap } from "gsap";
 import { globalLinks } from "@/data/links";
+import { useTranslation } from "react-i18next";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
@@ -35,6 +36,8 @@ const ExploreSection: React.FC = () => {
     );
   });
 
+  const { t } = useTranslation();
+
   return (
     <section
       ref={footnoteRef}
@@ -43,7 +46,7 @@ const ExploreSection: React.FC = () => {
       <div className="relative w-10 h-10 mx-auto mb-6">
         <Image src="/img/favicon.png" alt="" fill className="object-contain" />
       </div>
-      <p className="text-lg xl:text-xl mb-6">Vítejte v rodině Joseph&apos;s!</p>
+      <p className="text-lg xl:text-xl mb-6">{t("exploreSectionSubheading")}</p>
       <div className="relative">
         <p
           className={
@@ -51,7 +54,7 @@ const ExploreSection: React.FC = () => {
             unbounded.className
           }
         >
-          Prozkoumejte nové chutě a objevte kouzlo grilování!
+          {t("exploreSectionHeading")}
         </p>
         <div
           ref={underlineFootnoteRef}
@@ -60,13 +63,13 @@ const ExploreSection: React.FC = () => {
       </div>
       <div className="flex flex-col lg:flex-row flex-nowrap gap-5 lg:gap-10 lg:w-[650px] mt-10 mb-24 lg:mb-0 lg:mt-10">
         <div className="lg:w-1/2">
-          <Button link={globalLinks.eshop.cs} inverse={false} blank>
-            Do e-shopu &raquo;
+          <Button link={t("linkEshopGeneral")} inverse={false} blank>
+            {t("buttonEshop")} &raquo;
           </Button>
         </div>
         <div className="lg:w-1/2">
           <Button link={"/grily"} inverse={true}>
-            Naše grily &raquo;
+            {t("buttonOurGrills")} &raquo;
           </Button>
         </div>
       </div>

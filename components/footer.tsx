@@ -1,11 +1,14 @@
-import { globalLinks } from "@/data/links";
+"use client";
+
 import { Inter } from "next/font/google";
 import Image from "next/image";
-import { MdEmail, MdPhone } from "react-icons/md";
+import { useTranslation } from "react-i18next";
 
 const inter = Inter({ subsets: ["latin"] });
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <footer>
       <div className="w-full py-10 md:py-0 bg-white shadow-sm z-50 border-t border-mutedtext-light">
@@ -19,7 +22,9 @@ const Footer: React.FC = () => {
                 className="object-contain"
               />
             </div>
-            <h3 className="text-lg font-bold mb-3">Naše grily</h3>
+            <h3 className="text-lg font-bold mb-3">
+              {t("footerGrillsHeading")}
+            </h3>
             <ul>
               <li>
                 <a className="link" href="/grily/john">
@@ -47,43 +52,51 @@ const Footer: React.FC = () => {
             </div>
           </div>
           <div className="text-center mb-8">
-            <h3 className="text-lg font-bold mb-3">Další stránky</h3>
+            <h3 className="text-lg font-bold mb-3">
+              {t("footerPagesHeading")}
+            </h3>
             <ul>
               <li>
                 <a className="link" href="/o-nas">
-                  O nás
-                </a>
-              </li>
-              <li>
-                <a className="link" href={globalLinks.eshop.cs} target="_blank">
-                  E-shop
+                  {t("footerAboutLink")}
                 </a>
               </li>
               <li>
                 <a
                   className="link"
-                  href={globalLinks.termsAndConditions.cs}
+                  href={t("linkEshopGeneral")}
                   target="_blank"
                 >
-                  Obchodní podmínky
-                </a>
-              </li>
-              <li>
-                <a className="link" href={globalLinks.GDPR.cs} target="_blank">
-                  Ochrana osobních údajů a GDPR
+                  {t("footerEshopLink")}
                 </a>
               </li>
               <li>
                 <a
                   className="link"
-                  href={globalLinks.certification.cs}
+                  href={t("linkTermsAndConditions")}
                   target="_blank"
                 >
-                  Certifikace kovu
+                  {t("termsLink")}
+                </a>
+              </li>
+              <li>
+                <a className="link" href={t("linkGDPR")} target="_blank">
+                  {t("GDPRLink")}
+                </a>
+              </li>
+              <li>
+                <a
+                  className="link"
+                  href={t("linkCertification")}
+                  target="_blank"
+                >
+                  {t("certificationLink")}
                 </a>
               </li>
             </ul>
-            <h3 className="text-lg font-bold mt-6 mb-3">Kontakt</h3>
+            <h3 className="text-lg font-bold mt-6 mb-3">
+              {t("footerContactHeading")}
+            </h3>
             <ul>
               <li>
                 <a href="tel:'+420606727976'" className="link">
@@ -112,7 +125,7 @@ const Footer: React.FC = () => {
                 <br />
                 789 91 Štíty
                 <br />
-                Česká Republika
+                {t("czechRepublic")}
               </li>
             </ul>
           </div>
@@ -120,7 +133,7 @@ const Footer: React.FC = () => {
       </div>
       <div className="w-full h-20 bg-white shadow-sm z-50 border-t border-mutedtext-light">
         <div className="h-20 flex flex-nowrap justify-center items-center mx-[5vw] lg:mx-[10vw]">
-          Vytvořilo AURORA studio, {new Date().getFullYear()}
+          {t("footerMadeBy")} AURORA studio, {new Date().getFullYear()}
         </div>
       </div>
     </footer>

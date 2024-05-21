@@ -10,6 +10,7 @@ import ContactFormSection from "@/components/contactFormSection";
 import Image from "next/image";
 import { Unbounded } from "next/font/google";
 import ExploreSection from "@/components/exploreSection";
+import { useTranslation } from "react-i18next";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
@@ -138,6 +139,8 @@ const AboutPage = () => {
     );
   });
 
+  const { t } = useTranslation();
+
   return (
     <>
       <main className="max-w-[1200px] overflow-x-hidden mx-auto">
@@ -148,12 +151,9 @@ const AboutPage = () => {
               unbounded.className
             }
           >
-            Vítejte v rodině Joseph&apos;s!
+            {t("aboutHeroTitle")}
           </h1>
-          <p className="text-xl mb-6">
-            Grilování je naše vášeň, protože u grilu nejlépe poznáte jaký člověk
-            doopravdy je. Poznejte jací jsme v naší rodině a přidejte se k nám!
-          </p>
+          <p className="text-xl mb-6">{t("aboutHeroSubtitle")}</p>
         </section>
         <section
           ref={section1Ref}
@@ -170,7 +170,7 @@ const AboutPage = () => {
                   unbounded.className
                 }
               >
-                Od rodiny...
+                {t("aboutSection1Title")}
               </h2>
               <div
                 className="bg-orange opacity-25 h-10 absolute top-[10%] z-0"
@@ -178,20 +178,8 @@ const AboutPage = () => {
               ></div>
             </div>
 
-            <p className="text-md mb-6">
-              V srdci každého kusu kovu, který prošel rukama naší rodinné firmy
-              je ukryt příběh. Příběh o tradici, řemeslu a rodinné vášni, která
-              překračuje generace. Značka Joseph&apos;s Grills není výjimkou. Je
-              to odkaz na dědečka Josefa, zakladatele, a také Petra, jeho
-              pokračovatele, jehož vášeň pro grilování byla zakována do každého
-              detailu našich grilů.
-            </p>
-            <p className="text-md mb-6">
-              Léta strávená obráběním kovu a snaha pochopit jeho tajemství vedla
-              Petra k nápadu &mdash; vytvořit gril, který by nejen splňoval
-              všechna očekávání v oblasti kvality a funkčnosti, ale také byl
-              jednoduchý na obsluhu a vydržel po dlouhé roky.
-            </p>
+            <p className="text-md mb-6">{t("aboutSection1Text1")}</p>
+            <p className="text-md mb-6">{t("aboutSection1Text2")}</p>
           </div>
           <div ref={img1Ref} className="w-full h-[500px] relative">
             <Image
@@ -229,24 +217,9 @@ const AboutPage = () => {
                 className="bg-orange opacity-25 h-10 absolute top-[10%] z-0"
               ></div>
             </div>
-            <p className="text-md mb-6">
-              S touto vizí Joseph&apos;s přináší na trh tři unikátní typy grilů
-              &mdash; každý pojmenovaný na počest jednoho z členů rodiny:
-              Joseph, Peter a John. Každý z nich reprezentuje různé aspekty
-              grilovacích předností a stylů, aby vyhověl každému nadšenci
-              venkovní přípravy jídla.
-            </p>
-            <p className="text-md mb-6">
-              Každý gril je vytvořen s důrazem na jednoduchost, jak v designu,
-              tak v užívání. Používáme pouze nejkvalitnější materiály, což našim
-              grilům zaručuje dlouhověkost a odolnost. Věříme, že grilování je
-              především o rodině, přátelích a společně stráveném čase. A v tom
-              není nic komplikovaného.
-            </p>
-            <p className="text-md mb-6">
-              Proto jsme se rozhodli, že naše grily budou jednoduché, výkonné,
-              schopné přizpůsobit se jakémukoli stylu grilování.
-            </p>
+            <p className="text-md mb-6">{t("aboutSection2Text1")}</p>
+            <p className="text-md mb-6">{t("aboutSection2Text2")}</p>
+            <p className="text-md mb-6">{t("aboutSection2Text3")}</p>
           </div>
         </section>
 

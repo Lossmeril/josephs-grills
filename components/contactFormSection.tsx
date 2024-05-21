@@ -1,10 +1,13 @@
 import { Inter, Unbounded } from "next/font/google";
+import { useTranslation } from "react-i18next";
 import { MdEmail, MdPhone } from "react-icons/md";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"] });
 
 const ContactFormSection: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="contact-form-section section-2 min-h-[130vh] relative flex flex-row justify-start items-center xl:px-40">
       <div className="hidden xl:block w-2/5"></div>
@@ -15,7 +18,7 @@ const ContactFormSection: React.FC = () => {
             unbounded.className
           }
         >
-          Kontakt
+          {t("contactSectionHeading")}
         </h2>
         <div className="py-4 px-[10px] flex flex-col flex-nowrap gap-4 lg:pb-10 lg:gap-16 lg:flex-row">
           <div className="flex flex-row flex-nowrap justify-start gap-5">
@@ -44,12 +47,12 @@ const ContactFormSection: React.FC = () => {
             unbounded.className
           }
         >
-          Napište nám!
+          {t("contactSectionFormTitle")}
         </h2>
         <iframe
-          title="Kontaktní formulář"
+          title={t("contactIframeTitle")}
           className="w-full min-h-[115vh] lg:min-h-[80vh] overflow-visible"
-          src="https://cms.josephsgrills.cz/kontaktni-formular/"
+          src={t("contactIframeSrc")}
         />
       </div>
     </section>

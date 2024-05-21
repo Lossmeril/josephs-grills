@@ -8,7 +8,7 @@ import { Inter, Unbounded } from "next/font/google";
 import { IoMdPin } from "react-icons/io";
 import { MdEmail, MdPhone } from "react-icons/md";
 import Button from "@/components/button";
-import { globalLinks } from "@/data/links";
+import { useTranslation } from "react-i18next";
 
 const inter = Inter({ subsets: ["latin"] });
 const unbounded = Unbounded({ subsets: ["latin"] });
@@ -16,6 +16,8 @@ const unbounded = Unbounded({ subsets: ["latin"] });
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const ContactPage = () => {
+  const { t } = useTranslation();
+
   return (
     <main className="max-w-[1200px] overflow-x-hidden mx-auto">
       <section className="min-h-[500px] bg-white overflow-x-hidden pt-20 flex flex-col justify-center items-center hero">
@@ -26,12 +28,10 @@ const ContactPage = () => {
               unbounded.className
             }
           >
-            Ozvěte se nám!
+            {t("contactHeroTitle")}
           </h1>
           <div className="bg-orange opacity-25 h-10 absolute top-[10%] z-0"></div>
-          <p className="text-xl mb-6">
-            Vy máte rádi grilování. My taky. Tak nám napište a nebo zavolejte!
-          </p>
+          <p className="text-xl mb-6">{t("contactHeroSubtitle")}</p>
         </div>
       </section>
       <section className="min-h-[800px] py-5 bg-white overflow-x-hidden flex flex-col lg:flex-row flex-nowrap justify-center items-center gap-40 text-center ">
@@ -64,27 +64,23 @@ const ContactPage = () => {
                 <br />
                 789 91 Štíty
                 <br />
-                Česká Republika
+                {t("czechRepublic")}
               </p>
             </div>
             <div
               id="#terms-of-service-gdpr"
               className="mt-5 flex flex-col gap-5 max-w-80"
             >
-              <Button
-                link={globalLinks.termsAndConditions.cs}
-                inverse={false}
-                blank
-              >
-                Obchodní podmínky &raquo;
+              <Button link={t("linkTermsAndConditions")} inverse={false} blank>
+                {t("termsLink")} &raquo;
               </Button>
 
-              <Button link={globalLinks.GDPR.cs} inverse={false} blank>
-                Ochrana osobních údajů a GDPR &raquo;
+              <Button link={t("linkGDPR")} inverse={false} blank>
+                {t("GDPRLink")} &raquo;
               </Button>
 
-              <Button link={globalLinks.certification.cs} inverse={false} blank>
-                Certifikace nerezové oceli &raquo;
+              <Button link={t("linkCertification")} inverse={false} blank>
+                {t("certificationLink")} &raquo;
               </Button>
             </div>
           </div>
@@ -95,11 +91,12 @@ const ContactPage = () => {
                 unbounded.className
               }
             >
-              Napište nám!
+              {t("contactSectionFormTitle")}
             </h2>
             <iframe
+              title={t("contactIframeTitle")}
               className="w-full min-h-[80vh]"
-              src="https://cms.josephsgrills.cz/kontaktni-formular/"
+              src={t("contactIframeSrc")}
             />
           </div>
         </div>

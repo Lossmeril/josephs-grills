@@ -4,10 +4,10 @@ import Button from "@/components/button";
 import ContactFormSection from "@/components/contactFormSection";
 import { PropBox } from "@/components/homeProduct";
 import ProductParameter from "@/components/product/productParameters";
-import { globalLinks } from "@/data/links";
 import { Unbounded } from "next/font/google";
 import Image from "next/image";
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { PiSparkle } from "react-icons/pi";
 import { RxRulerSquare } from "react-icons/rx";
 import { SlFire } from "react-icons/sl";
@@ -16,6 +16,8 @@ const unbounded = Unbounded({ subsets: ["latin"] });
 
 const PeterProductPage: React.FC = () => {
   const [currentImg, setCurrentImg] = useState("1");
+
+  const { t } = useTranslation();
 
   return (
     <div className="w-full bg-black">
@@ -74,7 +76,7 @@ const PeterProductPage: React.FC = () => {
           </div>
           <div className="w-full lg:w-1/2 pt-10 p-6 lg:p-20 lg:pl-10">
             <p className="text-xl mb-6 text-center lg:text-left">
-              To jediné ohniště, které potřebujete.
+              {t("peterTagline")}
             </p>
             <h1
               className={
@@ -85,7 +87,7 @@ const PeterProductPage: React.FC = () => {
               Peter
             </h1>
             <p className="text-red text-2xl font-bold mb-4 text-center lg:text-left">
-              8 200,-
+              {t("peterPrice")}
             </p>
 
             <div className="block lg:hidden w-full lg:w-1/2 p-4 lg:p-20 lg:pr-10">
@@ -141,33 +143,20 @@ const PeterProductPage: React.FC = () => {
             </div>
 
             <p className="mb-6 text-center lg:text-left">
-              Peter transformuje každý venkovní prostor na místo plné tepla a
-              pohody. Díky svému inovativnímu designu, připomínajícímu kovovou
-              ošatku, se stane centrem pozornosti a místem setkávání pro rodinu
-              a přátele. Systém pro shromažďování popela zajišťuje snadnou
-              údržbu, zatímco jeho robustní konstrukce slibuje dlouholetou
-              spolehlivost.
+              {t("peterParagraph1")}
             </p>
             <p className="mb-6 text-center lg:text-left">
-              Jeho unikátní konstrukce z černé oceli nejen zajišťuje vynikající
-              odolnost proti povětrnostním vlivům, ale také optimalizuje přívod
-              vzduchu pro rovnoměrné spalování bez nadměrného kouře. Ocelové
-              tyče, pevně spojené do tvaru ošatky, umožňují efektivní udržení
-              paliva a zároveň poskytují dostatečný prostor pro přikládání, což
-              usnadňuje obsluhu. Díky snadno přístupnému popelníku ulehčuje
-              odstranění popela a čištění po každém použití. Peter tak přináší
-              nejen teplo a světlo, ale i pohodlí a praktičnost, které očekáváte
-              od venkovního ohniště.
+              {t("peterParagraph2")}
             </p>
             <div className="mt-10 lg:mt-0 flex flex-col items-center justify-center lg:justify-start md:flex-row flex-nowrap gap-4 md:gap-10 mb-20 lg:mb-0">
               <div className="w-40">
-                <Button link={globalLinks.eshopPeter.cs} inverse={false} blank>
-                  Do e-shopu &raquo;
+                <Button link={t("linkEshopPeter")} inverse={false} blank>
+                  {t("buttonEshop")} &raquo;
                 </Button>
               </div>
               <div className="w-40">
                 <Button link={"/grily"} inverse={true}>
-                  Všechny grily &raquo;
+                  {t("buttonOurGrills")} &raquo;
                 </Button>
               </div>
             </div>
@@ -182,12 +171,10 @@ const PeterProductPage: React.FC = () => {
                 <RxRulerSquare size={25} />
               </PropBox>
               <h2 className="text-center text-xl font-bold mb-8">
-                Unikátní design
+                {t("peterUSP1")}
               </h2>
               <p className="text-mutedtext-dark text-center">
-                Peterovo inovativní designové řešení nejen přitahuje pohledy,
-                ale také zajišťuje optimální přívod vzduchu pro rovnoměrné
-                spalování, což znamená méně kouře a efektivnější využití paliva.
+                {t("peterUSP1Text")}
               </p>
             </div>
             {/* --------- USP 2  --------- */}
@@ -196,12 +183,10 @@ const PeterProductPage: React.FC = () => {
                 <PiSparkle size={25} />
               </PropBox>
               <h2 className="text-center text-xl font-bold mb-8">
-                Estetický a praktický
+                {t("peterUSP2")}
               </h2>
               <p className="text-mutedtext-dark text-center">
-                Nejen že zajišťuje optimální přívod vzduchu pro rovnoměrné
-                spalování, ale také je to designový prvek, který oživí každou
-                zahradu nebo venkovní prostor svým industriálním vzhledem.
+                {t("peterUSP2Text")}
               </p>
             </div>
             {/* --------- USP 3  --------- */}
@@ -210,20 +195,26 @@ const PeterProductPage: React.FC = () => {
                 <SlFire size={25} />
               </PropBox>
               <h2 className="text-center text-xl font-bold mb-8">
-                Snadné přikládání
+                {t("peterUSP3")}
               </h2>
               <p className="text-mutedtext-dark text-center">
-                Otevřený design umožňuje snadné přikládání dřeva bez nutnosti
-                přerušovat grilování nebo opékání.
+                {t("peterUSP3Text")}
               </p>
             </div>
           </div>
           <h2 className="text-4xl font-bold leading-[1.25em] text-center md:text-left mb-8 -mt-4 ">
             Parametry
           </h2>
-          <ProductParameter name="Rozměr" value="743 × 743 × 331 mm" />
-          <ProductParameter name="Materiál" value="černá ocel" inverted />
-          <ProductParameter name="Hmotnost" value="36 kg" />
+          <ProductParameter
+            name={t("productParameterDimensions")}
+            value="743 × 743 × 331 mm"
+          />
+          <ProductParameter
+            name={t("productParameterMaterial")}
+            value={t("productParameterBlackSteel")}
+            inverted
+          />
+          <ProductParameter name={t("productParameterWeight")} value="36 kg" />
         </section>
       </main>
       <ContactFormSection />
