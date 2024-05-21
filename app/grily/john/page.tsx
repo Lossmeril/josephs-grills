@@ -3,6 +3,7 @@
 import Button from "@/components/button";
 import ContactFormSection from "@/components/contactFormSection";
 import { PropBox } from "@/components/homeProduct";
+import Gallery from "@/components/product/gallery";
 import ProductParameter from "@/components/product/productParameters";
 import { Unbounded } from "next/font/google";
 import Image from "next/image";
@@ -12,6 +13,17 @@ import { HiOutlineArchiveBox, HiOutlineWrench } from "react-icons/hi2";
 import { PiForkKnife } from "react-icons/pi";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
+
+const portfolio: Array<string> = [
+  "/img/products/joseph/gallery/joseph-photo-1.jpg",
+  "/img/products/joseph/gallery/joseph-photo-1.jpg",
+  "/img/products/joseph/gallery/joseph-photo-1.jpg",
+  "/img/products/joseph/gallery/joseph-photo-1.jpg",
+  "/img/products/joseph/gallery/joseph-photo-1.jpg",
+  "/img/products/joseph/gallery/joseph-photo-1.jpg",
+  "/img/products/joseph/gallery/joseph-photo-1.jpg",
+  "/img/products/joseph/gallery/joseph-photo-1.jpg",
+];
 
 const JohnProductPage: React.FC = () => {
   const [currentImg, setCurrentImg] = useState("1");
@@ -223,6 +235,8 @@ const JohnProductPage: React.FC = () => {
           />
           <ProductParameter name={t("productParameterWeight")} value="6 kg" />
         </section>
+
+        <Gallery grillName={"Joseph"} portfolioItems={portfolio} />
       </main>
       <ContactFormSection />
     </div>
