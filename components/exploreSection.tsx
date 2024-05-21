@@ -6,7 +6,6 @@ import { Unbounded } from "next/font/google";
 import Button from "./button";
 
 import { gsap } from "gsap";
-import { globalLinks } from "@/data/links";
 import { useTranslation } from "react-i18next";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
