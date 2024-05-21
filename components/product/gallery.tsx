@@ -4,6 +4,7 @@ import Image from "next/image";
 import ImageModal from "./imageModal";
 import { useState } from "react";
 import { Unbounded } from "next/font/google";
+import { useTranslation } from "react-i18next";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
@@ -42,6 +43,8 @@ const Gallery: React.FC<GalleryProps> = ({ grillName, portfolioItems }) => {
     setModalImage(newImage);
   };
 
+  const { t } = useTranslation();
+
   return (
     <>
       <section className="overflow-x-hidden flex flex-col flex-nowrap px-6 pb-16 lg:px-0 lg:py-10 mb-0 lg:mb-20">
@@ -51,7 +54,7 @@ const Gallery: React.FC<GalleryProps> = ({ grillName, portfolioItems }) => {
             unbounded.className
           }
         >
-          {grillName} v akci
+          {grillName + " " + t("productGalleryInAction")}
         </h2>
         <div className="w-full flex flex-col gap-4">
           <div className="w-full flex flex-col md:flex-row gap-4 ">
