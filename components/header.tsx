@@ -47,9 +47,11 @@ const Header = () => {
     return () => {
       if (i18n.language === "cs") {
         i18n?.changeLanguage("en");
+        localStorage.setItem("language", "en");
         setLocaleFlag(0);
       } else {
         i18n?.changeLanguage("cs");
+        localStorage.setItem("language", "cs");
         setLocaleFlag(1);
       }
     };
