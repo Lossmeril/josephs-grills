@@ -75,9 +75,7 @@ const Header = () => {
                 </NavbarLink>
               ))}
             </nav>
-
             {/* --------------------- MOBILE NAVBAR --------------------- */}
-
             <nav className="flex lg:hidden flex-row md:gap-6 lg:gap-12 h-full justify-center items-center">
               <div
                 className={
@@ -111,6 +109,16 @@ const Header = () => {
               />
             </div>
           </a>
+
+          <div className="flex md:hidden flex-nowrap justify-end">
+            <button onClick={changeLang()} className="">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                alt={localeFlags[localeFlag].name}
+                src={localeFlags[localeFlag].img}
+              />
+            </button>
+          </div>
 
           <div className="hidden md:flex flex-nowrap justify-end">
             <div className="flex flex-grow"></div>
