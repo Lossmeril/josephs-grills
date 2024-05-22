@@ -31,7 +31,7 @@ interface PropBoxProps {
 
 export const PropBox: React.FC<PropBoxProps> = ({ name, inv, children }) => {
   return (
-    <div className="flex flex-col flex-nowrap w-1/3 justify-start items-center">
+    <div className="flex flex-col flex-nowrap w-1/3 min-w-1/3 justify-start items-center">
       <div
         className={
           "border  rounded-full w-full max-w-20 aspect-square flex justify-center items-center mb-5 text-orange " +
@@ -42,7 +42,7 @@ export const PropBox: React.FC<PropBoxProps> = ({ name, inv, children }) => {
       </div>
       <h3
         className={
-          "text-center font-bold leading-none " +
+          "text-sm text-center font-bold leading-none " +
           (!inv ? "text-mutedtext-dark" : "text-mutedtext-light")
         }
       >
