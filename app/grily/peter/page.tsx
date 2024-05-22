@@ -16,14 +16,14 @@ import { SlFire } from "react-icons/sl";
 const unbounded = Unbounded({ subsets: ["latin"] });
 
 const portfolio: Array<string> = [
-  "/img/products/joseph/gallery/joseph-photo-1.jpg",
-  "/img/products/joseph/gallery/joseph-photo-1.jpg",
-  "/img/products/joseph/gallery/joseph-photo-1.jpg",
-  "/img/products/joseph/gallery/joseph-photo-1.jpg",
-  "/img/products/joseph/gallery/joseph-photo-1.jpg",
-  "/img/products/joseph/gallery/joseph-photo-1.jpg",
-  "/img/products/joseph/gallery/joseph-photo-1.jpg",
-  "/img/products/joseph/gallery/joseph-photo-1.jpg",
+  "/img/products/peter/gallery/peter-photo-1.jpg",
+  "/img/products/peter/gallery/peter-photo-2.jpg",
+  "/img/products/peter/gallery/peter-photo-3.jpg",
+  "/img/products/peter/gallery/peter-photo-4.jpg",
+  "/img/products/peter/gallery/peter-photo-5.jpg",
+  "/img/products/peter/gallery/peter-photo-6.jpg",
+  "/img/products/peter/gallery/peter-photo-7.jpg",
+  "/img/products/peter/gallery/peter-photo-8.jpg",
 ];
 
 const PeterProductPage: React.FC = () => {

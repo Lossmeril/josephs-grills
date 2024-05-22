@@ -15,14 +15,14 @@ import { PiForkKnife } from "react-icons/pi";
 const unbounded = Unbounded({ subsets: ["latin"] });
 
 const portfolio: Array<string> = [
-  "/img/products/joseph/gallery/joseph-photo-1.jpg",
-  "/img/products/joseph/gallery/joseph-photo-1.jpg",
-  "/img/products/joseph/gallery/joseph-photo-1.jpg",
-  "/img/products/joseph/gallery/joseph-photo-1.jpg",
-  "/img/products/joseph/gallery/joseph-photo-1.jpg",
-  "/img/products/joseph/gallery/joseph-photo-1.jpg",
-  "/img/products/joseph/gallery/joseph-photo-1.jpg",
-  "/img/products/joseph/gallery/joseph-photo-1.jpg",
+  "/img/products/john/gallery/john-photo-1.jpg",
+  "/img/products/john/gallery/john-photo-2.jpg",
+  "/img/products/john/gallery/john-photo-3.jpg",
+  "/img/products/john/gallery/john-photo-4.jpg",
+  "/img/products/john/gallery/john-photo-5.jpg",
+  "/img/products/john/gallery/john-photo-6.jpg",
+  "/img/products/john/gallery/john-photo-7.jpg",
+  "/img/products/john/gallery/john-photo-8.jpg",
 ];
 
 const JohnProductPage: React.FC = () => {
@@ -236,7 +236,7 @@ const JohnProductPage: React.FC = () => {
           <ProductParameter name={t("productParameterWeight")} value="6 kg" />
         </section>
 
-        <Gallery grillName={"Joseph"} portfolioItems={portfolio} />
+        <Gallery grillName={"John"} portfolioItems={portfolio} />
       </main>
       <ContactFormSection />
     </div>

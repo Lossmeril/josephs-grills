@@ -16,13 +16,13 @@ const unbounded = Unbounded({ subsets: ["latin"] });
 
 const portfolio: Array<string> = [
   "/img/products/joseph/gallery/joseph-photo-1.jpg",
-  "/img/products/joseph/gallery/joseph-photo-1.jpg",
-  "/img/products/joseph/gallery/joseph-photo-1.jpg",
-  "/img/products/joseph/gallery/joseph-photo-1.jpg",
-  "/img/products/joseph/gallery/joseph-photo-1.jpg",
-  "/img/products/joseph/gallery/joseph-photo-1.jpg",
-  "/img/products/joseph/gallery/joseph-photo-1.jpg",
-  "/img/products/joseph/gallery/joseph-photo-1.jpg",
+  "/img/products/joseph/gallery/joseph-photo-2.jpg",
+  "/img/products/joseph/gallery/joseph-photo-3.jpg",
+  "/img/products/joseph/gallery/joseph-photo-4.jpg",
+  "/img/products/joseph/gallery/joseph-photo-5.jpg",
+  "/img/products/joseph/gallery/joseph-photo-6.jpg",
+  "/img/products/joseph/gallery/joseph-photo-7.jpg",
+  "/img/products/joseph/gallery/joseph-photo-8.jpg",
 ];
 
 const JosephProductPage: React.FC = () => {

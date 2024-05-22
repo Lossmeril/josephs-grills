@@ -23,7 +23,10 @@ const GalleryItem: React.FC<GalleryItemProps> = ({ img, modalHandler }) => {
         className="hover:scale-110 transition-all object-cover"
         src={img}
         fill
-        alt=""
+        alt={img}
+        loading="lazy"
+        placeholder="blur"
+        blurDataURL="/img/blur.png"
       />
     </div>
   );
