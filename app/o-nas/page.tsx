@@ -183,7 +183,7 @@ const AboutPage = () => {
           </div>
           <div ref={img1Ref} className="w-full h-[500px] relative">
             <Image
-              src="/img/bg-img-1.webp"
+              src="/img/bg-img-2.webp"
               alt=""
               fill
               className="object-cover"
@@ -196,7 +196,7 @@ const AboutPage = () => {
         >
           <div ref={img2Ref} className="w-full h-[500px] relative">
             <Image
-              src="/img/bg-img-1.webp"
+              src="/img/bg-img-3.webp"
               alt=""
               fill
               className="object-cover"
