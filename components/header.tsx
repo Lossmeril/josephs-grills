@@ -115,6 +115,7 @@ const Header = () => {
           <div className="hidden md:flex flex-nowrap justify-end">
             <div className="flex flex-grow"></div>
             <button onClick={changeLang()} className="mr-8">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 alt={localeFlags[localeFlag].name}
                 src={localeFlags[localeFlag].img}

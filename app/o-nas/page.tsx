@@ -210,7 +210,7 @@ const AboutPage = () => {
                   unbounded.className
                 }
               >
-                ...ke grilům
+                {t("aboutSection2Title")}
               </h2>
               <div
                 ref={underline2Ref}
