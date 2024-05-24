@@ -232,7 +232,7 @@ const JosephProductPage: React.FC = () => {
             />
             <ProductParameter
               name={t("productParameterMaterial")}
-              value={t("productParameterStainlessSteel")}
+              value={t("productParameterStainlessSteelJoseph")}
               inverted
             />
             <ProductParameter
