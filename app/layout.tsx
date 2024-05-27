@@ -3,6 +3,7 @@ import { Cabin } from "next/font/google";
 import "./globals.scss";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import Script from "next/script";
 
 const cabin = Cabin({ subsets: ["latin"] });
 
@@ -34,6 +35,7 @@ export default function RootLayout({
           type="text/javascript"
           defer
         ></script>
+        <Script src="/scripts/gTagManager.js" />
       </head>
       <body className={cabin.className + " max-w-[100vw] overflow-x-hidden"}>
         <Header />
