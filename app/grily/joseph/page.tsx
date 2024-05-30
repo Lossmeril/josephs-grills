@@ -141,6 +141,97 @@ const JosephProductPage: React.FC = () => {
               <p className="text-red text-2xl font-bold text-center lg:text-left mb-2">
                 {t("josephPrice")}
               </p>
+              <div className="block lg:hidden w-full lg:w-1/2 p-4 lg:p-20 lg:pr-10">
+                <div className="relative overflow-hidden w-full aspect-[3/4] bg-mutedtext-light ml-auto mb-8">
+                  <Image
+                    src={"/img/products/joseph/joseph-" + currentImg + ".jpg"}
+                    alt=""
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+                <div className="flex flex-row flex-nowrap w-full h-28 gap-4 mb-8">
+                  <div
+                    className="w-1/4 relative overflow-hidden bg-red"
+                    onMouseOver={() => setCurrentImg("1")}
+                  >
+                    <Image
+                      src="/img/products/joseph/joseph-1.jpg"
+                      alt=""
+                      fill
+                      className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
+                    />
+                  </div>
+                  <div className="w-1/4 relative overflow-hidden bg-red">
+                    <Image
+                      src="/img/products/joseph/joseph-2.jpg"
+                      alt=""
+                      fill
+                      className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
+                      onMouseOver={() => setCurrentImg("2")}
+                    />
+                  </div>
+                  <div className="w-1/4 relative overflow-hidden bg-red">
+                    <Image
+                      src="/img/products/joseph/joseph-3.jpg"
+                      alt=""
+                      fill
+                      className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
+                      onMouseOver={() => setCurrentImg("3")}
+                    />
+                  </div>
+                  <div className="w-1/4 relative overflow-hidden bg-red">
+                    <Image
+                      src="/img/products/joseph/joseph-4.jpg"
+                      alt=""
+                      fill
+                      className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
+                      onMouseOver={() => setCurrentImg("4")}
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-row flex-nowrap w-full h-28 gap-4 mb-8">
+                  <div
+                    className="w-1/4 relative overflow-hidden bg-red"
+                    onMouseOver={() => setCurrentImg("5")}
+                  >
+                    <Image
+                      src="/img/products/joseph/joseph-5.jpg"
+                      alt=""
+                      fill
+                      className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
+                    />
+                  </div>
+                  <div className="w-1/4 relative overflow-hidden bg-red">
+                    <Image
+                      src="/img/products/joseph/joseph-6.jpg"
+                      alt=""
+                      fill
+                      className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
+                      onMouseOver={() => setCurrentImg("6")}
+                    />
+                  </div>
+                  <div className="w-1/4 relative overflow-hidden bg-red">
+                    <Image
+                      src="/img/products/joseph/joseph-7.jpg"
+                      alt=""
+                      fill
+                      className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
+                      onMouseOver={() => setCurrentImg("7")}
+                    />
+                  </div>
+                  <div className="w-1/4 relative overflow-hidden bg-red">
+                    <Image
+                      src="/img/products/joseph/joseph-8.jpg"
+                      alt=""
+                      fill
+                      className="object-cover hover:opacity-50 hover:cursor-pointer transition-all"
+                      onMouseOver={() => setCurrentImg("8")}
+                    />
+                  </div>
+                </div>
+              </div>
               <p className="text-white text-md text-center lg:text-left mb-2">
                 <span className="text-red font-bold">
                   + {t("josephAccessoryGratePrice")}
