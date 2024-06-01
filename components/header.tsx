@@ -6,9 +6,9 @@ import Button from "./button";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import { MdClose } from "react-icons/md";
-import { csTranslation } from "@/data/locales";
 import { usePathname } from "next/navigation";
 import { Translation } from "@/data/types";
+import { useRouter } from "next/navigation";
 
 interface NavbarLinkProps {
   children: React.ReactNode;
@@ -30,6 +30,30 @@ interface HeaderProps {
   langPack: Translation;
 }
 
+const changeLanguage = (url: string) => {
+  const linkMap = [
+    { cs: "/grily", en: "/grills" },
+    { cs: "/grily/john", en: "/grills/john" },
+    { cs: "/grily/peter", en: "/grills/peter" },
+    { cs: "/grily/joseph", en: "/grills/joseph" },
+    { cs: "/o-nas", en: "/about" },
+    { cs: "/kontakt", en: "/contact" },
+  ];
+
+  const slug =
+    url.substring(3).toString() !== ""
+      ? linkMap.find(
+          (o) =>
+            (url.substring(1, 3) === "cs" ? o.cs : o.en) ===
+            url.substring(3).toString()
+        )![url.substring(1, 3) === "cs" ? "en" : "cs"]
+      : "";
+
+  var translatedURL = "/" + (url.substring(1, 3) == "cs" ? "en" : "cs") + slug;
+
+  return translatedURL;
+};
+
 const Header: React.FC<HeaderProps> = ({ langPack }) => {
   const localeFlags = [
     {
@@ -42,8 +66,11 @@ const Header: React.FC<HeaderProps> = ({ langPack }) => {
     },
   ];
 
+  const currentURL = usePathname();
+  const switchFlag =
+    currentURL?.substring(1, 3) === "cs" ? localeFlags[1] : localeFlags[0];
+
   const [isMobileNavOpen, setMobileNavOpen] = useState(false);
-  const [localeFlag, setLocaleFlag] = useState(usePathname() === "cs" ? 1 : 0);
 
   const links = [
     [langPack.navbarHomeURL, langPack.navbarHome],
@@ -89,7 +116,7 @@ const Header: React.FC<HeaderProps> = ({ langPack }) => {
             <div className="flex flex-grow"></div>
           </div>
 
-          <a href="/">
+          <a href={langPack.navbarHomeURL}>
             <div className="w-[150px] relative aspect-[15/5]">
               <Image
                 src="/img/logo-full-color.png"
@@ -101,24 +128,18 @@ const Header: React.FC<HeaderProps> = ({ langPack }) => {
           </a>
 
           <div className="flex md:hidden flex-nowrap justify-end">
-            <button onClick={() => {}} className="">
+            <a href={changeLanguage(currentURL!)} className="">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                alt={localeFlags[localeFlag].name}
-                src={localeFlags[localeFlag].img}
-              />
-            </button>
+              <img alt={switchFlag.name} src={switchFlag.img} />
+            </a>
           </div>
 
           <div className="hidden md:flex flex-nowrap justify-end">
             <div className="flex flex-grow"></div>
-            <button onClick={() => {}} className="mr-8">
+            <a href={changeLanguage(currentURL!)} className="mr-8">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                alt={localeFlags[localeFlag].name}
-                src={localeFlags[localeFlag].img}
-              />
-            </button>
+              <img alt={switchFlag.name} src={switchFlag.img} />
+            </a>
             <Button link={langPack.linkEshopGeneral} inverse={false} blank>
               {langPack.buttonEshop} &raquo;
             </Button>
