@@ -1,16 +1,18 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import ContactFormSection from "@/components/contactFormSection";
-import Image from "next/image";
-import { Unbounded } from "next/font/google";
-import ExploreSection from "@/components/exploreSection";
 import { PageProps } from "@/data/types";
+
+import ContactFormSection from "@/components/contactFormSection";
+import ExploreSection from "@/components/exploreSection";
+
+import { Unbounded } from "next/font/google";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
