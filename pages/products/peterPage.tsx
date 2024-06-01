@@ -5,6 +5,7 @@ import ContactFormSection from "@/components/contactFormSection";
 import { PropBox } from "@/components/homeProduct";
 import Gallery from "@/components/product/gallery";
 import ProductParameter from "@/components/product/productParameters";
+import { PageProps } from "@/data/types";
 import { Unbounded } from "next/font/google";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -26,10 +27,8 @@ const portfolio: Array<string> = [
   "/img/products/peter/gallery/peter-photo-8.jpg",
 ];
 
-const PeterProductPage: React.FC = () => {
+const PeterProductPage: React.FC<PageProps> = ({ langPack }) => {
   const [currentImg, setCurrentImg] = useState("1");
-
-  const { t } = useTranslation();
 
   return (
     <div className="w-full bg-black">
@@ -88,7 +87,7 @@ const PeterProductPage: React.FC = () => {
           </div>
           <div className="w-full lg:w-1/2 pt-10 p-6 lg:p-20 lg:pl-10">
             <p className="text-xl mb-6 text-center lg:text-left">
-              {t("peterTagline")}
+              {langPack.peterTagline}
             </p>
             <h1
               className={
@@ -99,7 +98,7 @@ const PeterProductPage: React.FC = () => {
               Peter
             </h1>
             <p className="text-red text-2xl font-bold mb-4 text-center lg:text-left">
-              {t("peterPrice")}
+              {langPack.peterPrice}
             </p>
 
             <div className="block lg:hidden w-full lg:w-1/2 p-4 lg:p-20 lg:pr-10">
@@ -155,20 +154,20 @@ const PeterProductPage: React.FC = () => {
             </div>
 
             <p className="mb-6 text-center lg:text-left">
-              {t("peterParagraph1")}
+              {langPack.peterParagraph1}
             </p>
             <p className="mb-6 text-center lg:text-left">
-              {t("peterParagraph2")}
+              {langPack.peterParagraph2}
             </p>
             <div className="mt-10 lg:mt-0 flex flex-col items-center justify-center lg:justify-start md:flex-row flex-nowrap gap-4 md:gap-10 mb-20 lg:mb-0">
               <div className="w-40">
-                <Button link={t("linkEshopPeter")} inverse={false} blank>
-                  {t("buttonEshop")} &raquo;
+                <Button link={langPack.linkEshopPeter} inverse={false} blank>
+                  {langPack.buttonEshop} &raquo;
                 </Button>
               </div>
               <div className="w-40">
                 <Button link={"/grily"} inverse={true}>
-                  {t("buttonOurGrills")} &raquo;
+                  {langPack.buttonOurGrills} &raquo;
                 </Button>
               </div>
             </div>
@@ -183,10 +182,10 @@ const PeterProductPage: React.FC = () => {
                 <RxRulerSquare size={25} />
               </PropBox>
               <h2 className="text-center text-xl font-bold mb-8">
-                {t("peterUSP1")}
+                {langPack.peterUSP1}
               </h2>
               <p className="text-mutedtext-dark text-center">
-                {t("peterUSP1Text")}
+                {langPack.peterUSP1Text}
               </p>
             </div>
             {/* --------- USP 2  --------- */}
@@ -195,10 +194,10 @@ const PeterProductPage: React.FC = () => {
                 <PiSparkle size={25} />
               </PropBox>
               <h2 className="text-center text-xl font-bold mb-8">
-                {t("peterUSP2")}
+                {langPack.peterUSP2}
               </h2>
               <p className="text-mutedtext-dark text-center">
-                {t("peterUSP2Text")}
+                {langPack.peterUSP2Text}
               </p>
             </div>
             {/* --------- USP 3  --------- */}
@@ -207,10 +206,10 @@ const PeterProductPage: React.FC = () => {
                 <SlFire size={25} />
               </PropBox>
               <h2 className="text-center text-xl font-bold mb-8">
-                {t("peterUSP3")}
+                {langPack.peterUSP3}
               </h2>
               <p className="text-mutedtext-dark text-center">
-                {t("peterUSP3Text")}
+                {langPack.peterUSP3Text}
               </p>
             </div>
           </div>
@@ -218,15 +217,18 @@ const PeterProductPage: React.FC = () => {
             Parametry
           </h2>
           <ProductParameter
-            name={t("productParameterDimensions")}
+            name={langPack.productParameterDimensions}
             value="743 × 743 × 331 mm"
           />
           <ProductParameter
-            name={t("productParameterMaterial")}
-            value={t("productParameterBlackSteel")}
+            name={langPack.productParameterMaterial}
+            value={langPack.productParameterBlackSteel}
             inverted
           />
-          <ProductParameter name={t("productParameterWeight")} value="36 kg" />
+          <ProductParameter
+            name={langPack.productParameterWeight}
+            value="36 kg"
+          />
         </section>
 
         <Gallery grillName={"Peter"} portfolioItems={portfolio} />

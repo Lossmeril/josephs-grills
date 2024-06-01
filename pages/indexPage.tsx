@@ -25,13 +25,13 @@ import { SlFire } from "react-icons/sl";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import ExploreSection from "@/components/exploreSection";
 
-import { useTranslation } from "react-i18next";
+import { PageProps } from "@/data/types";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-const HomePage = () => {
+const HomePage: React.FC<PageProps> = ({ langPack }) => {
   const manRef = useRef(null);
   const productSecRef = useRef(null);
 
@@ -274,8 +274,6 @@ const HomePage = () => {
     );
   }, []);
 
-  const { t } = useTranslation();
-
   return (
     <>
       <main className="max-w-screen overflow-x-hidden">
@@ -287,18 +285,18 @@ const HomePage = () => {
                 unbounded.className
               }
             >
-              {t("indexHeroTitle")}
+              {langPack.indexHeroTitle}
             </h1>
             <div className="w-full flex flex-row flex-nowrap gap-4 xl:gap-10 z-20">
               <div className="w-1/2">
-                <Button link={t("linkEshopGeneral")} inverse={false} blank>
-                  {t("buttonEshop")} &raquo;
+                <Button link={langPack.linkEshopGeneral} inverse={false} blank>
+                  {langPack.buttonEshop} &raquo;
                 </Button>
               </div>
 
               <div className="w-1/2">
                 <Button link={"#grily"} inverse={true}>
-                  {t("buttonOurGrills")} &raquo;
+                  {langPack.buttonOurGrills} &raquo;
                 </Button>
               </div>
             </div>
@@ -332,14 +330,14 @@ const HomePage = () => {
                 unbounded.className
               }
             >
-              {t("slogan")}
+              {langPack.slogan}
             </p>
             <p className="text-lg md:text-xl xl:text-2xl mb-10">
-              {t("indexSection1Text")}
+              {langPack.indexSection1Text}
             </p>
             <div className="w-48">
               <Button link={"/o-nas"} inverse={false}>
-                {t("buttonOurStory")} &raquo;
+                {langPack.buttonOurStory} &raquo;
               </Button>
             </div>
           </div>
@@ -370,73 +368,73 @@ const HomePage = () => {
           <div ref={product1Ref}>
             <HomeProduct
               name="John"
-              tagline={t("johnTagline")}
+              tagline={langPack.johnTagline}
               weight="6"
               height="23"
               length="25"
-              descHeading={t("johnSubheading")}
-              price={t("johnPrice")}
+              descHeading={langPack.johnSubheading}
+              price={langPack.johnPrice}
               pageLink="./grily/john"
-              eshopLink={t("linkEshopJohn")}
+              eshopLink={langPack.linkEshopJohn}
               image="john-comparison"
-              prop1={t("johnUSP1")}
+              prop1={langPack.johnUSP1}
               prop1Icon={<HiOutlineArchiveBox size={25} />}
-              prop2={t("johnUSP2")}
+              prop2={langPack.johnUSP2}
               prop2Icon={<HiOutlineWrench size={25} />}
-              prop3={t("johnUSP3")}
+              prop3={langPack.johnUSP3}
               prop3Icon={<PiForkKnife size={25} />}
               leftRef={product1InfoLeftRef}
               rightRef={product1InfoRightRef}
             >
-              {t("johnParagraph1")}
+              {langPack.johnParagraph1}
             </HomeProduct>
           </div>
           <div ref={product2Ref}>
             <HomeProduct
               name="Peter"
-              tagline={t("peterTagline")}
+              tagline={langPack.peterTagline}
               weight="36"
               height="33,1"
               length="74,3"
-              descHeading={t("peterSubheading")}
-              price={t("peterPrice")}
+              descHeading={langPack.peterSubheading}
+              price={langPack.peterPrice}
               pageLink="./grily/peter"
-              eshopLink={t("linkEshopPeter")}
+              eshopLink={langPack.linkEshopPeter}
               image="peter-comparison"
-              prop1={t("peterUSP1")}
+              prop1={langPack.peterUSP1}
               prop1Icon={<RxRulerSquare size={25} />}
-              prop2={t("peterUSP2")}
+              prop2={langPack.peterUSP2}
               prop2Icon={<PiSparkle size={25} />}
-              prop3={t("peterUSP3")}
+              prop3={langPack.peterUSP3}
               prop3Icon={<SlFire size={25} />}
               leftRef={product2InfoLeftRef}
               rightRef={product2InfoRightRef}
             >
-              {t("peterParagraph1")}
+              {langPack.peterParagraph1}
             </HomeProduct>
           </div>
           <div ref={product3Ref}>
             <HomeProduct
               name="Joseph"
-              tagline={t("josephTagline")}
+              tagline={langPack.josephTagline}
               weight="244"
               height="90"
               length="74"
-              descHeading={t("josephSubheading")}
-              price={t("josephPrice")}
+              descHeading={langPack.josephSubheading}
+              price={langPack.josephPrice}
               pageLink="./grily/joseph"
-              eshopLink={t("linkEshopJoseph")}
+              eshopLink={langPack.linkEshopJoseph}
               image="joseph-comparison"
-              prop1={t("josephUSP1")}
+              prop1={langPack.josephUSP1}
               prop1Icon={<AiOutlineSafetyCertificate size={25} />}
-              prop2={t("josephUSP2")}
+              prop2={langPack.josephUSP2}
               prop2Icon={<PiCheckSquareOffset size={25} />}
-              prop3={t("josephUSP3")}
+              prop3={langPack.josephUSP3}
               prop3Icon={<PiGear size={25} />}
               leftRef={product3InfoLeftRef}
               rightRef={product3InfoRightRef}
             >
-              {t("josephParagraph1")}
+              {langPack.josephParagraph1}
             </HomeProduct>
           </div>
         </section>

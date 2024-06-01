@@ -5,10 +5,10 @@ import ContactFormSection from "@/components/contactFormSection";
 import { PropBox } from "@/components/homeProduct";
 import Gallery from "@/components/product/gallery";
 import ProductParameter from "@/components/product/productParameters";
+import { PageProps } from "@/data/types";
 import { Unbounded } from "next/font/google";
 import Image from "next/image";
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import { PiCheckSquareOffset, PiGear } from "react-icons/pi";
 
@@ -25,10 +25,8 @@ const portfolio: Array<string> = [
   "/img/products/joseph/gallery/joseph-photo-8.jpg",
 ];
 
-const JosephProductPage: React.FC = () => {
+const JosephProductPage: React.FC<PageProps> = ({ langPack }) => {
   const [currentImg, setCurrentImg] = useState("1");
-
-  const { t } = useTranslation();
 
   return (
     <>
@@ -128,7 +126,7 @@ const JosephProductPage: React.FC = () => {
             </div>
             <div className="w-full lg:w-1/2 pt-10 p-6 lg:p-20 lg:pl-10">
               <p className="text-xl mb-6 text-center lg:text-left">
-                {t("josephTagline")}
+                {langPack.josephTagline}
               </p>
               <h1
                 className={
@@ -139,7 +137,7 @@ const JosephProductPage: React.FC = () => {
                 Joseph
               </h1>
               <p className="text-red text-2xl font-bold text-center lg:text-left mb-2">
-                {t("josephPrice")}
+                {langPack.josephPrice}
               </p>
               <div className="block lg:hidden w-full lg:w-1/2 p-4 lg:p-20 lg:pr-10">
                 <div className="relative overflow-hidden w-full aspect-[3/4] bg-mutedtext-light ml-auto mb-8">
@@ -234,31 +232,31 @@ const JosephProductPage: React.FC = () => {
               </div>
               <p className="text-white text-md text-center lg:text-left mb-2">
                 <span className="text-red font-bold">
-                  + {t("josephAccessoryGratePrice")}
+                  + {langPack.josephAccessoryGratePrice}
                 </span>{" "}
-                {t("josephAccessoryGrate")}
+                {langPack.josephAccessoryGrate}
               </p>
               <p className="text-white text-md text-center lg:text-left mb-10">
                 <span className="text-red font-bold">
-                  + {t("josephAccessoryCoverPrice")}
+                  + {langPack.josephAccessoryCoverPrice}
                 </span>{" "}
-                {t("josephAccessoryCover")}
+                {langPack.josephAccessoryCover}
               </p>
               <p className="mb-6 text-center lg:text-left">
-                {t("josephParagraph1")}
+                {langPack.josephParagraph1}
               </p>
               <p className="mb-6 text-center lg:text-left">
-                {t("josephParagraph2")}
+                {langPack.josephParagraph2}
               </p>
               <div className="mt-10 lg:mt-0 flex flex-col items-center justify-center lg:justify-start md:flex-row flex-nowrap gap-4 md:gap-10 mb-20 lg:mb-0">
                 <div className="w-40">
-                  <Button link={t("linkEshopJoseph")} inverse={false} blank>
-                    {t("buttonEshop")} &raquo;
+                  <Button link={langPack.linkEshopJoseph} inverse={false} blank>
+                    {langPack.buttonEshop} &raquo;
                   </Button>
                 </div>
                 <div className="w-40">
                   <Button link={"/grily"} inverse={true}>
-                    {t("buttonOurGrills")} &raquo;
+                    {langPack.buttonOurGrills} &raquo;
                   </Button>
                 </div>
               </div>
@@ -273,10 +271,10 @@ const JosephProductPage: React.FC = () => {
                   <AiOutlineSafetyCertificate size={25} />
                 </PropBox>
                 <h2 className="text-center text-xl font-bold mb-8">
-                  {t("josephUSP1")}
+                  {langPack.josephUSP1}
                 </h2>
                 <p className="text-mutedtext-dark text-center">
-                  {t("josephUSP1Text")}
+                  {langPack.josephUSP1Text}
                 </p>
               </div>
               {/* --------- USP 2  --------- */}
@@ -285,10 +283,10 @@ const JosephProductPage: React.FC = () => {
                   <PiCheckSquareOffset size={25} />
                 </PropBox>
                 <h2 className="text-center text-xl font-bold mb-8">
-                  {t("josephUSP2")}
+                  {langPack.josephUSP2}
                 </h2>
                 <p className="text-mutedtext-dark text-center">
-                  {t("josephUSP2Text")}
+                  {langPack.josephUSP2Text}
                 </p>
               </div>
               {/* --------- USP 3  --------- */}
@@ -297,46 +295,46 @@ const JosephProductPage: React.FC = () => {
                   <PiGear size={25} />
                 </PropBox>
                 <h2 className="text-center text-xl font-bold mb-8">
-                  {t("josephUSP3")}
+                  {langPack.josephUSP3}
                 </h2>
                 <p className="text-mutedtext-dark text-center">
-                  {t("josephUSP3Text")}
+                  {langPack.josephUSP3Text}
                 </p>
               </div>
             </div>
 
             <h2 className="text-4xl font-bold leading-[1.25em] text-center md:text-left mb-8 -mt-4 ">
-              {t("productParametersHeading")}
+              {langPack.productParametersHeading}
             </h2>
             <ProductParameter
-              name={t("produtParameterHeight")}
+              name={langPack.produtParameterHeight}
               value="900 mm"
             />
             <ProductParameter
-              name={t("produtParameterWidth")}
+              name={langPack.produtParameterWidth}
               value="740 mm"
               inverted
             />
             <ProductParameter
-              name={t("productParameterSteelPlateThickness")}
+              name={langPack.productParameterSteelPlateThickness}
               value="10 mm"
             />
             <ProductParameter
-              name={t("productParameterMaterial")}
-              value={t("productParameterStainlessSteelJoseph")}
+              name={langPack.productParameterMaterial}
+              value={langPack.productParameterStainlessSteelJoseph}
               inverted
             />
             <ProductParameter
-              name={t("productParameterWeight")}
+              name={langPack.productParameterWeight}
               value="244 kg"
             />
             <ProductParameter
-              name={t("productParameterWeightOfAccessoryGrate")}
+              name={langPack.productParameterWeightOfAccessoryGrate}
               value="6 kg"
               inverted
             />
             <ProductParameter
-              name={t("productParameterWeightOfAccessoryCover")}
+              name={langPack.productParameterWeightOfAccessoryCover}
               value="8 kg"
             />
           </section>

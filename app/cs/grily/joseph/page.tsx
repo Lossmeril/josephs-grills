@@ -1,5 +1,6 @@
 import { Metadata } from "next";
-import JosephProductPage from "./page";
+import JosephProductPage from "@/pages/products/josephPage";
+import { csTranslation } from "@/data/locales";
 
 export const metadata: Metadata = {
   title: "Joseph: Mistr grilování | Joseph's",
@@ -9,4 +10,9 @@ export const metadata: Metadata = {
     "přenosný gril John, grilování na cestách, skládací gril, kompaktní gril, nerezový gril, Joseph's Grills, venkovní grilování, kvalitní grily",
   authors: [{ name: "Michal Špitálský", url: "https://www.lossmeril.art" }],
 };
-export default JosephProductPage;
+
+const JosephCS = () => {
+  return <JosephProductPage langPack={csTranslation} />;
+};
+
+export default JosephCS;

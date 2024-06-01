@@ -1,14 +1,17 @@
 "use client";
 
+import React, { useState } from "react";
+import Image from "next/image";
+import { PageProps } from "@/data/types";
+
 import Button from "@/components/button";
 import ContactFormSection from "@/components/contactFormSection";
 import { PropBox } from "@/components/homeProduct";
 import Gallery from "@/components/product/gallery";
 import ProductParameter from "@/components/product/productParameters";
+
 import { Unbounded } from "next/font/google";
-import Image from "next/image";
-import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
+
 import { HiOutlineArchiveBox, HiOutlineWrench } from "react-icons/hi2";
 import { PiForkKnife } from "react-icons/pi";
 
@@ -25,10 +28,8 @@ const portfolio: Array<string> = [
   "/img/products/john/gallery/john-photo-8.jpg",
 ];
 
-const JohnProductPage: React.FC = () => {
+const JohnProductPage: React.FC<PageProps> = ({ langPack }) => {
   const [currentImg, setCurrentImg] = useState("1");
-
-  const { t } = useTranslation();
 
   return (
     <div className="w-full bg-black">
@@ -87,7 +88,7 @@ const JohnProductPage: React.FC = () => {
           </div>
           <div className="w-full lg:w-1/2 pt-10 p-6 lg:p-20 lg:pl-10">
             <p className="text-xl mb-6 text-center lg:text-left">
-              {t("johnTagline")}
+              {langPack.johnTagline}
             </p>
             <h1
               className={
@@ -98,7 +99,7 @@ const JohnProductPage: React.FC = () => {
               John
             </h1>
             <p className="text-red text-2xl font-bold mb-4 text-center lg:text-left">
-              {t("johnPrice")}
+              {langPack.johnPrice}
             </p>
             <div className="block lg:hidden w-full lg:w-1/2 p-4 lg:p-20 lg:pr-10">
               <div className="relative overflow-hidden w-full aspect-[3/4] bg-mutedtext-light ml-auto mb-8">
@@ -153,20 +154,20 @@ const JohnProductPage: React.FC = () => {
             </div>
 
             <p className="mb-6 text-center lg:text-left">
-              {t("johnParagraph1")}
+              {langPack.johnParagraph1}
             </p>
             <p className="mb-6 text-center lg:text-left">
-              {t("johnParagraph2")}
+              {langPack.johnParagraph2}
             </p>
             <div className="mt-10 lg:mt-0 flex flex-col items-center justify-center lg:justify-start md:flex-row flex-nowrap gap-4 md:gap-10 mb-20 lg:mb-0">
               <div className="w-40">
-                <Button link={t("linkEshopJohn")} inverse={false} blank>
-                  {t("buttonEshop")} &raquo;
+                <Button link={langPack.linkEshopJohn} inverse={false} blank>
+                  {langPack.buttonEshop} &raquo;
                 </Button>
               </div>
               <div className="w-40">
                 <Button link={"/grily"} inverse={true}>
-                  {t("buttonOurGrills")} &raquo;
+                  {langPack.buttonOurGrills} &raquo;
                 </Button>
               </div>
             </div>
@@ -181,10 +182,10 @@ const JohnProductPage: React.FC = () => {
                 <HiOutlineArchiveBox size={25} />
               </PropBox>
               <h2 className="text-center text-xl font-bold mb-8">
-                {t("johnUSP1")}
+                {langPack.johnUSP1}
               </h2>
               <p className="text-mutedtext-dark text-center">
-                {t("johnUSP1Text")}
+                {langPack.johnUSP1Text}
               </p>
             </div>
             {/* --------- USP 2  --------- */}
@@ -193,10 +194,10 @@ const JohnProductPage: React.FC = () => {
                 <HiOutlineWrench size={25} />
               </PropBox>
               <h2 className="text-center text-xl font-bold mb-8">
-                {t("johnUSP2")}
+                {langPack.johnUSP2}
               </h2>
               <p className="text-mutedtext-dark text-center">
-                {t("johnUSP2Text")}
+                {langPack.johnUSP2Text}
               </p>
             </div>
             {/* --------- USP 3  --------- */}
@@ -205,35 +206,38 @@ const JohnProductPage: React.FC = () => {
                 <PiForkKnife size={25} />
               </PropBox>
               <h2 className="text-center text-xl font-bold mb-8">
-                {t("johnUSP3")}
+                {langPack.johnUSP3}
               </h2>
               <p className="text-mutedtext-dark text-center">
-                {t("johnUSP3Text")}
+                {langPack.johnUSP3Text}
               </p>
             </div>
           </div>
           <h2 className="text-4xl font-bold leading-[1.25em] text-center md:text-left mb-8 -mt-4 ">
-            {t("productParametersHeading")}
+            {langPack.productParametersHeading}
           </h2>
           <ProductParameter
-            name={t("productParameterSizeDis")}
+            name={langPack.productParameterSizeDis}
             value="250 × 250 × 15 mm"
           />
           <ProductParameter
-            name={t("productParameterSizeAss")}
+            name={langPack.productParameterSizeAss}
             value="250 × 250 × 230 mm"
             inverted
           />
           <ProductParameter
-            name={t("productParameterSteelThickness")}
+            name={langPack.productParameterSteelThickness}
             value="2 mm"
           />
           <ProductParameter
-            name={t("productParameterMaterial")}
-            value={t("productParameterStainlessSteel")}
+            name={langPack.productParameterMaterial}
+            value={langPack.productParameterStainlessSteel}
             inverted
           />
-          <ProductParameter name={t("productParameterWeight")} value="6 kg" />
+          <ProductParameter
+            name={langPack.productParameterWeight}
+            value="6 kg"
+          />
         </section>
 
         <Gallery grillName={"John"} portfolioItems={portfolio} />

@@ -4,20 +4,19 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import { Inter, Unbounded } from "next/font/google";
+import Button from "@/components/button";
+import { PageProps } from "@/data/types";
+
 import { IoMdPin } from "react-icons/io";
 import { MdEmail, MdPhone } from "react-icons/md";
-import Button from "@/components/button";
-import { useTranslation } from "react-i18next";
+import { Inter, Unbounded } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 const unbounded = Unbounded({ subsets: ["latin"] });
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-const ContactPage = () => {
-  const { t } = useTranslation();
-
+const ContactPage: React.FC<PageProps> = ({ langPack }) => {
   return (
     <main className="max-w-[1200px] overflow-x-hidden mx-auto">
       <section className="min-h-[500px] bg-white overflow-x-hidden pt-20 flex flex-col justify-center items-center hero">
@@ -28,10 +27,10 @@ const ContactPage = () => {
               unbounded.className
             }
           >
-            {t("contactHeroTitle")}
+            {langPack.contactHeroTitle}
           </h1>
           <div className="bg-orange opacity-25 h-10 absolute top-[10%] z-0"></div>
-          <p className="text-xl mb-6">{t("contactHeroSubtitle")}</p>
+          <p className="text-xl mb-6">{langPack.contactHeroSubtitle}</p>
         </div>
       </section>
       <section className="min-h-[800px] py-5 bg-white overflow-x-hidden flex flex-col lg:flex-row flex-nowrap justify-center items-center gap-40 text-center ">
@@ -64,23 +63,27 @@ const ContactPage = () => {
                 <br />
                 789 91 Štíty
                 <br />
-                {t("czechRepublic")}
+                {langPack.czechRepublic}
               </p>
             </div>
             <div
               id="#terms-of-service-gdpr"
               className="mt-5 flex flex-col gap-5 max-w-80"
             >
-              <Button link={t("linkTermsAndConditions")} inverse={false} blank>
-                {t("termsLink")} &raquo;
+              <Button
+                link={langPack.linkTermsAndConditions}
+                inverse={false}
+                blank
+              >
+                {langPack.termsLink} &raquo;
               </Button>
 
-              <Button link={t("linkGDPR")} inverse={false} blank>
-                {t("GDPRLink")} &raquo;
+              <Button link={langPack.linkGDPR} inverse={false} blank>
+                {langPack.GDPRLink} &raquo;
               </Button>
 
-              <Button link={t("linkCertification")} inverse={false} blank>
-                {t("certificationLink")} &raquo;
+              <Button link={langPack.linkCertification} inverse={false} blank>
+                {langPack.certificationLink} &raquo;
               </Button>
             </div>
           </div>
@@ -91,12 +94,12 @@ const ContactPage = () => {
                 unbounded.className
               }
             >
-              {t("contactSectionFormTitle")}
+              {langPack.contactSectionFormTitle}
             </h2>
             <iframe
-              title={t("contactIframeTitle")}
+              title={langPack.contactIframeTitle}
               className="w-full min-h-[80vh]"
-              src={t("contactIframeSrc")}
+              src={langPack.contactIframeSrc}
             />
           </div>
         </div>

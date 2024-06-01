@@ -1,5 +1,6 @@
 import { Metadata } from "next";
-import AboutPage from "./page";
+import AboutPage from "@/pages/aboutPage";
+import { csTranslation } from "@/data/locales";
 
 export const metadata: Metadata = {
   title: "O nás | Joseph's",
@@ -9,4 +10,9 @@ export const metadata: Metadata = {
     "Joseph's Grills, rodinná firma, příběh značky, prémiové grily, tradice grilování, kvalitní grily, venkovní grilování, grilovací příslušenství",
   authors: [{ name: "Michal Špitálský", url: "https://www.lossmeril.art" }],
 };
-export default AboutPage;
+
+const AboutCS = () => {
+  return <AboutPage langPack={csTranslation} />;
+};
+
+export default AboutCS;

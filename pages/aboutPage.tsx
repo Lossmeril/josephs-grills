@@ -10,13 +10,13 @@ import ContactFormSection from "@/components/contactFormSection";
 import Image from "next/image";
 import { Unbounded } from "next/font/google";
 import ExploreSection from "@/components/exploreSection";
-import { useTranslation } from "react-i18next";
+import { PageProps } from "@/data/types";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-const AboutPage = () => {
+const AboutPage: React.FC<PageProps> = ({ langPack }) => {
   const underline1Ref = useRef(null);
   const section1Ref = useRef(null);
   const text1Ref = useRef(null);
@@ -139,8 +139,6 @@ const AboutPage = () => {
     );
   });
 
-  const { t } = useTranslation();
-
   return (
     <>
       <main className="max-w-[1200px] overflow-x-hidden mx-auto">
@@ -151,9 +149,9 @@ const AboutPage = () => {
               unbounded.className
             }
           >
-            {t("aboutHeroTitle")}
+            {langPack.aboutHeroTitle}
           </h1>
-          <p className="text-xl mb-6">{t("aboutHeroSubtitle")}</p>
+          <p className="text-xl mb-6">{langPack.aboutHeroSubtitle}</p>
         </section>
         <section
           ref={section1Ref}
@@ -170,7 +168,7 @@ const AboutPage = () => {
                   unbounded.className
                 }
               >
-                {t("aboutSection1Title")}
+                {langPack.aboutSection1Title}
               </h2>
               <div
                 className="bg-orange opacity-25 h-10 absolute top-[10%] z-0"
@@ -178,8 +176,8 @@ const AboutPage = () => {
               ></div>
             </div>
 
-            <p className="text-md mb-6">{t("aboutSection1Text1")}</p>
-            <p className="text-md mb-6">{t("aboutSection1Text2")}</p>
+            <p className="text-md mb-6">{langPack.aboutSection1Text1}</p>
+            <p className="text-md mb-6">{langPack.aboutSection1Text2}</p>
           </div>
           <div ref={img1Ref} className="w-full h-[500px] relative">
             <Image
@@ -210,16 +208,16 @@ const AboutPage = () => {
                   unbounded.className
                 }
               >
-                {t("aboutSection2Title")}
+                {langPack.aboutSection2Title}
               </h2>
               <div
                 ref={underline2Ref}
                 className="bg-orange opacity-25 h-10 absolute top-[10%] z-0"
               ></div>
             </div>
-            <p className="text-md mb-6">{t("aboutSection2Text1")}</p>
-            <p className="text-md mb-6">{t("aboutSection2Text2")}</p>
-            <p className="text-md mb-6">{t("aboutSection2Text3")}</p>
+            <p className="text-md mb-6">{langPack.aboutSection2Text1}</p>
+            <p className="text-md mb-6">{langPack.aboutSection2Text2}</p>
+            <p className="text-md mb-6">{langPack.aboutSection2Text3}</p>
           </div>
         </section>
 

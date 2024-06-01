@@ -2,10 +2,9 @@
 
 import Button from "@/components/button";
 import ContactFormSection from "@/components/contactFormSection";
+import { PageProps, Translation } from "@/data/types";
 import { Unbounded } from "next/font/google";
 import Image from "next/image";
-
-import { useTranslation } from "react-i18next";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
@@ -16,6 +15,7 @@ interface ProductProps {
   link: string;
   eshopLink: string;
   children: React.ReactNode;
+  langPack: Translation;
 }
 
 const ProductCard: React.FC<ProductProps> = ({
@@ -25,8 +25,8 @@ const ProductCard: React.FC<ProductProps> = ({
   link,
   eshopLink,
   children,
+  langPack,
 }) => {
-  const { t } = useTranslation();
   return (
     <div className="w-full md:w-2/5 xl:w-1/3 bg-[#ffffffa8] border border-mutedtext-light flex flex-col justify-between px-10 pt-8 pb-16">
       <div className="flex flex-col">
@@ -48,10 +48,10 @@ const ProductCard: React.FC<ProductProps> = ({
       <div className="flex flex-col">
         <div className="flex flex-col gap-4">
           <Button link={eshopLink} inverse={false} blank>
-            {t("buttonEshop")} &raquo;
+            {langPack.buttonEshop} &raquo;
           </Button>
           <Button link={link} inverse={true}>
-            {t("buttonMoreInfo")} &raquo;
+            {langPack.buttonMoreInfo} &raquo;
           </Button>
         </div>
       </div>
@@ -59,16 +59,7 @@ const ProductCard: React.FC<ProductProps> = ({
   );
 };
 
-// export const metadata: Metadata = {
-//   title: "Naše grily | Joseph's",
-//   description:
-//     "Prozkoumejte naši kolekci prémiových grilů na Joseph's Grills. Od kompaktního grilu John, přes stylový gril Peter, až po exkluzivní model Joseph, najdete u nás gril pro každý venkovní prostor.",
-//   keywords:
-//     "prémiové grily, gril Joseph, gril Peter, gril John, venkovní grilování, grilovací příslušenství, Joseph's Grills, grily na prodej",
-// };
-
-const GrillsPage = () => {
-  const { t } = useTranslation();
+const GrillsPage: React.FC<PageProps> = ({ langPack }) => {
   return (
     <>
       <main className="max-w-[1200px] overflow-x-hidden mx-auto">
@@ -79,35 +70,38 @@ const GrillsPage = () => {
               unbounded.className
             }
           >
-            {t("grillsHeroTitle")}
+            {langPack.grillsHeroTitle}
           </h1>
           <div className="flex flex-col md:flex-row flex-wrap xl:flex-nowrap gap-5 w-[80wv] xl:w-full lg:mb-40 justify-center">
             <ProductCard
               name="John"
               image="john.webp"
               link="/grily/john"
-              eshopLink={t("linkEshopJohn")}
-              price={t("johnPrice")}
+              eshopLink={langPack.linkEshopJohn}
+              price={langPack.johnPrice}
+              langPack={langPack}
             >
-              {t("johnParagraph1short")}
+              {langPack.johnParagraph1short}
             </ProductCard>
             <ProductCard
               name="Peter"
               image="peter.webp"
               link="/grily/peter"
-              eshopLink={t("linkEshopPeter")}
-              price={t("peterPrice")}
+              eshopLink={langPack.linkEshopPeter}
+              price={langPack.peterPrice}
+              langPack={langPack}
             >
-              {t("peterParagraph1short")}
+              {langPack.peterParagraph1short}
             </ProductCard>
             <ProductCard
               name="Joseph"
               image="joseph.webp"
               link="/grily/joseph"
-              eshopLink={t("linkEshopJoseph")}
-              price={t("josephPrice")}
+              eshopLink={langPack.linkEshopJoseph}
+              price={langPack.josephPrice}
+              langPack={langPack}
             >
-              {t("josephParagraph1short")}
+              {langPack.josephParagraph1short}
             </ProductCard>
           </div>
         </section>
