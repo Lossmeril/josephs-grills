@@ -16,9 +16,9 @@ import { Unbounded } from "next/font/google";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
-
 const AboutPage: React.FC<PageProps> = ({ langPack }) => {
+  gsap.registerPlugin(useGSAP, ScrollTrigger);
+
   const underline1Ref = useRef(null);
   const section1Ref = useRef(null);
   const text1Ref = useRef(null);
