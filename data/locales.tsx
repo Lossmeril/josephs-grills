@@ -13,6 +13,10 @@ export const csTranslation: Translation = {
   navbarGrills: "Grily",
   navbarAbout: "O nás",
   navbarContact: "Kontakt",
+  navbarHomeURL: "/cs/",
+  navbarGrillsURL: "/cs/grily/",
+  navbarAboutURL: "/cs/o-nas/",
+  navbarContactURL: "/cs/kontakt/",
 
   johnTagline: "Gril pro dobrodruhy",
   johnPrice: "1 999,-",
@@ -172,6 +176,10 @@ export const enTranslation: Translation = {
   navbarGrills: "Grills",
   navbarAbout: "About us",
   navbarContact: "Contact",
+  navbarHomeURL: "/en/",
+  navbarGrillsURL: "/en/grills/",
+  navbarAboutURL: "/en/about",
+  navbarContactURL: "/en/contact",
 
   johnTagline: "Adventurers' Grill",
   johnPrice: "85 €",

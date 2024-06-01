@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 import PeterProductPage from "@/pages/products/peterPage";
-import { enTranslation } from "@/data/locales";
+import { csTranslation } from "@/data/locales";
 
 export const metadata: Metadata = {
-  title: "Peter: The only fireplace you'll ever need. | Joseph's",
+  title: "Peter: To jediné ohniště, které potřebujete. | Joseph's",
   description:
     "Objevte gril John od Joseph's Grills – váš ideální společník na cesty. Kompaktní, snadno sestavitelný a vyrobený z nerezové potravinářské oceli, John nabízí bezpečné a stylové grilování kdekoliv.",
   keywords:
@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   authors: [{ name: "Michal Špitálský", url: "https://www.lossmeril.art" }],
 };
 
-const PeterEN = () => {
-  return <PeterProductPage langPack={enTranslation} />;
+const PeterCS = () => {
+  return <PeterProductPage langPack={csTranslation} />;
 };
 
-export default PeterEN;
+export default PeterCS;

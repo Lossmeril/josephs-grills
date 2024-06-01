@@ -76,7 +76,7 @@ const GrillsPage: React.FC<PageProps> = ({ langPack }) => {
             <ProductCard
               name="John"
               image="john.webp"
-              link="/grily/john"
+              link={langPack.navbarGrillsURL + "john"}
               eshopLink={langPack.linkEshopJohn}
               price={langPack.johnPrice}
               langPack={langPack}
@@ -86,7 +86,7 @@ const GrillsPage: React.FC<PageProps> = ({ langPack }) => {
             <ProductCard
               name="Peter"
               image="peter.webp"
-              link="/grily/peter"
+              link={langPack.navbarGrillsURL + "peter"}
               eshopLink={langPack.linkEshopPeter}
               price={langPack.peterPrice}
               langPack={langPack}
@@ -96,7 +96,7 @@ const GrillsPage: React.FC<PageProps> = ({ langPack }) => {
             <ProductCard
               name="Joseph"
               image="joseph.webp"
-              link="/grily/joseph"
+              link={langPack.navbarGrillsURL + "joseph"}
               eshopLink={langPack.linkEshopJoseph}
               price={langPack.josephPrice}
               langPack={langPack}

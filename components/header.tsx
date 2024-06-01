@@ -46,10 +46,10 @@ const Header: React.FC<HeaderProps> = ({ langPack }) => {
   const [localeFlag, setLocaleFlag] = useState(usePathname() === "cs" ? 1 : 0);
 
   const links = [
-    ["/", langPack.navbarHome],
-    ["/grily", langPack.navbarGrills],
-    ["/o-nas", langPack.navbarAbout],
-    ["/kontakt", langPack.navbarContact],
+    [langPack.navbarHomeURL, langPack.navbarHome],
+    [langPack.navbarGrillsURL, langPack.navbarGrills],
+    [langPack.navbarAboutURL, langPack.navbarAbout],
+    [langPack.navbarContactURL, langPack.navbarContact],
   ];
 
   return (

@@ -68,7 +68,7 @@ const ExploreSection: React.FC<PageProps> = ({ langPack }) => {
           </Button>
         </div>
         <div className="lg:w-1/2">
-          <Button link={"/grily"} inverse={true}>
+          <Button link={langPack.navbarGrillsURL} inverse={true}>
             {langPack.buttonOurGrills} &raquo;
           </Button>
         </div>

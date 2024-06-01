@@ -336,7 +336,7 @@ const HomePage: React.FC<PageProps> = ({ langPack }) => {
               {langPack.indexSection1Text}
             </p>
             <div className="w-48">
-              <Button link={"/o-nas"} inverse={false}>
+              <Button link={langPack.navbarAboutURL} inverse={false}>
                 {langPack.buttonOurStory} &raquo;
               </Button>
             </div>
@@ -374,7 +374,6 @@ const HomePage: React.FC<PageProps> = ({ langPack }) => {
               length="25"
               descHeading={langPack.johnSubheading}
               price={langPack.johnPrice}
-              pageLink="./grily/john"
               eshopLink={langPack.linkEshopJohn}
               image="john-comparison"
               prop1={langPack.johnUSP1}
@@ -399,7 +398,6 @@ const HomePage: React.FC<PageProps> = ({ langPack }) => {
               length="74,3"
               descHeading={langPack.peterSubheading}
               price={langPack.peterPrice}
-              pageLink="./grily/peter"
               eshopLink={langPack.linkEshopPeter}
               image="peter-comparison"
               prop1={langPack.peterUSP1}
@@ -424,7 +422,6 @@ const HomePage: React.FC<PageProps> = ({ langPack }) => {
               length="74"
               descHeading={langPack.josephSubheading}
               price={langPack.josephPrice}
-              pageLink="./grily/joseph"
               eshopLink={langPack.linkEshopJoseph}
               image="joseph-comparison"
               prop1={langPack.josephUSP1}

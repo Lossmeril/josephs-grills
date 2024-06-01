@@ -62,7 +62,6 @@ interface HomeProductProps {
   descHeading: string;
   price: string;
 
-  pageLink: string;
   eshopLink: string;
 
   image: string;
@@ -92,7 +91,6 @@ const HomeProduct: React.FC<HomeProductProps> = ({
   length,
   descHeading,
   price,
-  pageLink,
   eshopLink,
   image,
   prop1,
@@ -151,7 +149,10 @@ const HomeProduct: React.FC<HomeProductProps> = ({
             <Button link={eshopLink} inverse={false}>
               {langPack.buttonEshop} &raquo;
             </Button>
-            <Button link={pageLink} inverse={true}>
+            <Button
+              link={langPack.navbarGrillsURL + name.toLowerCase()}
+              inverse={true}
+            >
               {langPack.buttonMoreInfo} &raquo;
             </Button>
           </div>
@@ -204,7 +205,10 @@ const HomeProduct: React.FC<HomeProductProps> = ({
                 <Button link={eshopLink} inverse={false} blank>
                   {langPack.buttonEshop} &raquo;
                 </Button>
-                <Button link={pageLink} inverse={true}>
+                <Button
+                  link={langPack.navbarGrillsURL + name.toLowerCase()}
+                  inverse={true}
+                >
                   {langPack.buttonMoreInfo} &raquo;
                 </Button>
               </div>

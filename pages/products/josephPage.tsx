@@ -255,7 +255,7 @@ const JosephProductPage: React.FC<PageProps> = ({ langPack }) => {
                   </Button>
                 </div>
                 <div className="w-40">
-                  <Button link={"/grily"} inverse={true}>
+                  <Button link={langPack.navbarGrillsURL} inverse={true}>
                     {langPack.buttonOurGrills} &raquo;
                   </Button>
                 </div>

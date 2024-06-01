@@ -11,6 +11,10 @@ export type Translation = {
   navbarGrills: string;
   navbarAbout: string;
   navbarContact: string;
+  navbarHomeURL: string;
+  navbarGrillsURL: string;
+  navbarAboutURL: string;
+  navbarContactURL: string;
 
   johnTagline: string;
   johnPrice: string;
