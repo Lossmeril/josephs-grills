@@ -221,9 +221,9 @@ const AboutPage: React.FC<PageProps> = ({ langPack }) => {
           </div>
         </section>
 
-        <ExploreSection />
+        <ExploreSection langPack={langPack} />
       </main>
-      <ContactFormSection />
+      <ContactFormSection langPack={langPack} />
     </>
   );
 };

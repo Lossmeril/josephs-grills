@@ -6,11 +6,12 @@ import { Unbounded } from "next/font/google";
 import Button from "./button";
 
 import { gsap } from "gsap";
-import { useTranslation } from "react-i18next";
+
+import { PageProps } from "@/data/types";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
-const ExploreSection: React.FC = () => {
+const ExploreSection: React.FC<PageProps> = ({ langPack }) => {
   const underlineFootnoteRef = useRef(null);
   const footnoteRef = useRef(null);
 
@@ -35,8 +36,6 @@ const ExploreSection: React.FC = () => {
     );
   });
 
-  const { t } = useTranslation();
-
   return (
     <section
       ref={footnoteRef}
@@ -45,7 +44,9 @@ const ExploreSection: React.FC = () => {
       <div className="relative w-10 h-10 mx-auto mb-6">
         <Image src="/img/favicon.png" alt="" fill className="object-contain" />
       </div>
-      <p className="text-lg xl:text-xl mb-6">{t("exploreSectionSubheading")}</p>
+      <p className="text-lg xl:text-xl mb-6">
+        {langPack.exploreSectionSubheading}
+      </p>
       <div className="relative">
         <p
           className={
@@ -53,7 +54,7 @@ const ExploreSection: React.FC = () => {
             unbounded.className
           }
         >
-          {t("exploreSectionHeading")}
+          {langPack.exploreSectionHeading}
         </p>
         <div
           ref={underlineFootnoteRef}
@@ -62,13 +63,13 @@ const ExploreSection: React.FC = () => {
       </div>
       <div className="flex flex-col lg:flex-row flex-nowrap gap-5 lg:gap-10 lg:w-[650px] mt-10 mb-24 lg:mb-0 lg:mt-10">
         <div className="lg:w-1/2">
-          <Button link={t("linkEshopGeneral")} inverse={false} blank>
-            {t("buttonEshop")} &raquo;
+          <Button link={langPack.linkEshopGeneral} inverse={false} blank>
+            {langPack.buttonEshop} &raquo;
           </Button>
         </div>
         <div className="lg:w-1/2">
           <Button link={"/grily"} inverse={true}>
-            {t("buttonOurGrills")} &raquo;
+            {langPack.buttonOurGrills} &raquo;
           </Button>
         </div>
       </div>

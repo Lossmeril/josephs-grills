@@ -3,7 +3,7 @@ import Button from "./button";
 
 import { Unbounded } from "next/font/google";
 import { MutableRefObject } from "react";
-import { useTranslation } from "react-i18next";
+import { Translation } from "@/data/types";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
@@ -79,6 +79,8 @@ interface HomeProductProps {
   leftRef: MutableRefObject<null>;
   rightRef: MutableRefObject<null>;
 
+  langPack: Translation;
+
   children: string | JSX.Element | JSX.Element[];
 }
 
@@ -102,8 +104,8 @@ const HomeProduct: React.FC<HomeProductProps> = ({
   leftRef,
   rightRef,
   children,
+  langPack,
 }) => {
-  const { t } = useTranslation();
   return (
     <>
       {/* MOBILE */}
@@ -147,10 +149,10 @@ const HomeProduct: React.FC<HomeProductProps> = ({
 
           <div className="flex flex-col lg:flex-row flex-nowrap gap-5 mt-10">
             <Button link={eshopLink} inverse={false}>
-              {t("buttonEshop")} &raquo;
+              {langPack.buttonEshop} &raquo;
             </Button>
             <Button link={pageLink} inverse={true}>
-              {t("buttonMoreInfo")} &raquo;
+              {langPack.buttonMoreInfo} &raquo;
             </Button>
           </div>
 
@@ -185,25 +187,25 @@ const HomeProduct: React.FC<HomeProductProps> = ({
                 <InfoBox
                   value={weight}
                   unit="kg"
-                  property={t("indexGrillWeight")}
+                  property={langPack.indexGrillWeight}
                 />
                 <InfoBox
                   value={height}
                   unit="cm"
-                  property={t("indexGrillHeight")}
+                  property={langPack.indexGrillHeight}
                 />
                 <InfoBox
                   value={length}
                   unit="cm"
-                  property={t("indexGrillLength")}
+                  property={langPack.indexGrillLength}
                 />
               </div>
               <div className="flex flex-row flex-nowrap gap-5 mt-10">
                 <Button link={eshopLink} inverse={false} blank>
-                  {t("buttonEshop")} &raquo;
+                  {langPack.buttonEshop} &raquo;
                 </Button>
                 <Button link={pageLink} inverse={true}>
-                  {t("buttonMoreInfo")} &raquo;
+                  {langPack.buttonMoreInfo} &raquo;
                 </Button>
               </div>
             </div>

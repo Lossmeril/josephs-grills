@@ -9,7 +9,7 @@ import { PageProps } from "@/data/types";
 import { Unbounded } from "next/font/google";
 import Image from "next/image";
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
+
 import { PiSparkle } from "react-icons/pi";
 import { RxRulerSquare } from "react-icons/rx";
 import { SlFire } from "react-icons/sl";
@@ -231,9 +231,13 @@ const PeterProductPage: React.FC<PageProps> = ({ langPack }) => {
           />
         </section>
 
-        <Gallery grillName={"Peter"} portfolioItems={portfolio} />
+        <Gallery
+          grillName={"Peter"}
+          portfolioItems={portfolio}
+          langPack={langPack}
+        />
       </main>
-      <ContactFormSection />
+      <ContactFormSection langPack={langPack} />
     </div>
   );
 };

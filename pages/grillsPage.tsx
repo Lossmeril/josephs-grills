@@ -106,7 +106,7 @@ const GrillsPage: React.FC<PageProps> = ({ langPack }) => {
           </div>
         </section>
       </main>
-      <ContactFormSection />
+      <ContactFormSection langPack={langPack} />
     </>
   );
 };

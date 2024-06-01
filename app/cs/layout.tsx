@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Cabin } from "next/font/google";
-import "./globals.scss";
+import "../globals.scss";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import Script from "next/script";
+import { csTranslation } from "@/data/locales";
 
 const cabin = Cabin({ subsets: ["latin"] });
 
@@ -18,5 +22,27 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <html
+      lang="cs"
+      className="scroll-smooth"
+      style={{ scrollBehavior: "smooth" }}
+    >
+      <head>
+        <script
+          id="Cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="7f5529fc-082d-493d-aae3-c002a59490b1"
+          type="text/javascript"
+          defer
+        ></script>
+        <Script src="/scripts/gTagManager.js" />
+      </head>
+      <body className={cabin.className + " max-w-[100vw] overflow-x-hidden"}>
+        <Header langPack={csTranslation} />
+        {children}
+        <Footer langPack={csTranslation} />
+      </body>
+    </html>
+  );
 }

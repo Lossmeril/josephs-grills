@@ -1,14 +1,17 @@
 "use client";
 
+import { csTranslation } from "@/data/locales";
+import { Translation } from "@/data/types";
 import { Inter } from "next/font/google";
 import Image from "next/image";
-import { useTranslation } from "react-i18next";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const Footer: React.FC = () => {
-  const { t } = useTranslation();
+interface FooterProps {
+  langPack: Translation;
+}
 
+const Footer: React.FC<FooterProps> = ({ langPack }) => {
   return (
     <footer>
       <div className="w-full py-10 md:py-0 bg-white shadow-sm z-50 border-t border-mutedtext-light">
@@ -23,7 +26,7 @@ const Footer: React.FC = () => {
               />
             </div>
             <h3 className="text-lg font-bold mb-3">
-              {t("footerGrillsHeading")}
+              {langPack.footerGrillsHeading}
             </h3>
             <ul>
               <li>
@@ -53,49 +56,49 @@ const Footer: React.FC = () => {
           </div>
           <div className="text-center mb-8">
             <h3 className="text-lg font-bold mb-3">
-              {t("footerPagesHeading")}
+              {langPack.footerPagesHeading}
             </h3>
             <ul>
               <li>
                 <a className="link" href="/o-nas">
-                  {t("footerAboutLink")}
+                  {langPack.footerAboutLink}
                 </a>
               </li>
               <li>
                 <a
                   className="link"
-                  href={t("linkEshopGeneral")}
+                  href={langPack.linkEshopGeneral}
                   target="_blank"
                 >
-                  {t("footerEshopLink")}
+                  {langPack.footerEshopLink}
                 </a>
               </li>
               <li>
                 <a
                   className="link"
-                  href={t("linkTermsAndConditions")}
+                  href={langPack.linkTermsAndConditions}
                   target="_blank"
                 >
-                  {t("termsLink")}
+                  {langPack.termsLink}
                 </a>
               </li>
               <li>
-                <a className="link" href={t("linkGDPR")} target="_blank">
-                  {t("GDPRLink")}
+                <a className="link" href={langPack.linkGDPR} target="_blank">
+                  {langPack.GDPRLink}
                 </a>
               </li>
               <li>
                 <a
                   className="link"
-                  href={t("linkCertification")}
+                  href={langPack.linkCertification}
                   target="_blank"
                 >
-                  {t("certificationLink")}
+                  {langPack.certificationLink}
                 </a>
               </li>
             </ul>
             <h3 className="text-lg font-bold mt-6 mb-3">
-              {t("footerContactHeading")}
+              {langPack.footerContactHeading}
             </h3>
             <ul>
               <li>
@@ -125,7 +128,7 @@ const Footer: React.FC = () => {
                 <br />
                 789 91 Štíty
                 <br />
-                {t("czechRepublic")}
+                {langPack.czechRepublic}
               </li>
             </ul>
           </div>
@@ -133,7 +136,7 @@ const Footer: React.FC = () => {
       </div>
       <div className="w-full h-20 bg-white shadow-sm z-50 border-t border-mutedtext-light">
         <div className="h-20 flex flex-nowrap justify-center items-center mx-[5vw] lg:mx-[10vw]">
-          {t("footerMadeBy")} AURORA studio, {new Date().getFullYear()}
+          {langPack.footerMadeBy} AURORA studio, {new Date().getFullYear()}
         </div>
       </div>
     </footer>

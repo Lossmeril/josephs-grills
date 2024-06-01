@@ -385,6 +385,7 @@ const HomePage: React.FC<PageProps> = ({ langPack }) => {
               prop3Icon={<PiForkKnife size={25} />}
               leftRef={product1InfoLeftRef}
               rightRef={product1InfoRightRef}
+              langPack={langPack}
             >
               {langPack.johnParagraph1}
             </HomeProduct>
@@ -409,6 +410,7 @@ const HomePage: React.FC<PageProps> = ({ langPack }) => {
               prop3Icon={<SlFire size={25} />}
               leftRef={product2InfoLeftRef}
               rightRef={product2InfoRightRef}
+              langPack={langPack}
             >
               {langPack.peterParagraph1}
             </HomeProduct>
@@ -433,15 +435,16 @@ const HomePage: React.FC<PageProps> = ({ langPack }) => {
               prop3Icon={<PiGear size={25} />}
               leftRef={product3InfoLeftRef}
               rightRef={product3InfoRightRef}
+              langPack={langPack}
             >
               {langPack.josephParagraph1}
             </HomeProduct>
           </div>
         </section>
         <div className="max-w-[1200px] overflow-x-hidden mx-auto">
-          <ExploreSection />
+          <ExploreSection langPack={langPack} />
         </div>
-        <ContactFormSection />
+        <ContactFormSection langPack={langPack} />
       </main>
     </>
   );

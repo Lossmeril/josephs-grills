@@ -4,7 +4,8 @@ import Image from "next/image";
 import ImageModal from "./imageModal";
 import { useState } from "react";
 import { Unbounded } from "next/font/google";
-import { useTranslation } from "react-i18next";
+
+import { Translation } from "@/data/types";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
@@ -35,9 +36,14 @@ const GalleryItem: React.FC<GalleryItemProps> = ({ img, modalHandler }) => {
 interface GalleryProps {
   grillName: string;
   portfolioItems: string[];
+  langPack: Translation;
 }
 
-const Gallery: React.FC<GalleryProps> = ({ grillName, portfolioItems }) => {
+const Gallery: React.FC<GalleryProps> = ({
+  grillName,
+  portfolioItems,
+  langPack,
+}) => {
   const [modalOpen, setModal] = useState(false);
   const [modalImage, setModalImage] = useState(portfolioItems[0]);
 
@@ -45,8 +51,6 @@ const Gallery: React.FC<GalleryProps> = ({ grillName, portfolioItems }) => {
     setModal(true);
     setModalImage(newImage);
   };
-
-  const { t } = useTranslation();
 
   return (
     <>
@@ -57,7 +61,7 @@ const Gallery: React.FC<GalleryProps> = ({ grillName, portfolioItems }) => {
             unbounded.className
           }
         >
-          {grillName + " " + t("productGalleryInAction")}
+          {grillName + " " + langPack.productGalleryInAction}
         </h2>
         <div className="w-full flex flex-col gap-4">
           <div className="w-full flex flex-col md:flex-row gap-4 ">

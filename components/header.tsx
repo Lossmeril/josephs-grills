@@ -6,9 +6,9 @@ import Button from "./button";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import { MdClose } from "react-icons/md";
-
-import i18n from "@/modules/i18n";
-import { useTranslation } from "react-i18next";
+import { csTranslation } from "@/data/locales";
+import { usePathname } from "next/navigation";
+import { Translation } from "@/data/types";
 
 interface NavbarLinkProps {
   children: React.ReactNode;
@@ -26,7 +26,11 @@ const NavbarLink: React.FC<NavbarLinkProps> = ({ children, link }) => {
   );
 };
 
-const Header = () => {
+interface HeaderProps {
+  langPack: Translation;
+}
+
+const Header: React.FC<HeaderProps> = ({ langPack }) => {
   const localeFlags = [
     {
       name: "česká vlajka",
@@ -39,29 +43,13 @@ const Header = () => {
   ];
 
   const [isMobileNavOpen, setMobileNavOpen] = useState(false);
-  const [localeFlag, setLocaleFlag] = useState(i18n.language === "cs" ? 1 : 0);
-
-  const { t } = useTranslation();
-
-  const changeLang = () => {
-    return () => {
-      if (i18n.language === "cs") {
-        i18n?.changeLanguage("en");
-        localStorage.setItem("language", "en");
-        setLocaleFlag(0);
-      } else {
-        i18n?.changeLanguage("cs");
-        localStorage.setItem("language", "cs");
-        setLocaleFlag(1);
-      }
-    };
-  };
+  const [localeFlag, setLocaleFlag] = useState(usePathname() === "cs" ? 1 : 0);
 
   const links = [
-    ["/", t("navbarHome")],
-    ["/grily", t("navbarGrills")],
-    ["/o-nas", t("navbarAbout")],
-    ["/kontakt", t("navbarContact")],
+    ["/", langPack.navbarHome],
+    ["/grily", langPack.navbarGrills],
+    ["/o-nas", langPack.navbarAbout],
+    ["/kontakt", langPack.navbarContact],
   ];
 
   return (
@@ -113,7 +101,7 @@ const Header = () => {
           </a>
 
           <div className="flex md:hidden flex-nowrap justify-end">
-            <button onClick={changeLang()} className="">
+            <button onClick={() => {}} className="">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 alt={localeFlags[localeFlag].name}
@@ -124,15 +112,15 @@ const Header = () => {
 
           <div className="hidden md:flex flex-nowrap justify-end">
             <div className="flex flex-grow"></div>
-            <button onClick={changeLang()} className="mr-8">
+            <button onClick={() => {}} className="mr-8">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 alt={localeFlags[localeFlag].name}
                 src={localeFlags[localeFlag].img}
               />
             </button>
-            <Button link={t("linkEshopGeneral")} inverse={false} blank>
-              {t("buttonEshop")} &raquo;
+            <Button link={langPack.linkEshopGeneral} inverse={false} blank>
+              {langPack.buttonEshop} &raquo;
             </Button>
           </div>
         </div>

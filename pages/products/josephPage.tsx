@@ -338,9 +338,13 @@ const JosephProductPage: React.FC<PageProps> = ({ langPack }) => {
               value="8 kg"
             />
           </section>
-          <Gallery grillName={"Joseph"} portfolioItems={portfolio} />
+          <Gallery
+            grillName={"Joseph"}
+            portfolioItems={portfolio}
+            langPack={langPack}
+          />
         </main>
-        <ContactFormSection />
+        <ContactFormSection langPack={langPack} />
       </div>
     </>
   );
