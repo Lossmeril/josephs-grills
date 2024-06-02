@@ -15,10 +15,10 @@ interface InfoBoxProps {
 
 const InfoBox: React.FC<InfoBoxProps> = ({ value, unit, property }) => {
   return (
-    <div className="flex flex-col flex-nowrap justify-center items-center border border-mutedtext-light border-solid p-2 w-32 aspect-square">
-      <p className="text-3xl font-bold -mb-2">{value}</p>
+    <div className="flex flex-col flex-nowrap justify-center items-center border border-mutedtext-light border-solid p-2 w-24 lg:w-32 aspect-square">
+      <p className="text-2xl lg:text-3xl font-bold -mb-2">{value}</p>
       <p className="text-lg font-bold mb-1">{unit}</p>
-      <p className="text-xs uppercase">{property}</p>
+      <p className="text-[0.65rem] lg:text-xs uppercase">{property}</p>
     </div>
   );
 };
