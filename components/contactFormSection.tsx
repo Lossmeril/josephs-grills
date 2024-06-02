@@ -1,13 +1,12 @@
+import { PageProps } from "@/data/types";
 import { Inter, Unbounded } from "next/font/google";
-import { useTranslation } from "react-i18next";
+
 import { MdEmail, MdPhone } from "react-icons/md";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"] });
 
-const ContactFormSection: React.FC = () => {
-  const { t } = useTranslation();
-
+const ContactFormSection: React.FC<PageProps> = ({ langPack }) => {
   return (
     <section className="contact-form-section section-2 min-h-[130vh] relative flex flex-row justify-start items-center xl:px-40">
       <div className="hidden xl:block w-2/5"></div>
@@ -18,7 +17,7 @@ const ContactFormSection: React.FC = () => {
             unbounded.className
           }
         >
-          {t("contactSectionHeading")}
+          {langPack.contactSectionHeading}
         </h2>
         <div className="py-4 px-[10px] flex flex-col flex-nowrap gap-4 lg:pb-10 lg:gap-16 lg:flex-row">
           <div className="flex flex-row flex-nowrap justify-start gap-5">
@@ -47,12 +46,12 @@ const ContactFormSection: React.FC = () => {
             unbounded.className
           }
         >
-          {t("contactSectionFormTitle")}
+          {langPack.contactSectionFormTitle}
         </h2>
         <iframe
-          title={t("contactIframeTitle")}
+          title={langPack.contactIframeTitle}
           className="w-full min-h-[115vh] lg:min-h-[80vh] overflow-visible"
-          src={t("contactIframeSrc")}
+          src={langPack.contactIframeSrc}
         />
       </div>
     </section>
