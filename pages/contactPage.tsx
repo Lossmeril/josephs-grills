@@ -1,9 +1,5 @@
 "use client";
 
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import Button from "@/components/button";
 import { PageProps } from "@/data/types";
 
@@ -13,8 +9,6 @@ import { Inter, Unbounded } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 const unbounded = Unbounded({ subsets: ["latin"] });
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const ContactPage: React.FC<PageProps> = ({ langPack }) => {
   return (

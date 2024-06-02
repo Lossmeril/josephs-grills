@@ -2,6 +2,10 @@ import { Metadata } from "next";
 import AboutPage from "@/pages/aboutPage";
 import { enTranslation } from "@/data/locales";
 
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
 export const metadata: Metadata = {
   title: "About us | Joseph's",
   description:
@@ -12,6 +16,8 @@ export const metadata: Metadata = {
 };
 
 const AboutCS = () => {
+  gsap.registerPlugin(useGSAP, ScrollTrigger);
+
   return <AboutPage langPack={enTranslation} />;
 };
 

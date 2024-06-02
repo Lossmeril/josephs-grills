@@ -3,10 +3,6 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import { PageProps } from "@/data/types";
 
 import ContactFormSection from "@/components/contactFormSection";
@@ -17,8 +13,6 @@ import { Unbounded } from "next/font/google";
 const unbounded = Unbounded({ subsets: ["latin"] });
 
 const AboutPage: React.FC<PageProps> = ({ langPack }) => {
-  gsap.registerPlugin(useGSAP, ScrollTrigger);
-
   const underline1Ref = useRef(null);
   const section1Ref = useRef(null);
   const text1Ref = useRef(null);

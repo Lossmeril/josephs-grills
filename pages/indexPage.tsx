@@ -5,10 +5,6 @@ import { useRef, useEffect } from "react";
 import HomeProduct from "@/components/homeProduct";
 import Image from "next/image";
 
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
-
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ContactFormSection from "@/components/contactFormSection";
 import { Unbounded } from "next/font/google";
 import Button from "@/components/button";
@@ -28,8 +24,6 @@ import ExploreSection from "@/components/exploreSection";
 import { PageProps } from "@/data/types";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const HomePage: React.FC<PageProps> = ({ langPack }) => {
   const manRef = useRef(null);
