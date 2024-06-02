@@ -301,7 +301,7 @@ export const enTranslation: Translation = {
 
   exploreSectionSubheading: "Welcome to the Joseph's family!",
   exploreSectionHeading:
-    "Discover new flavours and discover the magic of grilling!",
+    "Explore new flavours and discover the magic of grilling!",
 
   contactSectionHeading: "Contact",
   contactSectionFormTitle: "Leave us a message!",
