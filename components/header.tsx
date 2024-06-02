@@ -127,14 +127,14 @@ const Header: React.FC<HeaderProps> = ({ langPack }) => {
             </div>
           </a>
 
-          <div className="flex md:hidden flex-nowrap justify-end">
+          <div className="flex md:hidden flex-nowrap justify-end items-center">
             <a href={changeLanguage(currentURL!)} className="">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img alt={switchFlag.name} src={switchFlag.img} />
             </a>
           </div>
 
-          <div className="hidden md:flex flex-nowrap justify-end">
+          <div className="hidden md:flex flex-nowrap justify-end items-center">
             <div className="flex flex-grow"></div>
             <a href={changeLanguage(currentURL!)} className="mr-8">
               {/* eslint-disable-next-line @next/next/no-img-element */}

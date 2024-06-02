@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Cabin } from "next/font/google";
-import "../globals.scss";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Script from "next/script";
