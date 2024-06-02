@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import ContactPage from "@/pages/contactPage";
+import ContactPage from "@/pageTemplates/contactPage";
 import { csTranslation } from "@/data/locales";
 
 export const metadata: Metadata = {

@@ -1,13 +1,8 @@
 import { Metadata } from "next";
-import HomePage from "@/pages/indexPage";
+import HomePage from "@/pageTemplates/indexPage";
 import { enTranslation } from "@/data/locales";
 
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
 const IndexEN = () => {
-  gsap.registerPlugin(useGSAP, ScrollTrigger);
   return <HomePage langPack={enTranslation} />;
 };
 

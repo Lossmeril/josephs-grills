@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import JosephProductPage from "@/pages/products/josephPage";
+import JosephProductPage from "@/pageTemplates/products/josephPage";
 import { enTranslation } from "@/data/locales";
 
 export const metadata: Metadata = {

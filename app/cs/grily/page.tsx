@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import GrillsPage from "@/pages/grillsPage";
+import GrillsPage from "@/pageTemplates/grillsPage";
 import { csTranslation } from "@/data/locales";
 
 export const metadata: Metadata = {
