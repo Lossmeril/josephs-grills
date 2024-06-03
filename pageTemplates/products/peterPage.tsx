@@ -1,18 +1,23 @@
 "use client";
 
+import React, { useState } from "react";
+import Image from "next/image";
+
 import Button from "@/components/button";
 import ContactFormSection from "@/components/contactFormSection";
 import { PropBox } from "@/components/homeProduct";
 import Gallery from "@/components/product/gallery";
 import ProductParameter from "@/components/product/productParameters";
 import { PageProps } from "@/data/types";
-import { Unbounded } from "next/font/google";
-import Image from "next/image";
-import React, { useState } from "react";
+
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
 import { PiSparkle } from "react-icons/pi";
 import { RxRulerSquare } from "react-icons/rx";
 import { SlFire } from "react-icons/sl";
+
+import { Unbounded } from "next/font/google";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
@@ -236,6 +241,9 @@ const PeterProductPage: React.FC<PageProps> = ({ langPack }) => {
           portfolioItems={portfolio}
           langPack={langPack}
         />
+        <div className="mx-auto md:w-2/3 mb-0 lg:mb-20">
+          <LiteYouTubeEmbed id="EYv6Vori7Zo" title="Peter Grill video" />
+        </div>
       </main>
       <ContactFormSection langPack={langPack} />
     </div>

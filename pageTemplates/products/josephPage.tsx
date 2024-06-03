@@ -9,6 +9,10 @@ import { PageProps } from "@/data/types";
 import { Unbounded } from "next/font/google";
 import Image from "next/image";
 import React, { useState } from "react";
+
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
+
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import { PiCheckSquareOffset, PiGear } from "react-icons/pi";
 
@@ -342,6 +346,9 @@ const JosephProductPage: React.FC<PageProps> = ({ langPack }) => {
           portfolioItems={portfolio}
           langPack={langPack}
         />
+        <div className="mx-auto md:w-2/3 mb-0 lg:mb-20">
+          <LiteYouTubeEmbed id="jjZAsEWx_Ps" title="Joseph Grill video" />
+        </div>
       </main>
       <ContactFormSection langPack={langPack} />
     </div>

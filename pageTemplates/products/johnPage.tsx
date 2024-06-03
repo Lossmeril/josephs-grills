@@ -10,10 +10,13 @@ import { PropBox } from "@/components/homeProduct";
 import Gallery from "@/components/product/gallery";
 import ProductParameter from "@/components/product/productParameters";
 
-import { Unbounded } from "next/font/google";
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
 import { HiOutlineArchiveBox, HiOutlineWrench } from "react-icons/hi2";
 import { PiForkKnife } from "react-icons/pi";
+
+import { Unbounded } from "next/font/google";
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
@@ -245,6 +248,9 @@ const JohnProductPage: React.FC<PageProps> = ({ langPack }) => {
           portfolioItems={portfolio}
           langPack={langPack}
         />
+        <div className="mx-auto md:w-2/3 mb-0 lg:mb-20">
+          <LiteYouTubeEmbed id="1F0DXVb8wfk" title="John Grill video" />
+        </div>
       </main>
       <ContactFormSection langPack={langPack} />
     </div>
