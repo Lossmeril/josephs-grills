@@ -54,7 +54,7 @@ const Gallery: React.FC<GalleryProps> = ({
 
   return (
     <>
-      <section className="overflow-x-hidden flex flex-col flex-nowrap px-6 pb-16 lg:px-0 lg:py-10">
+      <section className="overflow-x-hidden flex flex-col flex-nowrap px-6 pb-16 lg:px-0 lg:py-20">
         <h2
           className={
             "text-4xl lg:text-6xl font-bold leading-[1.25em] text-center mb-8 mt-20 lg:mt-0 " +

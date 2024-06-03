@@ -243,14 +243,15 @@ const JohnProductPage: React.FC<PageProps> = ({ langPack }) => {
           />
         </section>
 
+        <div className="mx-auto md:w-2/3 mb-0 lg:mb-8">
+          <LiteYouTubeEmbed id="1F0DXVb8wfk" title="John Grill video" />
+        </div>
+
         <Gallery
           grillName={"John"}
           portfolioItems={portfolio}
           langPack={langPack}
         />
-        <div className="mx-auto md:w-2/3 mb-0 lg:mb-20">
-          <LiteYouTubeEmbed id="1F0DXVb8wfk" title="John Grill video" />
-        </div>
       </main>
       <ContactFormSection langPack={langPack} />
     </div>
