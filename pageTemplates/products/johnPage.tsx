@@ -244,7 +244,11 @@ const JohnProductPage: React.FC<PageProps> = ({ langPack }) => {
         </section>
 
         <div className="mx-auto md:w-2/3 mb-0 lg:mb-8">
-          <LiteYouTubeEmbed id="1F0DXVb8wfk" title="John Grill video" />
+          <LiteYouTubeEmbed
+            id="1F0DXVb8wfk"
+            title="John Grill video"
+            thumbnail="/img/video-thumbs/john-thumb.webp"
+          />
         </div>
 
         <Gallery
