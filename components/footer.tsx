@@ -1,6 +1,5 @@
 "use client";
 
-import { csTranslation } from "@/data/locales";
 import { Translation } from "@/data/types";
 import { Inter } from "next/font/google";
 import Image from "next/image";
@@ -30,17 +29,17 @@ const Footer: React.FC<FooterProps> = ({ langPack }) => {
             </h3>
             <ul>
               <li>
-                <a className="link" href="/grily/john">
+                <a className="link" href={langPack.navbarGrillsURL + "john"}>
                   John
                 </a>
               </li>
               <li>
-                <a className="link" href="/grily/john">
+                <a className="link" href={langPack.navbarGrillsURL + "peter"}>
                   Peter
                 </a>
               </li>
               <li>
-                <a className="link" href="/grily/john">
+                <a className="link" href={langPack.navbarGrillsURL + "joseph"}>
                   Joseph
                 </a>
               </li>
@@ -60,7 +59,7 @@ const Footer: React.FC<FooterProps> = ({ langPack }) => {
             </h3>
             <ul>
               <li>
-                <a className="link" href="/o-nas">
+                <a className="link" href={langPack.navbarAboutURL}>
                   {langPack.footerAboutLink}
                 </a>
               </li>
