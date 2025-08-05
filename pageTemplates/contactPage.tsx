@@ -55,7 +55,7 @@ const ContactPage: React.FC<PageProps> = ({ langPack }) => {
               <p className="text-lg text-left">
                 Na Pilníku 292,
                 <br />
-                789 91 Štíty
+                561 69 Dolní Morava 69
                 <br />
                 {langPack.czechRepublic}
               </p>

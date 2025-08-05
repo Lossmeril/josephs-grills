@@ -118,14 +118,14 @@ const Footer: React.FC<FooterProps> = ({ langPack }) => {
           <div className="text-center">
             <h3 className="text-lg font-bold mb-3">Joseph&apos;s grills</h3>
             <ul className="mb-6">
-              <li>IČO: 04143779</li>
-              <li>DIČ: CZ04143779</li>
+              <li>IČO: 44770987</li>
+              {/* <li>DIČ: CZ04143779</li> */}
             </ul>
             <ul>
               <li>
-                Na Pilníku 292,
+                Dolní Morava 69,
                 <br />
-                789 91 Štíty
+                561 69 Dolní Morava
                 <br />
                 {langPack.czechRepublic}
               </li>
