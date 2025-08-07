@@ -123,9 +123,9 @@ const Footer: React.FC<FooterProps> = ({ langPack }) => {
             </ul>
             <ul>
               <li>
-                Dolní Morava 69,
+                Nákladní 238,
                 <br />
-                561 69 Dolní Morava
+                789 91 Štíty
                 <br />
                 {langPack.czechRepublic}
               </li>
