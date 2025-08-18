@@ -53,9 +53,9 @@ const ContactPage: React.FC<PageProps> = ({ langPack }) => {
             <div className="flex flex-row flex-nowrap justify-start gap-5">
               <IoMdPin size={25} />
               <p className="text-lg text-left">
-                Na Pilníku 292,
+                Nákladní 238,
                 <br />
-                561 69 Dolní Morava 69
+                789 91 Štíty
                 <br />
                 {langPack.czechRepublic}
               </p>
